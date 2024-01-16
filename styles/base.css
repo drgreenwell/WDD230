@@ -1,41 +1,74 @@
-* {
-    box-sizing: border-box;
-  }
-  body {
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Color Scheme */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+nav a {
+    color: #fff;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Main Layout */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main {
     display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto 1fr auto;
-  }
-  
-  header {
-    background: lightpink;
-    padding: 2rem;
-    grid-column: 1 / 3;
-  }
-  
-  nav {
-    grid-column: 1 / 3;
-    background-color: #bed;
-    padding: 1rem;
-  }
-  
-  main {
-    background: coral;
-    height: 100%;
-    padding: 1rem;
-  }
-  
-  aside {
-    background: yellow;
-    grid-column: 2 / 3;
-    padding: 1rem;
-  }
-  
-  footer {
-    background: wheat;
-    padding: 2rem;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    border: 2px solid var(--primary-color);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Course Links List */
+.main-links-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-links-list li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
     text-align: center;
-    grid-column: 1 / 3;
-  }
-  
+    color: var(--text-color);
+}
+
+/* Additional Styles */
+/* Add your specific styles here based on your design preferences */
