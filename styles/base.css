@@ -1,0 +1,57 @@
+/* base.css */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use Google Fonts API for font */
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Set your background color */
+}
+
+main {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the main element horizontally */
+    display: grid;
+    grid-template-columns: 1fr; /* Display main sections in a single column */
+    gap: 20px; /* Set consistent spacing between elements */
+    padding: 20px; /* Add padding to the main element */
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    background-color: #333; /* Set your navigation background color */
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets from the course links list */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Align links with consistent spacing */
+}
+
+nav a {
+    text-decoration: none;
+    color: white; /* Set link color */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Set link color on hover */
+}
+
+section.card {
+    background-color: white; /* Set card background color */
+    padding: 20px;
+    border-radius: 8px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}

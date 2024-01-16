@@ -1,51 +1,58 @@
-<!DOCTYPE html5>
-
-<html lang="en-US">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 230: Assignment Portal</title>
-  <meta name="description" content="Web Development Portal For Daniel Greenwell in WDD 230.">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Greenwell - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="Daniel Greenwell - WDD 230 - Web Frontend Development.">
+    <meta name="author" content="Daniel Greenwell">
+    <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <header>
-    <img src="images/picture.jpg" alt="Profile image Of Daniel Greenwell">
-    <h1>Daniel Greenwell</h1>
-  </header>
+    <header>
+        <img src="images/picture.jpg" alt="Daniel Greenwell' Profile Picture">
+        <h1>Daniel Greenwell</h1>
+    </header>
 
-  <main>
-    <section>
-      <h2>WDD 230: Assignment Portal</h2>
-      <hr>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="lesson03/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="chamber/">Chamber</a></li>
+            <li><a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
+        </ul>
+    </nav>
 
-    <ul>
-      <li>Lesson 02: <a href="lesson2.html">Title</a></li>
-      <li>Lesson 03: <a href="lesson3.html">Title</a></li>
-      <li>Lesson 04: <a href="lesson4.html">Title</a>
-      <li>Lesson 05: <a href="lesson5.html">Title</a></li>
-      <li>Lesson 06: <a href="lesson6.html">Title</a></li>
-      <li>Lesson 07: <a href="lesson7.html">Title</a></li>
-      <li>Lesson 08: <a href="lesson8.html">Title</a></li>
-      <li>Lesson 09: <a href="lesson9.html">Title</a></li>
-      <li>Lesson 10: <a href="lesson10.html">Title</a></li>
-      <li>Lesson 11: <a href="lesson11.html">Title</a></li>
-      </ul>
+    <main>
+        <h2>WDD 230: Web Frontend Development</h2>
 
-  </main>
-  <footer>
-    <p>&copy;<span id="date1"></span> | Daniel Greenwell | Texas | <a
-        href="https://www.byui.edu/online">BYU-Idaho Online Learning</a>
-    </p>
-    <div>Last Updated: <span id="lastModified"></span></div>
-  </footer>
-  <script src="scripts/date.js"></script>
-  <script src="scripts/lastmodified.js"></script>
-  <script src="scripts/app.js"></script>
+        <section class="card">
+            <h3>Learning Activities</h3>
+            <ul>
+                <!-- learning activities for the course -->
+                <li><a href="#">Activity 1</a></li>
+                <li><a href="#">Activity 2</a></li>
+                <!-- Add more as needed -->
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>Information</h3>
+            <!-- Placeholder information about weather, visits, etc. -->
+            <p>Weather: [Placeholder]</p>
+            <p>Visits: [Placeholder]</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Daniel Greenwell [Your State/Country Flag]</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- Reference the getdates.js file -->
+    <script src="getdates.js"></script>
 </body>
 
 </html>
