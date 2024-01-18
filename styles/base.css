@@ -17,7 +17,7 @@ h1, h2, h3 {
   --primary-color: #4e9647d2;
   --secondary-color: #cf311f;
   --background-color: #97b99d;
-  --text-color: #2c502f;
+  --text-color: #ffffff;
 }
 
 body {
@@ -89,7 +89,7 @@ main {
 }
 
 .card {
-  border: 2px solid var(--primary-color);
+  border: 3px solid var(--primary-color);
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
