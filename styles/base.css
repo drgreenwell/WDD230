@@ -12,10 +12,10 @@ h1, h2, h3 {
 
 /* Color Scheme */
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #e74c3c;
+  --primary-color: #42db34d2;
+  --secondary-color: #cf311f;
   --background-color: #ecf0f1;
-  --text-color: #2c3e50;
+  --text-color: #2c502f;
 }
 
 body {
