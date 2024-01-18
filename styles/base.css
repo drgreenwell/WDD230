@@ -35,6 +35,15 @@ nav a:hover {
 }
 
 /* Main Layout */
+header {
+    display: flex;
+    align-items: center; /* Vertically align the items */
+}
+
+img {
+    size: 25%;
+}
+
 body {
     max-width: 800px;
     margin: 0 auto;
