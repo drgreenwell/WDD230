@@ -14,10 +14,10 @@ h1, h2, h3 {
 
 /* Color Scheme */
 :root {
-  --primary-color: #4e9647d2;
+  --primary-color: #248917;
   --secondary-color: #cf311f;
-  --background-color: #97b99d;
-  --text-color: #4e8851;
+  --background-color: #607E64;
+  --text-color: #418545;
 }
 
 body {
