@@ -1,3 +1,5 @@
+/* base.css */
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -14,7 +16,7 @@ h1, h2, h3 {
 :root {
   --primary-color: #4e9647d2;
   --secondary-color: #cf311f;
-  --background-color: #ecf0f1;
+  --background-color: #97b99d;
   --text-color: #2c502f;
 }
 
@@ -53,9 +55,14 @@ img {
   width: 10%;
 }
 
+/* Flex for mobile view */
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
 nav ul {
   list-style: none; /* Remove default list styling */
-  display: flex;
   justify-content: center; /* Horizontally align the items */
 }
 

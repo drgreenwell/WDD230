@@ -1,0 +1,33 @@
+/* larger.css */
+
+/* Larger Views Styles */
+@media screen and (min-width: 768px) {
+    body {
+      font-size: 18px; /* Adjust the font size for larger views */
+    }
+  
+    h2 {
+      font-size: 1.5em; /* Adjust the font size for h2 in larger views */
+    }
+  
+    nav {
+      flex-direction: row; /* Move the flex-direction property here for consistency */
+    }
+  
+    nav ul {
+      display: flex; /* Move the display property here for consistency */
+    }
+  
+    nav li {
+      margin-right: 20px; /* Adjust the margin for navigation links in larger views */
+    }
+  
+    main {
+      grid-template-columns: 1fr 1fr; /* Two columns for larger views */
+    }
+  
+    .card {
+      padding: 30px; /* Adjust padding for cards in larger views */
+    }
+  }
+  
