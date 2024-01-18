@@ -11,11 +11,14 @@
     }
   
     nav {
-      flex-direction: row; /* Move the flex-direction property here for consistency */
+      display: flex; /* Add display: flex to make the nav a flex container */
+      flex-direction: column; /* Change the flex-direction to column */
+      align-items: center; /* Center the items vertically */
     }
   
     nav ul {
       display: flex; /* Move the display property here for consistency */
+      justify-content: center; /* Center the items horizontally */
     }
   
     nav li {
@@ -29,5 +32,4 @@
     .card {
       padding: 30px; /* Adjust padding for cards in larger views */
     }
-  }
-  
+}
