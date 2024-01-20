@@ -1,0 +1,116 @@
+/* base.css */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Color Scheme */
+:root {
+  --primary-color: #1C6714;
+  --secondary-color: #B01A0D;
+  --background-color: #3F6142;
+  --text-color: #28532B;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+nav {
+  background-color: var(--primary-color);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold; /* Adjust the font weight as needed */
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+h2 {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Main Layout */
+header {
+  display: flex;
+  align-items: center; /* Vertically align the items */
+  justify-content: center; /* Horizontally align the items */
+  gap: 20px;
+}
+
+img {
+  width: 10%;
+}
+
+/* Flex for mobile view */
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Use flex container */
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Horizontally center the items */
+}
+
+nav li {
+  margin-right: 15px; /* Adjust the margin as needed for spacing */
+}
+
+body {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+h2 {
+  display: flex;
+  justify-content: center; /* Horizontally align the items */
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  border: 3px solid var(--primary-color);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Course Links List */
+.main-links-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-links-list li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+}
