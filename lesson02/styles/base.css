@@ -88,9 +88,17 @@ main {
 
 .card {
   border: 3px solid var(--primary-color);
-  background-color: #fff;
+  background-color: lightgrey;
   border-radius: 10px;
   padding: 20px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block; /* Ensure images don't have extra space below them */
+  margin: 0 auto; /* Center images horizontally */
 }
 
 /* Course Links List */
@@ -108,4 +116,11 @@ footer {
   margin-top: 20px;
   text-align: center;
   color: #fff;
+}
+
+/* Additional styles for better mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .card {
+    max-width: 100%; /* Allow cards to take the full width of the viewport in mobile mode */
+  }
 }
