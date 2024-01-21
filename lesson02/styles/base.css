@@ -51,10 +51,6 @@ header {
   gap: 20px;
 }
 
-img {
-  width: 10%;
-}
-
 /* Flex for mobile view */
 nav {
   display: flex;
