@@ -56,6 +56,20 @@ img {
   width: 10%;
 }
 
+/* Google Map */
+iframe.map {
+  width: 100%; /* Make the map take full width by default */
+  height: 300px; /* Set a default height for the map */
+  margin-top: 20px; /* Add a top buffer of 20px */
+}
+
+/* Marker pseudo-element */
+::marker {
+	color: var(--secondary-color);
+	font-size: 2rem;
+	font-variant: small-caps;
+}
+
 /* Mobile view */
 #menu {
 	font-size: 1.5rem;
@@ -81,7 +95,7 @@ img {
 }
 
 .active::before {
-	color: yellow; /* Change the color of the active indicator */
+  content: "🧭"; /* Add content to the ::before pseudo-element */
 }
 
 .navigation {

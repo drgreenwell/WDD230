@@ -26,12 +26,16 @@
       justify-content: center; /* Center the items horizontally */
   }
 
-  nav li {
+  nav a {
       margin-right: 20px; /* Adjust the margin for navigation links in larger views */
   }
 
   main {
       grid-template-columns: 1fr 1fr; /* Two columns for larger views */
+  }
+  
+  iframe.map {
+    height: 450px; /* Adjust the height for larger views */
   }
 
   .card {
