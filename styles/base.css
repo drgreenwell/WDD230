@@ -56,20 +56,52 @@ img {
   width: 10%;
 }
 
-/* Flex for mobile view */
-nav {
+/* Mobile view */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+ 	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❌";
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+.active::before {
+	color: yellow; /* Change the color of the active indicator */
+}
+
+.navigation {
+  display: none; /* Hide the nav by default */
+}
+
+#menu.open + .navigation {
   display: flex;
   flex-direction: column;
 }
 
-nav ul {
+#menu.open + nav ul {
     list-style: none;
     display: flex; /* Use flex container */
+    flex-direction: column; /* Change flex direction to column */
     align-items: center; /* Vertically center the items */
     justify-content: center; /* Horizontally center the items */
 }
 
-nav li {
+#menu.open + nav li {
   margin-right: 15px; /* Adjust the margin as needed for spacing */
 }
 
