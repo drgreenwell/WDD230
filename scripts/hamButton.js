@@ -1,15 +1,3 @@
 /* hamButton.js */
 
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('nav');
-const mapFrame = document.querySelector('.map');
-
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hamButton.classList.toggle('open');
-    if (navigation.classList.contains('open')) {
-        mapFrame.style.display = 'none';
-    } else {
-        mapFrame.style.display = ''; // Reset to default
-    }
-});
+const e=document.querySelector("#menu"),n=document.querySelector("nav"),o=document.querySelector(".map");e.addEventListener("click",()=>{n.classList.toggle("open"),e.classList.toggle("open"),n.classList.contains("open")?o.style.display="none":o.style.display=""});
