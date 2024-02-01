@@ -11,23 +11,30 @@
     <!-- Social Media Meta -->
     <meta property="og:title" content="Maxwell Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="your-social-image.jpg">
+    <meta property="og:image" content="maxwell_tx_logo.jpg">
     <meta property="og:url" content="https://www.example.com">
-    <!-- Stylesheets (You can link your CSS here) -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Javascript For Hamburger Button-->
+    <script src="hamButton.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Maxwell Chamber of Commerce Logo">
+            <img src="maxwell_tx_logo.jpg" alt="Maxwell Chamber of Commerce Logo">
         </div>
-        <nav>
-            <div class="menu-toggle" id="menu-toggle">
-                <label for="menu-toggle-checkbox" class="menu-icon">&#9776;</label>
-            </div>
+        <h1>Maxwell Chamber of Commerce</h1>
+         <!-- Hamburger menu icon -->
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="menu-section">
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
@@ -36,47 +43,47 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-    </header>
+  
+        <main>
+            <section class="hero">
+                <img src="hero-image.jpg" alt="Hero Image">
+            </section>
 
-    <main>
-        <section class="hero">
-            <img src="hero-image.jpg" alt="Hero Image">
-        </section>
+            <section class="cta">
+                <h2>Join the Chamber of Commerce</h2>
+                <p>Unlock the benefits of membership and connect with the local business community.</p>
+                <a href="#" class="btn">Join Now</a>
+            </section>
 
-        <section class="cta">
-            <h2>Join the Chamber of Commerce</h2>
-            <p>Unlock the benefits of membership and connect with the local business community.</p>
-            <a href="#" class="btn">Join Now</a>
-        </section>
+            <section class="events">
+                <h2>Current Events</h2>
+                <div class="event">
+                    <h3>Event Title</h3>
+                    <p>Event Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Date: January 1, 2024</p>
+                </div>
+            </section>
 
-        <section class="events">
-            <h2>Current Events</h2>
-            <div class="event">
-                <h3>Event Title</h3>
-                <p>Event Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Date: January 1, 2024</p>
-            </div>
-        </section>
+            <section class="weather">
+                <h2>Weather</h2>
+                <!-- Weather card goes here -->
+            </section>
 
-        <section class="weather">
-            <h2>Weather</h2>
-            <!-- Weather card goes here -->
-        </section>
-
-        <section class="spotlights">
-            <h2>Spotlight Businesses</h2>
-            <div class="spotlight">
-                <!-- Spotlight business 1 -->
-            </div>
-            <div class="spotlight">
-                <!-- Spotlight business 2 -->
-            </div>
-            <div class="spotlight">
-                <!-- Spotlight business 3 -->
-            </div>
-        </section>
-    </main>
-
+            <section class="spotlights">
+                <h2>Spotlight Businesses</h2>
+                <div class="spotlight">
+                    <!-- Spotlight business 1 -->
+                </div>
+                <div class="spotlight">
+                    <!-- Spotlight business 2 -->
+                </div>
+                <div class="spotlight">
+                    <!-- Spotlight business 3 -->
+                </div>
+            </section>
+        </main>
+    </div>
+      
     <footer>
         <div class="contact-info">
             <p>Contact Us: Maxwell Chamber of Commerce, Maxwell, TX</p>

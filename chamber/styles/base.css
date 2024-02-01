@@ -37,6 +37,8 @@ p {
 
 /* Header Styles */
 header {
+    display: flex;
+    align-items: center;
     background-color: var(--secondary-color);
     padding: 10px 0;
 }
@@ -130,52 +132,123 @@ footer {
     font-weight: bold;
 }
 
-/* Hamburger Menu Styles */
-.menu-toggle {
-    display: none; /* Hide Menu by default */
-}
-
-.menu-icon {
-    cursor: pointer;
-    display: block;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    padding: 0.5rem;
-    text-align: center;
-}
-
-.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/* Responsive Menu Styles */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+/* Media queries for adjusting layout */
+@media only screen and (max-width: 768px) {
+    /* For mobile devices */
+    header {
+        flex-direction: column;
     }
 
+    .main-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+    }
+    
+    .menu-section {
+        width: 100%;
+        background-color: var(--secondary-color);
+        display: flex;
+        justify-content: center; /* Center menu items horizontally */
+    }
+
+    .menu {
+        padding: 50;
+        margin: 50;
+        list-style-type: none;
+    }
+
+    .menu li {
+        margin-bottom: 10px; /* Adjust spacing as needed */
+    }
+
+    main {
+        margin-top: 20px; /* Adjust as needed */
+        text-align: center; /* Center text content */
+    }
+  
+    /* CSS for hamburger menu */
+    .menu-toggle {
+        display: block; /* Show only for mobile */
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .hamburger {
+        width: 30px;
+        height: 3px;
+        background-color: var(--text-color);
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    /* Rotate first and third line */
+    .menu-toggle.show .hamburger:nth-child(1),
+    .menu-toggle.show .hamburger:nth-child(3) {
+        transform: rotate(45deg);
+    }
+
+    /* Hide middle line */
+    .menu-toggle.show .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+
+    /* Rotate back to original position */
+    .menu-toggle.show .hamburger:nth-child(1) {
+        transform: rotate(-45deg);
+    }
+
+    /* Hide regular menu for mobile */
     .menu {
         display: none;
     }
 
-    .menu.active {
+    /* Show menu when toggled */
+    .menu.show {
         display: block;
+    } 
+}
+
+@media only screen and (min-width: 769px) {
+    /* For larger screens */
+    header {
+        flex-direction: column;
+    }
+
+    .main-container {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .menu-section {
+        width: 200px; /* Adjust width as needed */
+        background-color: var(--secondary-color);
+        padding: 20px;
+        display: flex;
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center; /* Center menu items horizontally */
+    }
+
+    .menu {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center; /* Center menu items horizontally */
     }
 
     .menu li {
-        display: block;
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Adjust spacing as needed */
+    }
+
+    main {
+        flex: 1;
+        margin-left: 20px; /* Adjust margin to leave space for the menu */
     }
 }
