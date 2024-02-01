@@ -131,6 +131,12 @@ h2 {
   justify-content: center; /* Horizontally align the items */
 }
 
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem; /* Adjusted the font size for mobile view */
+  }
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr;
