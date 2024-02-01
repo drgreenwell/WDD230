@@ -47,6 +47,11 @@ header {
     margin-left: 20px;
 }
 
+.logo img {
+    width: 100px; /* Set the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
