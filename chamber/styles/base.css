@@ -39,12 +39,15 @@ p {
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Add space between logo and h1 */
     background-color: var(--secondary-color);
     padding: 10px 20px;
 }
 
+
 .logo {
-    margin-right: 10px; /* Added margin to create space between logo and h1 */
+    display: flex; /* Use flexbox for logo and h1 */
+    align-items: center; /* Align items vertically */
 }
 
 .logo img {
@@ -153,7 +156,12 @@ footer {
     }
 
     .logo {
-        margin-right: 5px; /* Adjust margin for smaller screens */
+        display: flex; /* Use flexbox for logo and h1 */
+        align-items: center; /* Align items vertically */
+    }
+
+    h1 {
+        margin: 0; /* Remove any default margins */
     }
 
     .main-container {
