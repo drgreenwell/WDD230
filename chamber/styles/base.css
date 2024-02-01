@@ -39,7 +39,6 @@ p {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Add space between logo and h1 */
     background-color: var(--secondary-color);
     padding: 10px 20px;
 }
