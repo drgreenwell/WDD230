@@ -136,7 +136,15 @@ footer {
 @media only screen and (max-width: 768px) {
     /* For mobile devices */
     header {
-        flex-direction: column;
+        display: flex; /* Use flexbox */
+        align-items: center;
+        justify-content: space-between; /* Add space between logo and h1 */
+        background-color: var(--secondary-color);
+        padding: 10px 20px; /* Adjust padding as needed */
+    }
+
+    .logo {
+        margin-left: 20px; /* Remove margin-left */
     }
 
     .main-container {
@@ -174,30 +182,28 @@ footer {
         display: block; /* Show only for mobile */
         cursor: pointer;
         padding: 10px;
+        position: absolute; /* Set position to absolute */
+        top: 2px; /* Adjust top position as needed */
+        right: 5px; /* Adjust right position as needed */
     }
 
-    .hamburger {
-        width: 30px;
-        height: 3px;
-        background-color: var(--text-color);
-        margin: 6px 0;
-        transition: 0.4s;
+    .hamburger:before {
+        font-size: 24px;
+        content: "☰";
+    }
+  
+    .hamburger:after {
+        font-size: 24px;
+        content: "X";
+        display: none;
+    }
+  
+    .menu-toggle.active .hamburger:before {
+        display: none;
     }
 
-    /* Rotate first and third line */
-    .menu-toggle.show .hamburger:nth-child(1),
-    .menu-toggle.show .hamburger:nth-child(3) {
-        transform: rotate(45deg);
-    }
-
-    /* Hide middle line */
-    .menu-toggle.show .hamburger:nth-child(2) {
-        opacity: 0;
-    }
-
-    /* Rotate back to original position */
-    .menu-toggle.show .hamburger:nth-child(1) {
-        transform: rotate(-45deg);
+    .menu-toggle.active .hamburger:after {
+        display: inline;
     }
 
     /* Hide regular menu for mobile */
@@ -208,13 +214,21 @@ footer {
     /* Show menu when toggled */
     .menu.show {
         display: block;
-    } 
+    }
 }
 
 @media only screen and (min-width: 769px) {
     /* For larger screens */
     header {
-        flex-direction: column;
+        display: flex; /* Use flexbox */
+        align-items: center;
+        justify-content: space-between; /* Add space between logo and h1 */
+        background-color: var(--secondary-color);
+        padding: 10px 20px; /* Adjust padding as needed */
+    }
+
+    .logo {
+        margin-left: 20px; /* Remove margin-left */
     }
 
     .main-container {
