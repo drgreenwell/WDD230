@@ -40,11 +40,11 @@ header {
     display: flex;
     align-items: center;
     background-color: var(--secondary-color);
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
 .logo {
-    margin-right: 10px;
+    margin-right: 10px; /* Added margin to create space between logo and h1 */
 }
 
 .logo img {
@@ -153,7 +153,7 @@ footer {
     }
 
     .logo {
-        margin-left: 20px; /* Remove margin-left */
+        margin-right: 5px; /* Adjust margin for smaller screens */
     }
 
     .main-container {
