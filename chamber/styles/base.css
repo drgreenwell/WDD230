@@ -129,7 +129,7 @@ main {
 footer {
     background-color: var(--secondary-color);
     padding: 20px 0;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .contact-info p {
