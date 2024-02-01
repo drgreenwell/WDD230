@@ -55,7 +55,7 @@ header {
 }
 
 h1 {
-    margin: 25px;
+    margin: 0; /* Remove any default margins */
 }
 
 nav ul {
@@ -160,7 +160,7 @@ footer {
     }
 
     h1 {
-        margin: 25px;
+        margin: 0; /* Remove any default margins */
     }
 
     .main-container {
@@ -255,7 +255,7 @@ footer {
     }
 
     h1 {
-        margin: 25px;
+        margin: 25px; /* Remove any default margins */
     }
 
     .main-container {
