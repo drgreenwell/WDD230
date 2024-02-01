@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Maxwell Chamber of Commerce - Connecting Businesses">
+    <meta name="author" content="Daniel Greenwell">
+    <title>Maxwell Chamber of Commerce</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Maxwell Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="your-social-image.jpg">
+    <meta property="og:url" content="https://www.example.com">
+    <!-- Stylesheets (You can link your CSS here) -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="medium.css">
+    <link rel="stylesheet" href="larger.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Maxwell Chamber of Commerce Logo">
+        </div>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <label for="menu-toggle-checkbox" class="menu-icon">&#9776;</label>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="hero-image.jpg" alt="Hero Image">
+        </section>
+
+        <section class="cta">
+            <h2>Join the Chamber of Commerce</h2>
+            <p>Unlock the benefits of membership and connect with the local business community.</p>
+            <a href="#" class="btn">Join Now</a>
+        </section>
+
+        <section class="events">
+            <h2>Current Events</h2>
+            <div class="event">
+                <h3>Event Title</h3>
+                <p>Event Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Date: January 1, 2024</p>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <!-- Weather card goes here -->
+        </section>
+
+        <section class="spotlights">
+            <h2>Spotlight Businesses</h2>
+            <div class="spotlight">
+                <!-- Spotlight business 1 -->
+            </div>
+            <div class="spotlight">
+                <!-- Spotlight business 2 -->
+            </div>
+            <div class="spotlight">
+                <!-- Spotlight business 3 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Contact Us: Maxwell Chamber of Commerce, Maxwell, TX</p>
+            <p>Phone: 123-456-7890 | Email: info@maxwellchamber.com</p>
+        </div>
+        <div class="development-info">
+            <p>Developed by: Your Name</p>
+            <p>Project for WDD 230</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for last modified date -->
+    <script>
+        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+    </script>
+</body>
+</html>

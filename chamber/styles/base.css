@@ -1,0 +1,181 @@
+/* base.css */
+
+/* Color Scheme */
+:root {
+    --primary-color: #004d40; /* Primary color */
+    --secondary-color: #00897b; /* Secondary color */
+    --background-color: #f9f9f9; /* Background color */
+    --text-color: #333; /* Text color */
+}
+
+/* Body Styles */
+body {
+    font-family: 'Verdana', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: var(--primary-color);
+}
+
+/* Paragraph Styles */
+p {
+    line-height: 1.6;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Main Styles */
+main {
+    padding: 20px;
+}
+
+/* Hero Styles */
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Call to Action Styles */
+.cta {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cta h2 {
+    margin-top: 0;
+}
+
+.cta .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Event Styles */
+.events {
+    margin-top: 20px;
+}
+
+.events .event {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.events .event h3 {
+    color: var(--primary-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    color: #fff;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.development-info p {
+    margin: 5px 0;
+}
+
+.development-info span {
+    font-weight: bold;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none; /* Hide Menu by default */
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive Menu Styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
