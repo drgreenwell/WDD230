@@ -236,15 +236,26 @@ footer {
 @media only screen and (min-width: 769px) {
     /* For larger screens */
     header {
-        display: flex; /* Use flexbox */
-        align-items: center;
-        justify-content: space-between; /* Add space between logo and h1 */
-        background-color: var(--secondary-color);
-        padding: 10px 20px; /* Adjust padding as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    height: 100px; /* Optionally set a fixed height for the header */
     }
 
     .logo {
-        margin-left: 20px; /* Remove margin-left */
+        display: flex; /* Use flexbox for logo and h1 */
+        align-items: center; /* Align items vertically */
+    }
+
+    .logo img {
+        width: 100px; /* Set the width to your desired size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    h1 {
+        margin: 0; /* Remove any default margins */
     }
 
     .main-container {
