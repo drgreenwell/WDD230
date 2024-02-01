@@ -2,10 +2,11 @@
 
 /* Color Scheme */
 :root {
-    --primary-color: #004d40; /* Primary color */
-    --secondary-color: #00897b; /* Secondary color */
+    --primary-color: #213c63; /* Primary color */
+    --secondary-color: #F3C569; /* Secondary color */
     --background-color: #f9f9f9; /* Background color */
     --text-color: #333; /* Text color */
+    --event-color: #B60100 /* Event title color */
 }
 
 /* Body Styles */
@@ -71,7 +72,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 /* Main Styles */
@@ -88,8 +89,8 @@ main {
 
 /* Call to Action Styles */
 .cta {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     padding: 20px;
     border-radius: 5px;
 }
@@ -100,8 +101,8 @@ main {
 
 .cta .btn {
     display: inline-block;
-    background-color: #fff;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--background-color);
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -113,7 +114,7 @@ main {
 }
 
 .events .event {
-    background-color: #fff;
+    background-color: #FFF;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -121,7 +122,7 @@ main {
 }
 
 .events .event h3 {
-    color: var(--primary-color);
+    color: var(--event-color);
 }
 
 /* Footer Styles */
@@ -206,12 +207,14 @@ footer {
     .hamburger:before {
         font-size: 24px;
         content: "☰";
+        color: var(--primary-color);
     }
   
     .hamburger:after {
         font-size: 24px;
         content: "X";
         display: none;
+        color: var(--primary-color);
     }
   
     .menu-toggle.active .hamburger:before {
