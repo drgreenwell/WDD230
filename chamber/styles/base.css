@@ -127,17 +127,20 @@ main {
 
 /* Footer Styles */
 footer {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
     background-color: var(--secondary-color);
     padding: 20px 0;
     color: var(--text-color);
 }
 
 .contact-info p {
-    margin: 5px 0;
+    margin-right: 20px;
 }
 
 .development-info p {
-    margin: 5px 0;
+    margin-left: 20px;
 }
 
 .development-info span {
