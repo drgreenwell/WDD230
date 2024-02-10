@@ -8,6 +8,7 @@
     --text-color: #333; /* Text color */
     --event-color: #b60100; /* Event title color */
     --event-background: #FFF; /* Event background color */
+    --cta-color: #f9f9f9;
 }
 
 .dark-mode {
@@ -17,6 +18,7 @@
     --text-color: #fff; /* Text color */
     --event-color: #ffdddd; /* Event title color */
     --event-background: #333; /* Event background color */
+    --cta-color: #f9f9f9;
 }
 
 /* Body Styles */
@@ -113,7 +115,7 @@ main {
 .cta .btn {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--background-color);
+    color: var(--cta-color);
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
