@@ -331,11 +331,22 @@ footer {
     outline: none;
 }
 
-.dark-mode-toggle .moon-icon {
+/* Initially hide sun icon */
+.dark-mode-toggle .sun-icon {
     display: none;
 }
 
-.dark-mode .moon-icon {
+/* Show sun icon when in dark mode */
+.dark-mode .sun-icon {
     display: inline-block;
 }
 
+/* Initially show moon icon */
+.dark-mode-toggle .moon-icon {
+    display: inline-block;
+}
+
+/* Hide moon icon when in dark mode */
+.dark-mode .moon-icon {
+    display: none;
+}
