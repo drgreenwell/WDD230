@@ -339,20 +339,12 @@ footer {
     display: none;
 }
 
-.dark-mode {
-    --sun-color: #FFD700;
-    --moon-color: #F0F8FF;
-}
-
-.dark-mode-toggle .moon-icon {
+.dark-mode-toggle.dark-mode .moon-icon {
     display: inline-block;
 }
 
+/* Remove redundant rules */
 .dark-mode-toggle .sun-icon {
-    display: none;
-}
-
-.dark-mode .moon-icon {
     display: none;
 }
 
