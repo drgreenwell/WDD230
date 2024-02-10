@@ -6,7 +6,17 @@
     --secondary-color: #F3CD81; /* Secondary color */
     --background-color: #f9f9f9; /* Background color */
     --text-color: #333; /* Text color */
-    --event-color: #B60100 /* Event title color */
+    --event-color: #b60100; /* Event title color */
+    --event-background: #FFF; /* Event background color */
+}
+
+.dark-mode {
+    --primary-color: #f3cd81; /* Primary color */
+    --secondary-color: #213c63; /* Secondary color */
+    --background-color: #111; /* Background color */
+    --text-color: #fff; /* Text color */
+    --event-color: #ffdddd; /* Event title color */
+    --event-background: #333; /* Event background color */
 }
 
 /* Body Styles */
@@ -115,7 +125,7 @@ main {
 }
 
 .events .event {
-    background-color: #FFF;
+    background-color: var(--event-background);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -154,7 +164,7 @@ footer {
     header {
         display: flex; /* Use flexbox */
         align-items: center;
-        justify-content: space-between; /* Add space between logo and h1 */
+        justify-content: center; /* Add space between logo and h1 */
         background-color: var(--secondary-color);
         padding: 10px 20px; /* Adjust padding as needed */
     }
@@ -203,9 +213,10 @@ footer {
         display: block; /* Show only for mobile */
         cursor: pointer;
         padding: 10px;
-        position: absolute; /* Set position to absolute */
-        top: 2px; /* Adjust top position as needed */
-        right: 5px; /* Adjust right position as needed */
+        position: absolute;
+        top: 40px; /* Adjust as needed to position it below the dark mode toggle button */
+        right: 10px; /* Adjust as needed */
+        z-index: 1000; /* Ensure it's above other content, adjust as needed */
     }
 
     .hamburger:before {
@@ -299,4 +310,52 @@ footer {
         flex: 1;
         margin-left: 20px; /* Adjust margin to leave space for the menu */
     }
+}
+
+/* Dark mode toggle styles */
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other content, adjust as needed */
+}
+
+.dark-mode-toggle button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dark-mode-toggle button:focus {
+    outline: none;
+}
+
+.dark-mode-toggle .sun-icon {
+    display: inline-block;
+}
+
+.dark-mode-toggle .moon-icon {
+    display: none;
+}
+
+.dark-mode {
+    --sun-color: #FFD700;
+    --moon-color: #F0F8FF;
+}
+
+.dark-mode-toggle .moon-icon {
+    display: inline-block;
+}
+
+.dark-mode-toggle .sun-icon {
+    display: none;
+}
+
+.dark-mode .moon-icon {
+    display: none;
+}
+
+.dark-mode .sun-icon {
+    display: inline-block;
 }
