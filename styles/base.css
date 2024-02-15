@@ -62,10 +62,6 @@ header {
   margin-bottom: 20px; /* Add some space between the temple image and the sections below */
 }
 
-.picture {
-  position: relative;
-}
-
 .temple-label {
   position: absolute;
   top: 20px; /* Adjust as needed */
@@ -75,6 +71,27 @@ header {
   padding: 10px;
   font-size: 18px;
   pointer-events: none; /* Ensure the label doesn't interfere with clicks */
+}
+
+/* CSS for card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 50%; /* Cards take 50% of the width each */
+  padding: 20px;
+  margin-right: 20px; /* Add space between cards */
+  margin-bottom: 20px;
+  border: 3px solid var(--primary-color);
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.card:last-child {
+  margin-right: 0; /* Remove margin from the last card */
 }
 
 /* Google Map */

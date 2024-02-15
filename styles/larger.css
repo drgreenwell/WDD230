@@ -3,16 +3,16 @@
 /* Larger Views Styles */
 @media screen and (min-width: 768px) {
   body {
-      font-size: 18px; /* Adjust the font size for larger views */
+    font-size: 18px; /* Adjust the font size for larger views */
   }
 
   h2 {
-      font-size: 1.5em; /* Adjust the font size for h2 in larger views */
+    font-size: 1.5em; /* Adjust the font size for h2 in larger views */
   }
 
   /* Hide #menu button for larger views */
   #menu {
-      display: none;
+    display: none;
   }
 
   .navigation {
@@ -22,38 +22,32 @@
   }
 
   nav ul {
-      display: flex; /* Move the display property here for consistency */
-      justify-content: center; /* Center the items horizontally */
+    display: flex; /* Move the display property here for consistency */
+    justify-content: center; /* Center the items horizontally */
   }
 
   nav a {
-      margin-right: 20px; /* Adjust the margin for navigation links in larger views */
+    margin-right: 20px; /* Adjust the margin for navigation links in larger views */
   }
 
   main {
-      grid-template-columns: 1fr 1fr; /* Two columns for larger views */
+    grid-template-columns: 1fr 1fr; /* Two columns for larger views */
   }
   
   iframe.map {
     height: 450px; /* Adjust the height for larger views */
   }
 
-  .card {
-      padding: 30px; /* Adjust padding for cards in larger views */
-  }
-}
-
   /* CSS for temple image and label in larger views */
   .temple-image {
-    margin-bottom: 30px; /* Increase margin-bottom for larger views if needed */
+    margin-bottom: 30px;
   }
-
+    
   .temple-label {
-    font-size: 24px; /* Increase font size for larger views if needed */
+    font-size: 24px;
   }
-
-  /* Adjustments for the sections in larger views */
+    
   .card {
-    padding: 30px; /* Increase padding for cards in larger views if needed */
-    margin-bottom: 30px; /* Increase margin-bottom for larger views if needed */
+    flex-basis: calc(50% - 20px); /* Adjust card width for larger screens */
   }
+}
