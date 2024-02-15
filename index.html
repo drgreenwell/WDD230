@@ -10,11 +10,13 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg">
     <meta property="og:url" content="https://drgreenwell.github.io/wdd230/">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon.ico">
+    
 </head>
 
 <body>
@@ -40,51 +42,49 @@
 
     <main>
         <div class="content-wrapper">
-            <!-- Temple image section -->
-            <section class="temple-image">
+            <!-- Card for Temple image -->
+            <section class="card temple-image">
                 <!-- Hero image of the temple -->
                 <picture>
                     <source srcset="images/temple-mobile.webp" media="(max-width: 600px)">
                     <source srcset="images/temple-large.webp" media="(min-width: 601px) and (max-width: 960px)">
                     <img src="images/temple-large.webp" alt="Calgary Alberta Temple">
                 </picture>
-        
+    
                 <!-- Overlay div for labeling the temple -->
                 <div class="temple-label">Calgary Alberta Temple</div>
             </section>
-        
-            <!-- Learning Activities and Information section -->
-            <section class="card-container">
-                <section class="card">
-                    <h3>Learning Activities</h3>
-                    <ul>
-                        <!-- learning activities for the course -->
-                        <li><a href="lesson02/design.html">Week 2 - Web Design Principles</a></li>
-                        <li><a href="lesson02/media-query.html">Week 2 - CSS Media Queries</a></li>
-                        <li><a href="lesson02/design-principles.html">Assignment 2 - Design Principles Document</a></li>
-                        <li><a href="lesson03/images/Combinators.jpg">Week 3 - CSS Combinators</a></li>
-                        <li><a href="https://codepen.io/DGreenwell/pen/yLwzrrR">Week 3 - CSS Pseudo-Elements</a></li>
-                        <li><a href="https://codepen.io/DGreenwell/pen/bGZoyEM">Week 3 - Responsive "Hamburger" Menu</a></li>
-                        <li><a href="lesson03/chamber-site-plan.html">Assignment 3 - Chamber Site Plan</a></li>
-                        <li><a href="https://codepen.io/DGreenwell/pen/GRexxvM">Week 4 - CSS Pseudo-Classes</a></li>
-                        <li><a href="lesson05/bom.html">Week 5 - Book of Mormon Favorite Chapters Application</a></li>
-                        <li><a href="lesson06/images/pexels-pixabay-158316.webp">Week 6 - WebP Image File Format</a></li>
-                        <li><a href="lesson06/responsive-images.html">Week 6 - Responsive Images: srcset</a></li>
-                        <!-- Add more as needed -->
-                    </ul>
-                </section>
-        
-                <section class="card">
-                    <h3>Information</h3>
-                    <!-- Placeholder information about weather, visits, etc. -->
-                    <p>Weather: [Placeholder]</p>
-                    <p>Visits: [Placeholder]</p>
-                </section>
+    
+            <!-- Card for Learning Activities -->
+            <section class="card">
+                <h3>Learning Activities</h3>
+                <ul>
+                    <!-- learning activities for the course -->
+                    <li><a href="lesson02/design.html">Week 2 - Web Design Principles</a></li>
+                    <li><a href="lesson02/media-query.html">Week 2 - CSS Media Queries</a></li>
+                    <li><a href="lesson02/design-principles.html">Assignment 2 - Design Principles Document</a></li>
+                    <li><a href="lesson03/images/Combinators.jpg">Week 3 - CSS Combinators</a></li>
+                    <li><a href="https://codepen.io/DGreenwell/pen/yLwzrrR">Week 3 - CSS Pseudo-Elements</a></li>
+                    <li><a href="https://codepen.io/DGreenwell/pen/bGZoyEM">Week 3 - Responsive "Hamburger" Menu</a></li>
+                    <li><a href="lesson03/chamber-site-plan.html">Assignment 3 - Chamber Site Plan</a></li>
+                    <li><a href="https://codepen.io/DGreenwell/pen/GRexxvM">Week 4 - CSS Pseudo-Classes</a></li>
+                    <li><a href="lesson05/bom.html">Week 5 - Book of Mormon Favorite Chapters Application</a></li>
+                    <li><a href="lesson06/images/pexels-pixabay-158316.webp">Week 6 - WebP Image File Format</a></li>
+                    <li><a href="lesson06/responsive-images.html">Week 6 - Responsive Images: srcset</a></li>
+                    <!-- Add more as needed -->
+                </ul>
+            </section>
+    
+            <!-- Card for Information -->
+            <section class="card">
+                <h3>Information</h3>
+                <!-- Placeholder information about weather, visits, etc. -->
+                <p>Weather: [Placeholder]</p>
+                <p>Visits: [Placeholder]</p>
             </section>
         </div>
-    </main>
+    </main>  
     
-
     <!-- Google Map Embed -->
     <iframe class="map" title="Map of Maxwell, TX" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13837.66952141737!2d-97.80363543409321!3d29.88107195530943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865cab284aaf8a25%3A0xea5bc53de1a30444!2sMaxwell%2C%20TX%2078656!5e0!3m2!1sen!2sus!4v1706223609377!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
