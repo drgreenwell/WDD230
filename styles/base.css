@@ -49,6 +49,7 @@ header {
 
 .profile {
   width: 10%;
+  height: auto;
 }
 
 /* Positioning for the temple image and label */
