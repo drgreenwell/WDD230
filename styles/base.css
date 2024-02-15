@@ -57,8 +57,9 @@ header {
 }
 
 /* Positioning for the temple image and label */
-main {
+.temple-image {
   position: relative;
+  margin-bottom: 20px; /* Add some space between the temple image and the sections below */
 }
 
 .picture {
