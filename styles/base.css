@@ -56,6 +56,26 @@ img {
   width: 10%;
 }
 
+/* Positioning for the temple image and label */
+main {
+  position: relative;
+}
+
+.picture {
+  position: relative;
+}
+
+.temple-label {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  font-size: 18px;
+  pointer-events: none; /* Ensure the label doesn't interfere with clicks */
+}
+
 /* Google Map */
 iframe.map {
   width: 100%; /* Make the map take full width by default */
@@ -166,3 +186,4 @@ footer {
   text-align: center;
   color: #fff;
 }
+

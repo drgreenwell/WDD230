@@ -20,7 +20,7 @@
 <body>
     <section class="card">
         <header>
-            <img src="images/picture.jpg" alt="Daniel Greenwell' Profile Picture">
+            <img src="images/picture.webp" alt="Daniel Greenwell' Profile Picture">
             <h1>Daniel Greenwell</h1>
         </header>
 
@@ -39,6 +39,17 @@
     <h2>WDD 230: Web Frontend Development</h2>
 
     <main>
+        <!-- Hero image of the temple -->
+        <picture>
+            <source srcset="images/temple-mobile.webp" media="(max-width: 600px)">
+            <source srcset="images/temple-large.webp" media="(min-width: 601px) and (max-width: 960px)">
+            <img src="images/temple-large.webp" alt="Calgary Alberta Temple">
+        </picture>
+
+        <!-- Overlay div for labeling the temple -->
+        <div class="temple-label">Calgary Alberta Temple</div>
+
+
         <section class="card">
             <h3>Learning Activities</h3>
             <ul>
