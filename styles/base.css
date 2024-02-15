@@ -103,33 +103,33 @@ iframe.map {
 
 /* Marker pseudo-element */
 ::marker {
-	color: var(--secondary-color);
-	font-size: 2rem;
-	font-variant: small-caps;
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-variant: small-caps;
 }
 
 /* Mobile view */
 #menu {
-	font-size: 1.5rem;
-	border: 0;
-	background: none;
-	color: #000;
- 	position: absolute;
-	top: 0;
-	right: 0;
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 #menu::before {
-	content: "☰";
+  content: "☰";
 }
 
 #menu.open::before {
-	content: "❌";
+  content: "❌";
 }
 
 /* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
-	display: block;
+  display: block;
 }
 
 .active::before {
@@ -204,4 +204,3 @@ footer {
   text-align: center;
   color: #fff;
 }
-

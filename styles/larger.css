@@ -2,52 +2,52 @@
 
 /* Larger Views Styles */
 @media screen and (min-width: 768px) {
-  body {
-    font-size: 18px; /* Adjust the font size for larger views */
-  }
-
-  h2 {
-    font-size: 1.5em; /* Adjust the font size for h2 in larger views */
-  }
-
-  /* Hide #menu button for larger views */
-  #menu {
-    display: none;
-  }
-
-  .navigation {
-    display: flex; /* Add display: flex to make the nav a flex container */
-    flex-direction: column; /* Change the flex-direction to column */
-    justify-content: flex-start; /* Align items to the start (left side) */
-  }
-
-  nav ul {
-    display: flex; /* Move the display property here for consistency */
-    justify-content: center; /* Center the items horizontally */
-  }
-
-  nav a {
-    margin-right: 20px; /* Adjust the margin for navigation links in larger views */
-  }
-
-  main {
-    grid-template-columns: 1fr 1fr; /* Two columns for larger views */
-  }
+    body {
+      font-size: 18px; /* Adjust the font size for larger views */
+    }
   
-  iframe.map {
-    height: 450px; /* Adjust the height for larger views */
-  }
-
-  /* CSS for temple image and label in larger views */
-  .temple-image {
-    margin-bottom: 30px;
-  }
+    h2 {
+      font-size: 1.5em; /* Adjust the font size for h2 in larger views */
+    }
+  
+    /* Hide #menu button for larger views */
+    #menu {
+      display: none;
+    }
+  
+    .navigation {
+      display: flex; /* Add display: flex to make the nav a flex container */
+      flex-direction: column; /* Change the flex-direction to column */
+      justify-content: flex-start; /* Align items to the start (left side) */
+    }
+  
+    nav ul {
+      display: flex; /* Move the display property here for consistency */
+      justify-content: center; /* Center the items horizontally */
+    }
+  
+    nav a {
+      margin-right: 20px; /* Adjust the margin for navigation links in larger views */
+    }
+  
+    main {
+      grid-template-columns: 1fr 1fr; /* Two columns for larger views */
+    }
     
-  .temple-label {
-    font-size: 24px;
+    iframe.map {
+      height: 450px; /* Adjust the height for larger views */
+    }
+  
+    /* CSS for temple image and label in larger views */
+    .temple-image {
+      margin-bottom: 30px;
+    }
+      
+    .temple-label {
+      font-size: 24px;
+    }
+      
+    .card {
+      flex-basis: calc(50% - 20px); /* Adjust card width for larger screens */
+    }
   }
-    
-  .card {
-    flex-basis: calc(50% - 20px); /* Adjust card width for larger screens */
-  }
-}
