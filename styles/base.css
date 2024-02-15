@@ -76,7 +76,7 @@ header {
 }
 
 .card {
-  flex: 1 1 50%;
+  flex: 1;
   padding: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
