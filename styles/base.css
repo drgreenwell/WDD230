@@ -104,6 +104,21 @@ iframe.map {
   font-variant: small-caps;
 }
 
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 calc(50% - 20px); /* Adjust width as needed */
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
 /* Mobile view */
 #menu {
   font-size: 1.5rem;
