@@ -42,3 +42,18 @@
       padding: 30px; /* Adjust padding for cards in larger views */
   }
 }
+
+  /* CSS for temple image and label in larger views */
+  .temple-image {
+    margin-bottom: 30px; /* Increase margin-bottom for larger views if needed */
+  }
+
+  .temple-label {
+    font-size: 24px; /* Increase font size for larger views if needed */
+  }
+
+  /* Adjustments for the sections in larger views */
+  .card {
+    padding: 30px; /* Increase padding for cards in larger views if needed */
+    margin-bottom: 30px; /* Increase margin-bottom for larger views if needed */
+  }
