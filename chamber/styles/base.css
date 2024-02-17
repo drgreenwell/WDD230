@@ -138,6 +138,19 @@ main {
     color: var(--event-color);
 }
 
+/* Weather Styles */
+.weather {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.weather p {
+    margin: 10px 0;
+}
+
 /* Footer Styles */
 footer {
     display: flex;
@@ -209,6 +222,10 @@ footer {
         margin-top: 20px; /* Adjust as needed */
         text-align: center; /* Center text content */
     }
+
+   .weather {
+        text-align: center; /* Center text content */
+    }  
   
     /* CSS for hamburger menu */
     .menu-toggle {
