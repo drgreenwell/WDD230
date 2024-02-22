@@ -47,6 +47,18 @@ header {
   gap: 20px;
 }
 
+body {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
 .profile {
   width: 10%;
   height: auto;
@@ -124,6 +136,36 @@ iframe.map {
   color: var(--text-color);
 }
 
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  border: 3px solid var(--primary-color);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Course Links List */
+.main-links-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-links-list li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+
 /* Mobile view */
 #menu {
   font-size: 1.5rem;
@@ -172,24 +214,33 @@ iframe.map {
   margin-right: 15px;
 }
 
-body {
-  display: flex;
-  max-width: 800px;
-  margin: 0 auto;
-  flex-direction: column;
-}
-
-h2 {
-  display: flex;
-  justify-content: center;
-}
-
 @media screen and (max-width: 600px) {
   h2 {
     font-size: 1.5rem;
   }
-  
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 100%; /* Ensure header spans full width */
+    text-align: center; /* Center content within header */
+  }
+
+  main {
+    width: 100%; /* Ensure main content spans full width */
+  }
+
+  footer {
+    width: 100%; /* Ensure footer spans full width */
+    text-align: center; /* Center content within footer */
+  }
+
   .content-wrapper {
+    width: 100%; /* Ensure content wrapper spans full width */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center items horizontally */
@@ -197,7 +248,6 @@ h2 {
 
   .card {
     width: calc(100% - 40px); /* Full width for cards with margins */
-    margin-right: 0;
     margin-bottom: 20px; /* Add margin to separate cards */
   }
 
@@ -205,34 +255,11 @@ h2 {
     width: calc(100% - 40px); /* Full width for temple image with margins */
     margin-bottom: 20px; /* Add margin to separate temple image */
   }
-}
 
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.card {
-  border: 3px solid var(--primary-color);
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-/* Course Links List */
-.main-links-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.main-links-list li {
-  margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-  margin-top: 20px;
-  text-align: center;
-  color: #fff;
+  .temple-label {
+    width: 100%; /* Make the label span full width */
+    text-align: center; /* Center the text */
+    top: initial; /* Remove top positioning */
+    left: initial; /* Remove left positioning */
+  }
 }
