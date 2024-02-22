@@ -87,7 +87,7 @@ iframe.map {
 }
 
 /* Marker pseudo-element */
-::marker {
+.card ::marker {
   color: var(--secondary-color);
   font-size: 2rem;
   font-variant: small-caps;
