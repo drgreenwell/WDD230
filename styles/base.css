@@ -196,8 +196,12 @@ h2 {
   }
 
   .card {
-    margin-right: 0;
     width: 100%; /* Full width for cards */
+  }
+
+  .temple-image {
+    margin-bottom: 20px;
+    text-align: center; /* Center the temple image */
   }
 }
 
