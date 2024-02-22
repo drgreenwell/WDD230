@@ -119,6 +119,11 @@ iframe.map {
   margin-right: 0;
 }
 
+#visitCount {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
 /* Mobile view */
 #menu {
   font-size: 1.5rem;
