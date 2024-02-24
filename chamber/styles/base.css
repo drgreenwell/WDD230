@@ -96,7 +96,7 @@ nav ul li a {
 }
 
 /* Photo Gallery Styles */
-.gallery {
+.photo-gallery {
     grid-column: 2 / 3; /* Set the photo gallery to start at column 2 and end at column 3 */
     padding: 20px;
 }
