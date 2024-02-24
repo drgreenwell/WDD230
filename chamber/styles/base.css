@@ -311,7 +311,7 @@ footer {
     
     .main-container {
         display: grid;
-        grid-template-columns: auto 1fr; /* Sidebar takes auto width, photo gallery takes remaining space */
+        grid-template-columns: auto 1fr; 
         gap: 20px; /* Add some gap between the items */
         align-items: start; /* Align items to the top */
         width: 100%;
@@ -322,7 +322,7 @@ footer {
     .content-container {
         display: grid;
         grid-template-columns: auto 1fr; /* Sidebar takes auto width, photo gallery takes remaining space */
-        gap: 20px; /* Add some gap between the items */
+        gap: 10px; /* Add some gap between the items */
         align-items: start; /* Align items to the top */
     }
 
