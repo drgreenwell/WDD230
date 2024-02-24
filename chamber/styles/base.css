@@ -99,7 +99,7 @@ nav ul li a {
 .photo-gallery {
     grid-column: 2 / 3; /* Set the photo gallery to start at column 2 and end at column 3 */
     padding: 20px;
-    margin-left: 20px; /* Add margin to separate it from the sidebar */
+    margin-left: 2000px; /* Add margin to separate it from the sidebar */
 }
 
 /* Main Container Styles */
