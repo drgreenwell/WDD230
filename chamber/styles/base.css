@@ -380,12 +380,31 @@ footer {
     outline: none;
 }
 
-.dark-mode-toggle .sun-icon,
+.dark-mode-toggle .sun-icon {
+    display: inline-block;
+}
+
+.dark-mode-toggle .moon-icon {
+    display: none;
+}
+
+.dark-mode {
+    --sun-color: #FFD700;
+    --moon-color: #F0F8FF;
+}
+
+.dark-mode-toggle .moon-icon {
+    display: inline-block;
+}
+
+.dark-mode-toggle .sun-icon {
+    display: none;
+}
+
 .dark-mode .moon-icon {
     display: none;
 }
 
-.dark-mode .sun-icon,
-.dark-mode-toggle .moon-icon {
+.dark-mode .sun-icon {
     display: inline-block;
 }
