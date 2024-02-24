@@ -304,12 +304,11 @@ footer {
     }
 
     .menu-section {
-        width: 200px; /* Adjust width as needed */
+        display: block; /* Ensure the menu-section takes full width and doesn't affect grid layout */
+        width: 100%;
+        max-width: 200px; /* Optionally set a max width */
         background-color: var(--secondary-color);
         padding: 20px;
-        display: flex;
-        flex-direction: column; /* Change flex direction to column */
-        align-items: center; /* Center menu items horizontally */
     }
 
     .menu {
