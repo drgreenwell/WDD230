@@ -319,25 +319,18 @@ footer {
     
     .main-container {
         display: grid;
-        grid-template-columns: auto auto; /* Set two columns, one for the sidebar and one for the photo gallery */
+        grid-template-columns: 1fr 1fr; /* Set two columns, one for the sidebar and one for the photo gallery */
         gap: 20px; /* Add some gap between the items */
     }
 
     .sidebar {
         grid-column: 1; /* Set the sidebar to start at column 1 */
-        grid-row: 1; /* Set the sidebar to start at row 1 */
     }
 
     .photo-gallery {
         grid-column: 2; /* Set the photo gallery to start at column 2 */
-        grid-row: 1; /* Set the photo gallery to start at row 1 */
     }
-
-    /* Ensure the sidebar takes the full height of the grid container */
-    .main-container {
-        align-items: start;
-    }
-
+    
     .menu-section {
         display: block; /* Ensure the menu-section takes full width and doesn't affect grid layout */
         width: 100%;
