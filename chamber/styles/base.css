@@ -319,8 +319,12 @@ footer {
     
     .main-container {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Set two columns, one for the sidebar and one for the photo gallery */
+        grid-template-columns: auto 1fr; /* Sidebar takes auto width, photo gallery takes remaining space */
         gap: 20px; /* Add some gap between the items */
+        align-items: start; /* Align items to the top */
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .sidebar {
@@ -330,7 +334,7 @@ footer {
     .photo-gallery {
         grid-column: 2; /* Set the photo gallery to start at column 2 */
     }
-    
+
     .menu-section {
         display: block; /* Ensure the menu-section takes full width and doesn't affect grid layout */
         width: 100%;
