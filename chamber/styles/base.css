@@ -88,22 +88,23 @@ nav ul li a {
     color: var(--primary-color);
 }
 
-/* Main Styles */
-.main-container {
-    display: grid;
-    grid-template-columns: 200px auto; /* Sidebar takes 200px width, gallery takes the remaining space */
-    gap: 20px; /* Adjust the gap between sidebar and gallery */
-}
-
 /* Sidebar Styles */
 .sidebar {
-    background-color: var(--secondary-color);
+    grid-column: 1 / 2; /* Set the sidebar to start at column 1 and end at column 2 */
+    background-color: var(--background-color);
     padding: 20px;
 }
 
 /* Photo Gallery Styles */
 .gallery {
+    grid-column: 2 / 3; /* Set the photo gallery to start at column 2 and end at column 3 */
     padding: 20px;
+}
+
+/* Main Container Styles */
+.main-container {
+    display: grid;
+    grid-template-columns: auto auto; /* Define two columns, one for the sidebar and one for the photo gallery */
 }
 
 /* Event Styles */
