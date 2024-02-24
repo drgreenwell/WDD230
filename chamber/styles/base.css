@@ -308,18 +308,10 @@ footer {
     h1 {
         margin: 25px; /* Remove any default margins */
     }
-
-    /*.main-container {
-        display: flex;
-        align-items: flex-start;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-    }*/
     
     .main-container {
         display: grid;
-        grid-template-columns: auto auto 1fr; /* Sidebar takes auto width, photo gallery takes remaining space */
+        grid-template-columns: auto 1fr; /* Sidebar takes auto width, photo gallery takes remaining space */
         gap: 20px; /* Add some gap between the items */
         align-items: start; /* Align items to the top */
         width: 100%;
@@ -327,13 +319,21 @@ footer {
         margin: 0 auto;
     }
 
+    .content-container {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Sidebar takes auto width, photo gallery takes remaining space */
+        gap: 20px; /* Add some gap between the items */
+        align-items: start; /* Align items to the top */
+    }
+
     .sidebar {
-        grid-column: 2; /* Set the sidebar to start at column 1 */
+        grid-column: 1; /* Set the sidebar to start at column 1 */
     }
 
     .photo-gallery {
-        grid-column: 3; /* Set the photo gallery to start at column 2 */
+        grid-column: 2; /* Set the photo gallery to start at column 2 */
     }
+}
 
     .menu-section {
         display: block; /* Ensure the menu-section takes full width and doesn't affect grid layout */
