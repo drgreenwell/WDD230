@@ -350,22 +350,12 @@ footer {
     outline: none;
 }
 
-/* Initially hide sun icon */
-.dark-mode-toggle .sun-icon {
-    display: none;
-}
-
-/* Show sun icon when in dark mode */
-.dark-mode .sun-icon {
-    display: inline-block;
-}
-
-/* Initially show moon icon */
-.dark-mode-toggle .moon-icon {
-    display: inline-block;
-}
-
-/* Hide moon icon when in dark mode */
+.dark-mode-toggle .sun-icon,
 .dark-mode .moon-icon {
     display: none;
+}
+
+.dark-mode .sun-icon,
+.dark-mode-toggle .moon-icon {
+    display: inline-block;
 }

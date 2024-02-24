@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Maxwell Chamber of Commerce - Connecting Businesses Together In Maxwell, TX">
+    <meta name="author" content="Daniel Greenwell">
+    <title>Maxwell Chamber of Commerce</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Maxwell Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg">
+    <meta property="og:url" content="https://www.example.com">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/maxwell_tx_logo.webp" alt="Maxwell Chamber of Commerce Logo">
+        </div>
+        <h1>Maxwell Chamber of Commerce</h1>
+         <!-- Hamburger menu icon -->
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+        <div class="dark-mode-toggle">
+            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                <span class="sun-icon">🔆</span>
+                <span class="moon-icon">🌑</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="menu-section">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+  
+        <div class="content-container">
+            <aside class="sidebar">
+                <!-- Sidebar content including demographics and statistical data -->
+            </aside>
+
+            <main>
+                <!-- Main area for local photos of interest -->
+                <section class="photo-gallery">
+                    <!-- Image gallery content will be dynamically loaded -->
+                </section>
+            </main>
+        </div>
+    </div>
+      
+    <footer>
+        <div class="contact-info">
+            <p>Contact Us: Maxwell Chamber of Commerce, Maxwell, TX</p>
+            <p>Phone: 123-456-7890 | Email: info@maxwellchamber.com</p>
+        </div>
+        <div class="development-info">
+            <p>Developed by: Daniel Greenwell</p>
+            <p>Project for WDD 230</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="scripts/hamButton.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <script>
+        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+    </script>
+
+    <script>
+        // JavaScript for lazy loading images
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = document.querySelectorAll('.photo-gallery img');
+
+            if ('IntersectionObserver' in window) {
+                var lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            var lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.add('lazy-loaded');
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Fallback for browsers that don't support Intersection Observer
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.add('lazy-loaded');
+                });
+            }
+        });
+
+        // JavaScript for localStorage functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            var lastVisit = localStorage.getItem('lastVisit');
+            var currentDate = Date.now();
+            var messageElement = document.createElement('div');
+            messageElement.classList.add('sidebar-message');
+            var sidebar = document.querySelector('.sidebar');
+
+            if (!lastVisit) {
+                messageElement.textContent = "Welcome! Let us know if you have any questions.";
+            } else {
+                var daysSinceLastVisit = Math.floor((currentDate - lastVisit) / (1000 * 60 * 60 * 24));
+                if (daysSinceLastVisit === 0) {
+                    messageElement.textContent = "Back so soon! Awesome!";
+                } else {
+                    messageElement.textContent = "You last visited " + daysSinceLastVisit + (daysSinceLastVisit === 1 ? " day" : " days") + " ago.";
+                }
+            }
+
+            sidebar.prepend(messageElement);
+            localStorage.setItem('lastVisit', currentDate);
+        });
+    </script>
+</body>
+</html>
