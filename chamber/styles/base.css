@@ -88,12 +88,6 @@ nav ul li a {
     color: var(--primary-color);
 }
 
-/* Main Container Styles */
-.main-container {
-    display: grid;
-    grid-template-columns: auto auto auto; /* Define three columns */
-}
-
 /* Sidebar Styles */
 .sidebar {
     grid-column: 1 / 2; /* Set the sidebar to start at column 1 and end at column 2 */
@@ -101,15 +95,17 @@ nav ul li a {
     padding: 20px;
 }
 
-/* Content Container Styles */
-.content-container {
-    grid-column: 2 / 3; /* Set the content container to start at column 2 and end at column 3 */
-}
-
 /* Photo Gallery Styles */
 .photo-gallery {
-    grid-column: 3 / 4; /* Set the photo gallery to start at column 3 and end at column 4 */
+    grid-column: 2 / 3; /* Set the photo gallery to start at column 2 and end at column 3 */
     padding: 20px;
+    margin-left: 20px; /* Add margin to separate it from the sidebar */
+}
+
+/* Main Container Styles */
+.main-container {
+    display: grid;
+    grid-template-columns: auto auto; /* Define two columns, one for the sidebar and one for the photo gallery */
 }
 
 /* Event Styles */
