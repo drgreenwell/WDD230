@@ -333,7 +333,6 @@ footer {
     .photo-gallery {
         grid-column: 2; /* Set the photo gallery to start at column 2 */
     }
-}
 
     .menu-section {
         display: block; /* Ensure the menu-section takes full width and doesn't affect grid layout */
