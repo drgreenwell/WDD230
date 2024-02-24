@@ -99,7 +99,7 @@ nav ul li a {
 .photo-gallery {
     grid-column: 2 / 3; /* Set the photo gallery to start at column 2 and end at column 3 */
     padding: 20px;
-    margin-left: 2000px; /* Add margin to separate it from the sidebar */
+    margin-left: 20px; /* Add margin to separate it from the sidebar */
 }
 
 /* Main Container Styles */
@@ -282,12 +282,25 @@ footer {
         margin: 25px; /* Remove any default margins */
     }
 
-    .main-container {
+    /*.main-container {
         display: flex;
         align-items: flex-start;
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+    }*/
+    
+    .main-container {
+        display: grid;
+        grid-template-columns: auto auto; /* Set two columns, one for the sidebar and one for the photo gallery */
+    }
+
+    .sidebar {
+        grid-column: 1; /* Set the sidebar to start at column 1 */
+    }
+
+    .photo-gallery {
+        grid-column: 2; /* Set the photo gallery to start at column 2 */
     }
 
     .menu-section {
