@@ -89,36 +89,21 @@ nav ul li a {
 }
 
 /* Main Styles */
-main {
-    padding: 20px;
+.main-container {
+    display: grid;
+    grid-template-columns: 200px auto; /* Sidebar takes 200px width, gallery takes the remaining space */
+    gap: 20px; /* Adjust the gap between sidebar and gallery */
 }
 
-/* Hero Styles */
-.hero img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Call to Action Styles */
-.cta {
+/* Sidebar Styles */
+.sidebar {
     background-color: var(--secondary-color);
-    color: var(--text-color);
     padding: 20px;
-    border-radius: 5px;
 }
 
-.cta h2 {
-    margin-top: 0;
-}
-
-.cta .btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--cta-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+/* Photo Gallery Styles */
+.gallery {
+    padding: 20px;
 }
 
 /* Event Styles */
@@ -171,19 +156,6 @@ footer {
 
 .development-info span {
     font-weight: bold;
-}
-
-/* Sidebar Styles */
-.sidebar {
-    grid-column: 1 / 2; /* Set the sidebar to start at column 1 and end at column 2 */
-    background-color: #f2f2f2; /* Example background color */
-    padding: 20px;
-}
-
-/* Photo Gallery Styles */
-.gallery {
-    grid-column: 2 / 3; /* Set the photo gallery to start at column 2 and end at column 3 */
-    padding: 20px;
 }
 
 /* Media queries for adjusting layout */
