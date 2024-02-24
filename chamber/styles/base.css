@@ -91,7 +91,7 @@ nav ul li a {
 /* Sidebar Styles */
 .sidebar {
     grid-column: 1 / 2; /* Set the sidebar to start at column 1 and end at column 2 */
-    background-color: var(--background-color);
+    background-color: var(--event-background);
     padding: 20px;
 }
 
