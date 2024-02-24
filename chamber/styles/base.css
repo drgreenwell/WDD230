@@ -173,6 +173,19 @@ footer {
     font-weight: bold;
 }
 
+/* Sidebar Styles */
+.sidebar {
+    grid-column: 1 / 2; /* Set the sidebar to start at column 1 and end at column 2 */
+    background-color: #f2f2f2; /* Example background color */
+    padding: 20px;
+}
+
+/* Photo Gallery Styles */
+.gallery {
+    grid-column: 2 / 3; /* Set the photo gallery to start at column 2 and end at column 3 */
+    padding: 20px;
+}
+
 /* Media queries for adjusting layout */
 @media only screen and (max-width: 768px) {
     /* For mobile devices */
