@@ -8,8 +8,10 @@ table {
 }
 
 caption {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    padding: 10px;
+    caption-side: bottom;
+    color: black;
+    font-size: .85rem;
 }
 
 thead {
