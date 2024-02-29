@@ -3,7 +3,7 @@ body {
 }
 
 table {
-    width: 100%;
+    width: 600px;
     border-collapse: collapse;
 }
 
@@ -20,6 +20,10 @@ thead {
 
 thead th {
     padding: 10px;
+    text-align: center;
+}
+
+thead td {
     text-align: center;
 }
 
