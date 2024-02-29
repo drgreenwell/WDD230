@@ -20,7 +20,7 @@ thead {
 
 thead th {
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 tbody tr:nth-child(odd) {
