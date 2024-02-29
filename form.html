@@ -10,47 +10,50 @@
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
-    <!-- Include course home page header and navigation -->
-    <header>
-        <img class="profile" src="images/picture.webp" alt="Daniel Greenwell's Profile Picture" width="300" height="400">
-        <h1>Daniel Greenwell</h1>
-    </header>
-    <button id="menu" title="menu"></button>
-    <nav class="navigation">
-        <ul>
-            <li><a href="index.html" title="Go To Home">Home</a></li>
-            <li><a href="lesson03/chamber-site-plan.html" title="Go To Site Plan">Site Plan</a></li>
-            <li><a href="chamber/index.html" title="Go To Chamber">Chamber</a></li>
-            <li><a href="https://www.byui.edu/" title="Go To BYU-Idaho" target="_blank">BYU-Idaho</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" title="Go To Scriptures" target="_blank">Scriptures</a></li>
-            <li><a href="form.html" title="Go To Form Page" class="active">Form</a></li>
-        </ul>
-    </nav>
-    
+    <div class="card">
+        <header>
+            <img class="profile" src="images/picture.webp" alt="Daniel Greenwell's Profile Picture" width="300" height="400">
+            <h1>Daniel Greenwell</h1>
+        </header>
+        <button id="menu" title="menu"></button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html" title="Go To Home">Home</a></li>
+                <li><a href="lesson03/chamber-site-plan.html" title="Go To Site Plan">Site Plan</a></li>
+                <li><a href="chamber/index.html" title="Go To Chamber">Chamber</a></li>
+                <li><a href="https://www.byui.edu/" title="Go To BYU-Idaho" target="_blank">BYU-Idaho</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures" title="Go To Scriptures" target="_blank">Scriptures</a></li>
+                <li><a href="form.html" title="Go To Form Page" class="active">Form</a></li>
+            </ul>
+        </nav>
+    </div>     
+
     <!-- Form section -->
-    <main>
-        <form action="record.html" method="get">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+    <div class="card">
+        <main>
+            <form action="record.html" method="get">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required minlength="8" pattern="[A-Za-z0-9]+" title="Password must be at least 8 characters long and can only contain alpha-numeric characters.">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8" pattern="[A-Za-z0-9]+" title="Password must be at least 8 characters long and can only contain alpha-numeric characters.">
 
-            <label for="confirm_password">Confirm Password:</label>
-            <input type="password" id="confirm_password" name="confirm_password" required>
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu" title="A valid byui.edu email address.">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu" title="A valid byui.edu email address.">
 
-            <label for="page_rating">Page Rating:</label>
-            <input type="range" id="page_rating" name="page_rating" min="1" max="10" step="1" onchange="document.getElementById('rating_value').innerText = this.value;">
-            <span id="rating_value">5</span>
+                <label for="page_rating">Page Rating:</label>
+                <input type="range" id="page_rating" name="page_rating" min="1" max="10" step="1" onchange="document.getElementById('rating_value').innerText = this.value;">
+                <span id="rating_value">5</span>
 
-            <button type="submit">Submit</button>
-        </form>
-    </main>
-
-    <!-- Include course home page footer -->
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </div>
+    
+    <!-- Footer -->
     <footer>
         <p>&copy; <span id="currentYear"></span> Daniel Greenwell Texas</p>
         <p id="lastModified"></p>
