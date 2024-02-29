@@ -74,3 +74,100 @@ form {
     }
   }
   
+  /* Mobile view */
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "❌";
+}
+
+.open a {
+  display: block;
+}
+
+.active::before {
+  content: "🧭";
+}
+
+.navigation {
+  display: none;
+}
+
+#menu.open + .navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu.open + nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu.open + nav li {
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 100%; /* Ensure header spans full width */
+    text-align: center; /* Center content within header */
+  }
+
+  main {
+    width: 100%; /* Ensure main content spans full width */
+  }
+
+  footer {
+    width: 100%; /* Ensure footer spans full width */
+    text-align: center; /* Center content within footer */
+  }
+
+  .content-wrapper {
+    width: 100%; /* Ensure content wrapper spans full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+  }
+
+  .card {
+    width: calc(100% - 40px); /* Full width for cards with margins */
+    margin-bottom: 20px; /* Add margin to separate cards */
+  }
+
+  .temple-image {
+    width: calc(100% - 40px); /* Full width for temple image with margins */
+    margin-bottom: 20px; /* Add margin to separate temple image */
+  }
+
+  .temple-label {
+    width: 100%; /* Make the label span full width */
+    text-align: center; /* Center the text */
+    top: initial; /* Remove top positioning */
+    left: initial; /* Remove left positioning */
+  }
+}
