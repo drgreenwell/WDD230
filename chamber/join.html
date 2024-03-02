@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to Maxwel's Chamber of Commerce - Connecting Businesses Together In Maxwell, TX">
     <meta name="author" content="Daniel Greenwell">
-    <title>Maxwell Chamber of Commerce</title>
+    <title>Join Maxwell Chamber of Commerce</title>
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
     <!-- Social Media Meta -->
@@ -50,48 +50,33 @@
         </nav>
   
         <main>
-            <section class="hero">
-                <img srcset="images/hero-image.webp"
-                     sizes="(max-width: 480px) 480px,
-                            (max-width: 768px) 768px,
-                            1200px"
-                     src="images/hero-image.webp" alt="Hero Image">
-                <h2>Welcome to Maxwell Chamber of Commerce</h2>
-            </section>
-
-            <section class="cta">
+            <section class="form">
                 <h2>Join the Chamber of Commerce</h2>
-                <p>Unlock the benefits of membership and connect with the local business community.</p>
-                <a href="join.html" class="btn">Join Now</a>
-            </section>
-
-            <section class="events">
-                <h2>Current Events</h2>
-                <div class="event">
-                    <h3>Event Title</h3>
-                    <p>Event Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Date: January 1, 2024</p>
-                </div>
-            </section>
-
-            <section class="weather">
-                <h2>Weather</h2>
-                <p>Temperature: <span id="temperature">65</span> °F</p>
-                <p>Wind Speed: <span id="windSpeed">5.2</span> mph</p>
-                <p>Wind Chill: <span id="windChill">Calculating...</span></p>
-            </section>           
-
-            <section class="spotlights">
-                <h2>Spotlight Businesses</h2>
-                <div class="spotlight">
-                    <!-- Spotlight business 1 -->
-                </div>
-                <div class="spotlight">
-                    <!-- Spotlight business 2 -->
-                </div>
-                <div class="spotlight">
-                    <!-- Spotlight business 3 -->
-                </div>
+                <form action="thankyou.html" method="get">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" required><br><br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" required><br><br>
+                    <label for="title">Title/Position:</label>
+                    <input type="text" id="title" name="title" required pattern="[A-Za-z\s\-]{7,}"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@example.com"><br><br>
+                    <label for="phone">Mobile Phone:</label>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+                    <label for="organization">Organization:</label>
+                    <input type="text" id="organization" name="organization" required><br><br>
+                    <label for="membership">Membership Level:</label>
+                    <select id="membership" name="membership">
+                        <option value="NP Membership">NP Membership (Free)</option>
+                        <option value="Bronze Membership">Bronze Membership</option>
+                        <option value="Silver Membership">Silver Membership</option>
+                        <option value="Gold Membership">Gold Membership</option>
+                    </select><br><br>
+                    <label for="description">Organization Description:</label><br>
+                    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+                    <input type="hidden" id="formDateTime" name="formDateTime">
+                    <button type="submit" class="btn">Submit</button>
+                </form>
             </section>
         </main>
     </div>
@@ -116,6 +101,7 @@
     <!-- JavaScript for last modified date -->
     <script>
         document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+        document.getElementById('formDateTime').value = Date.now();
     </script>
 </body>
 </html>
