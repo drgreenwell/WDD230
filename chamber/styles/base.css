@@ -165,6 +165,15 @@ nav ul li a {
     margin: 10px 0;
 }
 
+/* Form Styles */
+.form {
+    background-color: var(--event-background);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 /* Footer Styles */
 footer {
     display: flex;
