@@ -1,0 +1,92 @@
+@media only screen and (min-width: 769px) {
+    /* For larger screens */
+    header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    height: 100px; /* Optionally set a fixed height for the header */
+    }
+
+    .logo {
+        display: flex; /* Use flexbox for logo and h1 */
+        align-items: center; /* Align items vertically */
+    }
+
+    .logo img {
+        width: 100px; /* Set the width to your desired size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    h1 {
+        margin: 25px; /* Remove any default margins */
+    }
+    
+    .main-container {
+        display: grid;
+        grid-template-columns: auto 1fr; 
+        gap: 20px; /* Add some gap between the items */
+        align-items: start; /* Align items to the top */
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Sidebar takes auto width, photo gallery takes remaining space */
+        gap: 10px; /* Add some gap between the items */
+        align-items: start; /* Align items to the top */
+    }
+
+    .sidebar {
+        grid-column: 1; /* Set the sidebar to start at column 1 */
+    }
+
+    .photo-gallery {
+        grid-column: 2; /* Set the photo gallery to start at column 2 */
+    }
+
+    .menu-section {
+        display: block; /* Ensure the menu-section takes full width and doesn't affect grid layout */
+        width: 100%;
+        max-width: 200px; /* Optionally set a max width */
+        background-color: var(--secondary-color);
+        padding: 20px;
+    }
+
+    .menu {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center; /* Center menu items horizontally */
+    }
+
+    .menu li {
+        margin-bottom: 10px; /* Adjust spacing as needed */
+    }
+
+    main {
+        flex: 1;
+        margin-left: 20px; /* Adjust margin to leave space for the menu */
+    }
+    
+    /* Larger Form Styles */
+    .form-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
+        gap: 20px; /* Add some gap between the sections */
+        align-items: start; /* Align items to the top */
+    }
+  
+    .form {
+        grid-column: 1; /* Set the form to the first column */
+    }
+
+    .membership-benefits {
+        grid-column: 2; /* Set the membership benefits section to the second column */
+    }
+}

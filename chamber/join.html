@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Maxwel's Chamber of Commerce - Connecting Businesses Together In Maxwell, TX">
+    <meta name="description" content="Welcome to Maxwel's Chamber of Commerce - Join Us!">
     <meta name="author" content="Daniel Greenwell">
-    <title>Join Maxwell Chamber of Commerce</title>
+    <title>Maxwell Chamber of Commerce - Join Us!</title>
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
     <!-- Social Media Meta -->
@@ -50,34 +50,80 @@
         </nav>
   
         <main>
-            <section class="form">
-                <h2>Join the Chamber of Commerce</h2>
-                <form action="thankyou.html" method="get">
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" required><br><br>
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" required><br><br>
-                    <label for="title">Title/Position:</label>
-                    <input type="text" id="title" name="title" required pattern="[A-Za-z\s\-]{7,}"><br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="example@example.com"><br><br>
-                    <label for="phone">Mobile Phone:</label>
-                    <input type="tel" id="phone" name="phone" required><br><br>
-                    <label for="organization">Organization:</label>
-                    <input type="text" id="organization" name="organization" required><br><br>
-                    <label for="membership">Membership Level:</label>
-                    <select id="membership" name="membership">
-                        <option value="NP Membership">NP Membership (Free)</option>
-                        <option value="Bronze Membership">Bronze Membership</option>
-                        <option value="Silver Membership">Silver Membership</option>
-                        <option value="Gold Membership">Gold Membership</option>
-                    </select><br><br>
-                    <label for="description">Organization Description:</label><br>
-                    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
-                    <input type="hidden" id="formDateTime" name="formDateTime">
-                    <button type="submit" class="btn">Submit</button>
-                </form>
-            </section>
+            <div class="form-container">
+                <section class="form">
+                    <h2>Join the Chamber of Commerce</h2>
+                    <form action="thankyou.html" method="get">
+                        <label>First Name:<input type="text" id="fname" name="fname" required></label>
+                        <label>Last Name:<input type="text" id="lname" name="lname" required></label>
+                        <label>Title/Position:<input type="text" id="title" name="title" required pattern="[A-Za-z\s\-]{7,}"></label>
+                        <label>Email:<input type="email" id="email" name="email" required placeholder="example@example.com"></label>
+                        <label>Mobile Phone:<input type="tel" id="phone" name="phone" required placeholder="(800) 555-1234"></label>
+                        <label>Organization:<input type="text" id="organization" name="organization" required></label>
+                        <label>Membership Level:
+                            <select id="membership" name="membership">
+                                <option value="">Please Select</option>
+                                <option value="NP Membership">Non Profit</option>
+                                <option value="Bronze Membership">Bronze</option>
+                                <option value="Silver Membership">Silver</option>
+                                <option value="Gold Membership">Gold</option>
+                            </select>
+                        </label>
+                        <label for="description">Organization Description:</label>
+                        <textarea id="description" name="description" rows="4" cols="50"></textarea>
+                        <input type="hidden" id="formDateTime" name="formDateTime">
+                        <button type="submit" class="btn">Join</button>
+                    </form>
+                </section>
+                <section class="membership-benefits">
+                    <h2>Membership Benefits</h2>
+                    <ul>
+                        <li>
+                            <h3>Non-Profit Membership</h3>
+                            <p>Cost: Free</p>
+                            <p>Benefits:</p>
+                            <ul>
+                                <li>Access to networking events</li>
+                                <li>Listing on chamber website</li>
+                                <!-- Add more benefits as needed -->
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Bronze Membership</h3>
+                            <p>Cost: $100/year</p>
+                            <p>Benefits:</p>
+                            <ul>
+                                <li>All benefits of Non-Profit Membership</li>
+                                <li>Featured listing on chamber website</li>
+                                <li>Discounted rates for chamber events</li>
+                                <!-- Add more benefits as needed -->
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Silver Membership</h3>
+                            <p>Cost: $250/year</p>
+                            <p>Benefits:</p>
+                            <ul>
+                                <li>All benefits of Bronze Membership</li>
+                                <li>Priority access to chamber events</li>
+                                <li>Exclusive training sessions</li>
+                                <!-- Add more benefits as needed -->
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Gold Membership</h3>
+                            <p>Cost: $500/year</p>
+                            <p>Benefits:</p>
+                            <ul>
+                                <li>All benefits of Silver Membership</li>
+                                <li>Spotlight position on chamber website</li>
+                                <li>Customized advertising opportunities</li>
+                                <!-- Add more benefits as needed -->
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </main>
     </div>
       

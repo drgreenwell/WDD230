@@ -8,7 +8,8 @@
     --text-color: #333; /* Text color */
     --event-color: #b60100; /* Event title color */
     --event-background: #FFF; /* Event background color */
-    --cta-color: #f9f9f9;
+    --cta-color: #f9f9f9; /* CTA color */
+    --memtext-color: #fff; /* Member Benefits text color */
 }
 
 .dark-mode {
@@ -18,7 +19,8 @@
     --text-color: #fff; /* Text color */
     --event-color: #ffdddd; /* Event title color */
     --event-background: #333; /* Event background color */
-    --cta-color: #7C0C0C;
+    --cta-color: #7C0C0C; /* CTA color */
+    --memtext-color: #111; /* Member Benefits text color */
 }
 
 /* Body Styles */
@@ -168,10 +170,90 @@ nav ul li a {
 /* Form Styles */
 .form {
     background-color: var(--event-background);
-    padding: 20px;
+    padding: 50px;
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form label {
+    color: var(--primary-color);
+    font-size: .9rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"],
+.form input[type="date"],
+.form input[type="number"],
+.form textarea,
+.form select {
+    background-color: var(--background-color);
+    display: block;
+    border: solid 1px var(--secondary-color);
+    border-radius: 6px;
+    padding: .75rem;
+    color: var(--text-color);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+}
+
+.form input:required {
+    border-bottom: solid 8px darkred;
+}
+
+.form input:required:valid {
+    border-bottom: solid 8px green;
+}
+
+.form .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--cta-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Membership Benefits Styles */
+.membership-benefits {
+    background-color: var(--primary-color);
+    color: var(--memtext-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.membership-benefits h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.membership-benefits ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.membership-benefits li {
+    margin-bottom: 20px;
+}
+
+.membership-benefits h3 {
+    color: var(--secondary-color);
+}
+
+.membership-benefits p {
+    margin-bottom: 5px;
+}
+
+.membership-benefits ul ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 /* Footer Styles */
@@ -248,7 +330,18 @@ footer {
 
    .weather {
         text-align: center; /* Center text content */
-    }  
+    }
+  
+    /* Mobile Form Styles */
+  
+    .membership-benefits {
+    text-align: justify;
+    }
+  
+    .membership-benefits ul ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    }
   
     /* CSS for hamburger menu */
     .menu-toggle {
@@ -290,83 +383,6 @@ footer {
     /* Show menu when toggled */
     .menu.show {
         display: block;
-    }
-}
-
-@media only screen and (min-width: 769px) {
-    /* For larger screens */
-    header {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center items horizontally */
-    background-color: var(--secondary-color);
-    padding: 10px 20px;
-    height: 100px; /* Optionally set a fixed height for the header */
-    }
-
-    .logo {
-        display: flex; /* Use flexbox for logo and h1 */
-        align-items: center; /* Align items vertically */
-    }
-
-    .logo img {
-        width: 100px; /* Set the width to your desired size */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    h1 {
-        margin: 25px; /* Remove any default margins */
-    }
-    
-    .main-container {
-        display: grid;
-        grid-template-columns: auto 1fr; 
-        gap: 20px; /* Add some gap between the items */
-        align-items: start; /* Align items to the top */
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .content-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr; /* Sidebar takes auto width, photo gallery takes remaining space */
-        gap: 10px; /* Add some gap between the items */
-        align-items: start; /* Align items to the top */
-    }
-
-    .sidebar {
-        grid-column: 1; /* Set the sidebar to start at column 1 */
-    }
-
-    .photo-gallery {
-        grid-column: 2; /* Set the photo gallery to start at column 2 */
-    }
-
-    .menu-section {
-        display: block; /* Ensure the menu-section takes full width and doesn't affect grid layout */
-        width: 100%;
-        max-width: 200px; /* Optionally set a max width */
-        background-color: var(--secondary-color);
-        padding: 20px;
-    }
-
-    .menu {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        display: flex;
-        flex-direction: column; /* Change flex direction to column */
-        align-items: center; /* Center menu items horizontally */
-    }
-
-    .menu li {
-        margin-bottom: 10px; /* Adjust spacing as needed */
-    }
-
-    main {
-        flex: 1;
-        margin-left: 20px; /* Adjust margin to leave space for the menu */
     }
 }
 
