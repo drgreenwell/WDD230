@@ -271,6 +271,25 @@ nav ul li a {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.member-list {
+    background-color: var(--event-background);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.member-list h3 {
+    font-size: 1.2rem; /* Adjust as needed */
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-list p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
 /* Footer Styles */
 footer {
     display: flex;
