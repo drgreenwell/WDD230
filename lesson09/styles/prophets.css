@@ -27,6 +27,7 @@ body {
 .prophet-card h2 {
   font-size: 20px;
   margin-bottom: 10px;
+
 }
 
 .prophet-card p {
@@ -37,11 +38,11 @@ body {
 .prophet-card img {
   width: 100%;
   height: 400px;
-		object-fit: cover; /* Ensures the image covers the entire container */
+	object-fit: cover; /* Ensures the image covers the entire container */
   border-radius: 8px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .prophet-card {
     width: 100%; /* Make cards occupy full width on smaller screens */
     margin-right: 0; /* Remove right margin */
