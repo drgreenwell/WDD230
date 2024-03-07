@@ -7,11 +7,25 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch("data/members.json")
         .then(response => response.json())
         .then(data => {
-            // Function to generate HTML for a single member
-            function generateMemberHTML(member) {
+            // Function to generate HTML for a single member in grid view
+            function generateMemberHTMLGrid(member) {
                 return `
                     <div class="member">
                         <img src="images/${member.image}" alt="${member.name}">
+                        <h3>${member.name}</h3>
+                        <p>${member.address}</p>
+                        <p>${member.phone}</p>
+                        <p><a href="${member.website}" target="_blank">Website</a></p>
+                        <p>Membership Level: ${member.membership_level}</p>
+                        <p>${member.additional_info}</p>
+                    </div>
+                `;
+            }
+
+            // Function to generate HTML for a single member in list view
+            function generateMemberHTMLList(member) {
+                return `
+                    <div class="member">
                         <h3>${member.name}</h3>
                         <p>${member.address}</p>
                         <p>${member.phone}</p>
@@ -26,22 +40,20 @@ document.addEventListener("DOMContentLoaded", function() {
             function renderGrid() {
                 membersContainer.innerHTML = "";
                 data.forEach(member => {
-                    const memberHTML = generateMemberHTML(member);
+                    const memberHTML = generateMemberHTMLGrid(member);
                     membersContainer.insertAdjacentHTML("beforeend", memberHTML);
                 });
-                membersContainer.classList.remove("members-list");
-                membersContainer.classList.add("members-grid");
-            }           
+                membersContainer.classList.remove("list-view");
+            }
 
             // Function to render members as list
             function renderList() {
                 membersContainer.innerHTML = "";
                 data.forEach(member => {
-                    const memberHTML = generateMemberHTML(member);
+                    const memberHTML = generateMemberHTMLList(member);
                     membersContainer.insertAdjacentHTML("beforeend", `<div class="member-list">${memberHTML}</div>`);
                 });
-                membersContainer.classList.remove("members-grid");
-                membersContainer.classList.add("members-list");
+                membersContainer.classList.add("list-view");
             }
 
             // Initial rendering as grid
