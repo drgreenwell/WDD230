@@ -1,8 +1,13 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #c8e3e8;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  text-align: center;
+		color: purple;
 }
 
 .container {
@@ -13,21 +18,23 @@ body {
 
 .prophet-card {
   background-color: #fff;
-  border-radius: 8px;
+		border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
   display: inline-block;
   width: calc(25% - 20px); /* Adjust width to fit four cards in a row */
-  margin-right: 20px; /* Adjust margin between cards */
+  margin-right: 10px; /* Adjust margin between cards */
+	 margin-left: 10px;
   vertical-align: top; /* Align cards at the top */
   box-sizing: border-box;
+	 text-align: center; /* Center text within the card */
 }
 
 .prophet-card h2 {
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 10px;
-
+		color: purple;
 }
 
 .prophet-card p {
@@ -38,14 +45,15 @@ body {
 .prophet-card img {
   width: 100%;
   height: 400px;
-	object-fit: cover; /* Ensures the image covers the entire container */
+		object-fit: cover; /* Ensures the image covers the entire container */
   border-radius: 8px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .prophet-card {
     width: 100%; /* Make cards occupy full width on smaller screens */
     margin-right: 0; /* Remove right margin */
+    margin-left: 0; /* Remove left margin */
     margin-bottom: 20px; /* Add bottom margin for spacing */
   }
 }
