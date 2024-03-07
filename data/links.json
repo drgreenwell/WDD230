@@ -1,114 +1,114 @@
 {
     "lessons": [
       {
-        "lesson": "02",
+        "lesson": "Week 02",
         "links": [
           {
             "url": "lesson02/design.html",
-            "title": "Week 2 - Web Design Principles"
+            "title": "Web Design Principles"
           },
           {
             "url": "lesson02/media-query.html",
-            "title": "Week 2 - CSS Media Queries"
+            "title": "CSS Media Queries"
           },
           {
             "url": "lesson02/design-principles.html",
-            "title": "Assignment 2 - Design Principles Document"
+            "title": "Assignment - Design Principles Document"
           }
         ]
       },
       {
-        "lesson": "03",
+        "lesson": "Week 03",
         "links": [
           {
             "url": "lesson03/images/Combinators.jpg",
-            "title": "Week 3 - CSS Combinators"
+            "title": "CSS Combinators"
           },
           {
             "url": "https://codepen.io/DGreenwell/pen/yLwzrrR",
-            "title": "Week 3 - CSS Pseudo-Elements"
+            "title": "CSS Pseudo-Elements"
           },
           {
             "url": "https://codepen.io/DGreenwell/pen/bGZoyEM",
-            "title": "Week 3 - Responsive 'Hamburger' Menu"
+            "title": "Responsive 'Hamburger' Menu"
           },
           {
             "url": "lesson03/chamber-site-plan.html",
-            "title": "Assignment 3 - Chamber Site Plan"
+            "title": "Assignment - Chamber Site Plan"
           }
         ]
       },
       {
-        "lesson": "04",
+        "lesson": "Week 04",
         "links": [
           {
             "url": "https://codepen.io/DGreenwell/pen/GRexxvM",
-            "title": "Week 4 - CSS Pseudo-Classes"
+            "title": "CSS Pseudo-Classes"
           }
         ]
       },
       {
-        "lesson": "05",
+        "lesson": "Week 05",
         "links": [
           {
             "url": "lesson05/bom.html",
-            "title": "Week 5 - Book of Mormon Favorite Chapters Application"
+            "title": "Book of Mormon Favorite Chapters Application"
           }
         ]
       },
       {
-        "lesson": "06",
+        "lesson": "Week 06",
         "links": [
           {
             "url": "lesson06/images/pexels-pixabay-158316.webp",
-            "title": "Week 6 - WebP Image File Format"
+            "title": "WebP Image File Format"
           },
           {
             "url": "lesson06/responsive-images.html",
-            "title": "Week 6 - Responsive Images: srcset"
+            "title": "Responsive Images: srcset"
           }
         ]
       },
       {
-        "lesson": "07",
+        "lesson": "Week 07",
         "links": [
           {
             "url": "lesson07/lazyload.html",
-            "title": "Week 7 - Lazy Loading"
+            "title": "Lazy Loading"
           },
           {
             "url": "lesson07/bom.html",
-            "title": "Week 7 - Web Storage API - localStorage"
+            "title": "Web Storage API - localStorage"
           },
           {
             "url": "chamber/discover.html",
-            "title": "Assignment 7 - Chamber Discover Page"
+            "title": "Assignment - Chamber Discover Page"
           }
         ]
       },
       {
-        "lesson": "08",
+        "lesson": "Week 08",
         "links": [
           {
             "url": "lesson08/tablebuild.html",
-            "title": "Week 8 - HTML Tables for Data Presentation"
+            "title": "HTML Tables for Data Presentation"
           },
           {
             "url": "lesson08/form-start/Form-start/index.html",
-            "title": "Week 8 - HTML Forms"
+            "title": "HTML Forms"
           }
         ]
       },
       {
-        "lesson": "09",
+        "lesson": "Week 09",
         "links": [
           {
             "url": "lesson09/new-ward-members.json",
-            "title": "Week 9 - JSON"
+            "title": "JSON"
           },
           {
             "url": "lesson09/prophets.html",
-            "title": "Week 9 - The Fetch API"
+            "title": "The Fetch API"
           }
         ]
       }

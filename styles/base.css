@@ -177,7 +177,7 @@ footer {
   margin-right: 15px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 425px) {
   h2 {
     font-size: 1.5rem;
   }
