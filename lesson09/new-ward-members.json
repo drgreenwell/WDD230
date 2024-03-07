@@ -1,0 +1,35 @@
+{
+    "wardInformation": {
+    "familyName": "Johnson",
+    "moveInDate": "2023-06-10",
+    "numberOfPeople": 5,
+    "visitedByBishopric": false,
+    "familyMembers": [
+        {
+        "name": "Robert Johnson",
+        "gender": "Male",
+        "birthdate": "1978-09-15"
+        },
+        {
+        "name": "Sarah Johnson",
+        "gender": "Female",
+        "birthdate": "1982-04-30"
+        },
+        {
+        "name": "Emily Johnson",
+        "gender": "Female",
+        "birthdate": "2005-12-20"
+        },
+        {
+        "name": "Daniel Johnson",
+        "gender": "Male",
+        "birthdate": "2010-07-08"
+        },
+        {
+        "name": "Olivia Johnson",
+        "gender": "Female",
+        "birthdate": "2017-02-14"
+        }
+    ]
+    }
+}
