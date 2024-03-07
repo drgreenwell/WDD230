@@ -88,6 +88,7 @@ iframe.map {
   width: 100%;
   height: 300px;
   margin-top: 20px;
+  max-width: 775px;
 }
 
 /* Marker pseudo-element */
@@ -112,28 +113,19 @@ iframe.map {
   padding: 20px;
 }
 
-.card:last-child {
-  margin-right: 0;
-}
-
 /* Secondary-wrapper */
 .secondary-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
 
-.secondary-wrapper .card {
+.learning-activities {
   flex: 1 1 calc(50% - 20px); /* Adjust width as needed */
   margin-right: 20px;
-  margin-bottom: 20px;
-  border: 3px solid var(--primary-color);
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
 }
 
-.secondary-wrapper .card:last-child {
-  margin-right: 0;
+.information {
+  flex: 1 1 calc(50% - 20px); /* Adjust width as needed */
 }
 
 /* Course Links List */
@@ -210,6 +202,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 425px;
   }
 
   header {

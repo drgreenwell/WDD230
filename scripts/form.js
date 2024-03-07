@@ -1,20 +1,21 @@
+/* form.js */
+
 const kp1 = document.querySelector("#password");
 const kp2 = document.querySelector("#confirm_password");
-const message = document.querySelector("#index.html");
+const message = document.querySelector("#error_message");
 
-kp2.addEventListener("focusout", checkSame);
+kp2.addEventListener("focusout", validatePasswords);
 
-// This should be refactored.
-function checkSame() {
-	if (kp1.value !== kp2.value) {
-		message.textContent = "❗Password DOES NOT MATCH!";
-		message.style.visibility = "show";
-		kp2.style.backgroundColor = "#fff0f3";
-		kp2.value = "";
-		kp2.focus();
-	} else {
-		message.style.display = "none";
-		kp2.style.backgroundColor = "#fff";
-		kp2.style.color = "#000";
-	}
+function validatePasswords() {
+    if (kp1.value !== kp2.value) {
+        message.textContent = "❗ Passwords DO NOT MATCH!";
+        message.style.visibility = "visible";
+        kp2.classList.add("password-mismatch");
+        kp2.value = "";
+        kp2.focus();
+    } else {
+        message.textContent = ""; // Clear the message
+        message.style.visibility = "hidden";
+        kp2.classList.remove("password-mismatch");
+    }
 }
