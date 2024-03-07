@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const membersContainer = document.querySelector(".main-container main"); // Selecting the main container
+    const membersContainer = document.querySelector(".members-container"); // Selecting the container for members
     const gridButton = document.getElementById("grid"); // Selecting the grid button
     const listButton = document.getElementById("list"); // Selecting the list button
     let isGridView = true; // Flag to track the current view mode
