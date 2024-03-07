@@ -68,6 +68,10 @@ h2 {
   margin-bottom: 20px;
 }
 
+.temple-image img{
+  width: 725px;
+}
+
 .temple-label {
   position: absolute;
   top: 20px;
@@ -237,6 +241,10 @@ footer {
   .temple-image {
     width: calc(100% - 40px); /* Full width for temple image with margins */
     margin-bottom: 20px; /* Add margin to separate temple image */
+  }
+
+  .temple-image img{
+    width: 100%;
   }
 
   .temple-label {
