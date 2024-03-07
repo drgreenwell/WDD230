@@ -263,11 +263,6 @@ nav ul li a {
     gap: 20px; /* Adjust the gap between grid items */
 }
 
-.member-list {
-    display: block;
-    width: auto;
-}
-
 .member {
     background-color: var(--event-background);
     padding: 50px;

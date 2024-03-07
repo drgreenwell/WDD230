@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Function to generate HTML for a single member in list view
             function generateMemberHTMLList(member) {
                 return `
-                    <div class="member">
+                    <div class="member-list">
                         <h3>${member.name}</h3>
                         <p>${member.address}</p>
                         <p>${member.phone}</p>
@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     const memberHTML = generateMemberHTMLGrid(member);
                     membersContainer.insertAdjacentHTML("beforeend", memberHTML);
                 });
-                membersContainer.classList.remove("list-view");
             }
 
             // Function to render members as list
@@ -51,9 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 membersContainer.innerHTML = "";
                 data.forEach(member => {
                     const memberHTML = generateMemberHTMLList(member);
-                    membersContainer.insertAdjacentHTML("beforeend", `<div class="member-list">${memberHTML}</div>`);
+                    membersContainer.insertAdjacentHTML("beforeend", memberHTML);
                 });
-                membersContainer.classList.add("list-view");
             }
 
             // Initial rendering as grid
