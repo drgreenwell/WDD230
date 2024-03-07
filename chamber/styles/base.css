@@ -272,19 +272,18 @@ nav ul li a {
 }
 
 .member-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0px;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Background color for even list items */
 .member-list:nth-child(even) {
     background-color: #f0f0f0; /* Change this to the desired background color */
 }
 
+/* Adjust heading and paragraph styles */
 .member-list h3 {
     font-size: 1.2rem; /* Adjust as needed */
     color: var(--primary-color);

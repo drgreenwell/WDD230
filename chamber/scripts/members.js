@@ -1,63 +1,45 @@
+// Fetch JSON data and generate list items
 document.addEventListener("DOMContentLoaded", function() {
-    const membersContainer = document.getElementById("members");
-    const gridButton = document.getElementById("grid-button");
-    const listButton = document.getElementById("list-button");
-    let isGridView = true; // Flag to track the current view mode
+    const gridButton = document.getElementById("grid");
+    const listButton = document.getElementById("list");
+    const display = document.querySelector("article");
 
     // Fetch member data from members.json
     fetch("data/members.json")
         .then(response => response.json())
         .then(data => {
-            // Function to generate HTML for a single member in grid view
-            function generateMemberHTMLGrid(member) {
+            // Function to generate HTML for a single member
+            function generateMemberHTML(member) {
                 return `
-                    <div class="member">
-                        <img src="images/${member.image}" alt="${member.name}">
+                    <section>
                         <h3>${member.name}</h3>
                         <p>${member.address}</p>
                         <p>${member.phone}</p>
                         <p><a href="${member.website}" target="_blank">Website</a></p>
                         <p>Membership Level: ${member.membership_level}</p>
                         <p>${member.additional_info}</p>
-                    </div>
-                `;
-            }
-
-            // Function to generate HTML for a single member in list view
-            function generateMemberHTMLList(member) {
-                return `
-                    <div class="member-list">
-                        <p>${member.name} ${member.address} ${member.phone} <a href="${member.website}" target="_blank">Website</a> ${member.membership_level} ${member.additional_info}</p>
-                    </div>
+                    </section>
                 `;
             }
 
             // Function to render members
-            function renderMembers() {
-                membersContainer.innerHTML = "";
+            function renderMembers(view) {
+                display.innerHTML = ""; // Clear previous content
                 data.forEach(member => {
-                    const memberHTML = isGridView ? generateMemberHTMLGrid(member) : generateMemberHTMLList(member);
-                    membersContainer.insertAdjacentHTML("beforeend", memberHTML);
+                    const memberHTML = generateMemberHTML(member);
+                    display.insertAdjacentHTML("beforeend", memberHTML);
                 });
+
+                // Add class to display based on view
+                display.classList.add(view);
             }
 
-            // Initial rendering
-            renderMembers();
+            // Initial rendering based on default view
+            renderMembers("grid");
 
             // Toggle between grid and list view
-            gridButton.addEventListener("click", function() {
-                if (!isGridView) {
-                    isGridView = true;
-                    renderMembers();
-                }
-            });
-
-            listButton.addEventListener("click", function() {
-                if (isGridView) {
-                    isGridView = false;
-                    renderMembers();
-                }
-            });
+            gridButton.addEventListener("click", () => renderMembers("grid"));
+            listButton.addEventListener("click", () => renderMembers("list"));
         })
         .catch(error => console.error("Error fetching member data:", error));
 });
