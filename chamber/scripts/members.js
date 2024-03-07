@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", function() {
             // Function to generate HTML for a single member in list view
             function generateMemberHTMLList(member) {
                 return `
-                    ${member.name} ${member.address} ${member.phone} Website ${member.membership_level} ${member.additional_info}
+                    <div class="member">
+                        <p>${member.name} ${member.address} ${member.phone} <a href="${member.website}" target="_blank">Website</a> ${member.membership_level} ${member.additional_info}</p>
+                    </div>
                 `;
             }
 
