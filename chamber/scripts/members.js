@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Function to render members
             function renderMembers() {
-                membersContainer.innerHTML = "";
+                membersContainer.innerHTML = ""; // Clear previous content
                 data.forEach((member, index) => {
                     const memberHTML = isGridView ? generateMemberHTMLGrid(member) : generateMemberHTMLList(member, index);
                     membersContainer.insertAdjacentHTML("beforeend", memberHTML);
