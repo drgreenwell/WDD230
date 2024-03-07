@@ -1,45 +1,78 @@
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
-const display = document.querySelector(".display"); // Change to select the article with class display
+document.addEventListener('DOMContentLoaded', function() {
+    const gridButton = document.getElementById('grid');
+    const listButton = document.getElementById('list');
+    const displaySection = document.querySelector('.display');
+    const dataUrl = 'members.json'; // Assuming members.json is the file containing your JSON data
+    
+    // Fetch data from JSON file
+    async function fetchMembers() {
+        try {
+            const response = await fetch(dataUrl);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error fetching members:', error);
+        }
+    }
 
-// Load JSON data
-fetch('members.json')
-    .then(response => response.json())
-    .then(data => {
-        // Call a function to generate HTML sections from the JSON data
-        renderSections(data);
-    })
-    .catch(error => {
-        console.error('Error loading JSON:', error);
+    // Generate member cards
+    function generateMemberCards(members) {
+        displaySection.innerHTML = ''; // Clear previous content
+        members.forEach(member => {
+            const memberCard = document.createElement('div');
+            memberCard.classList.add('member-card');
+
+            const memberImage = document.createElement('img');
+            memberImage.src = member.image;
+            memberImage.alt = member.name;
+
+            const memberDetails = document.createElement('div');
+            memberDetails.classList.add('member-details');
+
+            const memberName = document.createElement('h2');
+            memberName.textContent = member.name;
+
+            const memberAddress = document.createElement('p');
+            memberAddress.textContent = member.address;
+
+            const memberPhone = document.createElement('p');
+            memberPhone.textContent = 'Phone: ' + member.phone;
+
+            const memberWebsite = document.createElement('p');
+            const websiteLink = document.createElement('a');
+            websiteLink.href = member.website;
+            websiteLink.textContent = 'Website';
+            memberWebsite.appendChild(websiteLink);
+
+            memberDetails.appendChild(memberName);
+            memberDetails.appendChild(memberAddress);
+            memberDetails.appendChild(memberPhone);
+            memberDetails.appendChild(memberWebsite);
+
+            memberCard.appendChild(memberImage);
+            memberCard.appendChild(memberDetails);
+
+            displaySection.appendChild(memberCard);
+        });
+    }
+
+    // Toggle between grid and list view
+    gridButton.addEventListener('click', function() {
+        displaySection.classList.remove('list-view');
+        generateMemberCards(membersData);
     });
 
-// Function to generate HTML sections
-function renderSections(data) {
-    display.innerHTML = ''; // Clear previous content
-
-    data.forEach(member => {
-        const section = document.createElement('section');
-        section.innerHTML = `
-            <img src="${member.image}" alt="${member.name}" />
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Website</a>
-            <p>${member.additional_info}</p>
-        `;
-        display.appendChild(section);
+    listButton.addEventListener('click', function() {
+        displaySection.classList.add('list-view');
+        generateMemberList(membersData);
     });
-}
 
-// Event listeners
-gridbutton.addEventListener("click", () => {
-    display.classList.add("grid");
-    display.classList.remove("list");
+    // Fetch members data and initially generate cards
+    let membersData;
+    fetchMembers().then(data => {
+        membersData = data;
+        generateMemberCards(data);
+    }).catch(error => {
+        console.error('Error:', error);
+    });
 });
-
-listbutton.addEventListener("click", showList);
-
-function showList() {
-    display.classList.add("list");
-    display.classList.remove("grid");
-}
