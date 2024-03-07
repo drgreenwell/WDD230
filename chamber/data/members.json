@@ -1,0 +1,66 @@
+[
+    {
+      "name": "Maxwell Cafe",
+      "address": "123 Main Street, Maxwell, TX 12345",
+      "phone": "555-123-4567",
+      "website": "http://www.maxwellcafe.com",
+      "image": "maxwell_cafe.jpg",
+      "membership_level": "Gold",
+      "additional_info": "Serving delicious breakfast and lunch options."
+    },
+    {
+      "name": "Maxwell Hardware Store",
+      "address": "456 Elm Street, Maxwell, TX 12345",
+      "phone": "555-987-6543",
+      "website": "http://www.maxwellhardware.com",
+      "image": "maxwell_hardware.jpg",
+      "membership_level": "Silver",
+      "additional_info": "Providing a wide range of hardware supplies."
+    },
+    {
+      "name": "Maxwell Medical Clinic",
+      "address": "789 Oak Avenue, Maxwell, TX 12345",
+      "phone": "555-321-7890",
+      "website": "http://www.maxwellclinic.com",
+      "image": "maxwell_clinic.jpg",
+      "membership_level": "Platinum",
+      "additional_info": "Comprehensive medical services for the community."
+    },
+    {
+      "name": "Maxwell Bakery",
+      "address": "321 Maple Lane, Maxwell, TX 12345",
+      "phone": "555-456-7890",
+      "website": "http://www.maxwellbakery.com",
+      "image": "maxwell_bakery.jpg",
+      "membership_level": "Gold",
+      "additional_info": "Freshly baked goods for all occasions."
+    },
+    {
+      "name": "Maxwell Auto Repair",
+      "address": "987 Pine Street, Maxwell, TX 12345",
+      "phone": "555-654-3210",
+      "website": "http://www.maxwellautorepair.com",
+      "image": "maxwell_autorepair.jpg",
+      "membership_level": "Silver",
+      "additional_info": "Professional automotive repair services."
+    },
+    {
+      "name": "Maxwell Florist",
+      "address": "654 Cedar Drive, Maxwell, TX 12345",
+      "phone": "555-789-0123",
+      "website": "http://www.maxwellflorist.com",
+      "image": "maxwell_florist.jpg",
+      "membership_level": "Bronze",
+      "additional_info": "Beautiful floral arrangements for every occasion."
+    },
+    {
+      "name": "Maxwell Accounting Services",
+      "address": "234 Birch Street, Maxwell, TX 12345",
+      "phone": "555-890-1234",
+      "website": "http://www.maxwellaccounting.com",
+      "image": "maxwell_accounting.jpg",
+      "membership_level": "Bronze",
+      "additional_info": "Expert accounting and financial services."
+    }
+]
+  
