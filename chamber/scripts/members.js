@@ -1,29 +1,53 @@
-/* members.js */
+document.addEventListener("DOMContentLoaded", function() {
+    const membersContainer = document.getElementById("members-container");
+    const gridButton = document.getElementById("grid-button");
+    const listButton = document.getElementById("list-button");
 
-window.onload = function() {
-    fetch('data/members.json')
+    // Fetch member data from members.json
+    fetch("data/members.json")
         .then(response => response.json())
-        .then(data => displayMembers(data));
+        .then(data => {
+            // Function to generate HTML for a single member
+            function generateMemberHTML(member) {
+                return `
+                    <div class="member">
+                        <img src="images/${member.image}" alt="${member.name}">
+                        <h3>${member.name}</h3>
+                        <p>${member.address}</p>
+                        <p>${member.phone}</p>
+                        <p><a href="${member.website}" target="_blank">Website</a></p>
+                        <p>Membership Level: ${member.membership_level}</p>
+                        <p>${member.additional_info}</p>
+                    </div>
+                `;
+            }
 
-    function displayMembers(members) {
-        const membersSection = document.getElementById('members');
-        membersSection.innerHTML = '';
+            // Function to render members as grid
+            function renderGrid() {
+                membersContainer.innerHTML = "";
+                data.forEach(member => {
+                    const memberHTML = generateMemberHTML(member);
+                    membersContainer.insertAdjacentHTML("beforeend", memberHTML);
+                });
+                membersContainer.classList.remove("list-view");
+            }
 
-        members.forEach(member => {
-            const memberCard = document.createElement('div');
-            memberCard.classList.add('member-card');
+            // Function to render members as list
+            function renderList() {
+                membersContainer.innerHTML = "";
+                data.forEach(member => {
+                    const memberHTML = generateMemberHTML(member);
+                    membersContainer.insertAdjacentHTML("beforeend", `<div class="member-list">${memberHTML}</div>`);
+                });
+                membersContainer.classList.add("list-view");
+            }
 
-            /* Adjust the following as per the structure of your JSON data */
-            memberCard.innerHTML = `
-                <img src="images/${member.image}" alt="${member.name}">
-                <h3>${member.name}</h3>
-                <p>${member.address}</p>
-                <p>Phone: ${member.phone}</p>
-                <p>Website: <a href="${member.website}">${member.website}</a></p>
-                <p>Membership Level: ${member.membership_level}</p>
-                <!-- Add more information as needed -->
-            `;
-            membersSection.appendChild(memberCard);
-        });
-    }
-};
+            // Initial rendering as grid
+            renderGrid();
+
+            // Toggle between grid and list view
+            gridButton.addEventListener("click", renderGrid);
+            listButton.addEventListener("click", renderList);
+        })
+        .catch(error => console.error("Error fetching member data:", error));
+});
