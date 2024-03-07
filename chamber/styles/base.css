@@ -256,6 +256,21 @@ nav ul li a {
     padding-left: 20px;
 }
 
+/* Directory Styles */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust as needed */
+    gap: 20px; /* Adjust the gap between grid items */
+}
+
+.member {
+    background-color: var(--event-background);
+    padding: 50px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 /* Footer Styles */
 footer {
     display: flex;

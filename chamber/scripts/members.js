@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     membersContainer.insertAdjacentHTML("beforeend", memberHTML);
                 });
                 membersContainer.classList.remove("members-list");
-            }
+                membersContainer.classList.add("members-grid");
+            }           
 
             // Function to render members as list
             function renderList() {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     const memberHTML = generateMemberHTML(member);
                     membersContainer.insertAdjacentHTML("beforeend", `<div class="member-list">${memberHTML}</div>`);
                 });
+                membersContainer.classList.remove("members-grid");
                 membersContainer.classList.add("members-list");
             }
 
