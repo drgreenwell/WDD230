@@ -257,35 +257,38 @@ nav ul li a {
 }
 
 /* Directory Styles */
-.members-grid {
+.main-container main {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Three columns for grid view */
     gap: 20px;
 }
 
+/* Member styles */
 .member {
     background-color: var(--event-background);
-    padding: 50px;
-    margin-bottom: 20px;
+    padding: 20px; /* Reduced padding for grid view */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.member img {
+    max-width: 100%;
+    height: auto;
 }
 
 .member-list {
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Background color for even list items */
-.member-list:nth-child(even) {
-    background-color: #f0f0f0; /* Change this to the desired background color */
+/* Zebra striping for list items */
+.member-list.even {
+    background-color: #f0f0f0;
 }
 
-/* Adjust heading and paragraph styles */
 .member-list h3 {
-    font-size: 1.2rem; /* Adjust as needed */
+    font-size: 1.2rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }

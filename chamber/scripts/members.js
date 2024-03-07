@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const membersContainer = document.getElementById("members");
-    const gridButton = document.getElementById("grid-button");
-    const listButton = document.getElementById("list-button");
+    const membersContainer = document.querySelector(".main-container main"); // Selecting the main container
+    const gridButton = document.getElementById("grid"); // Selecting the grid button
+    const listButton = document.getElementById("list"); // Selecting the list button
     let isGridView = true; // Flag to track the current view mode
 
     // Fetch member data from members.json
@@ -24,10 +24,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             // Function to generate HTML for a single member in list view
-            function generateMemberHTMLList(member) {
+            function generateMemberHTMLList(member, index) {
                 return `
-                    <div class="member-list">
-                        <p>${member.name} ${member.address} ${member.phone} <a href="${member.website}" target="_blank">Website</a> ${member.membership_level} ${member.additional_info}</p>
+                    <div class="member-list ${index % 2 === 0 ? 'even' : 'odd'}">
+                        <h3>${member.name}</h3>
+                        <p>${member.address}</p>
+                        <p>${member.phone}</p>
+                        <p><a href="${member.website}" target="_blank">Website</a></p>
+                        <p>Membership Level: ${member.membership_level}</p>
+                        <p>${member.additional_info}</p>
                     </div>
                 `;
             }
@@ -35,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Function to render members
             function renderMembers() {
                 membersContainer.innerHTML = "";
-                data.forEach(member => {
-                    const memberHTML = isGridView ? generateMemberHTMLGrid(member) : generateMemberHTMLList(member);
+                data.forEach((member, index) => {
+                    const memberHTML = isGridView ? generateMemberHTMLGrid(member) : generateMemberHTMLList(member, index);
                     membersContainer.insertAdjacentHTML("beforeend", memberHTML);
                 });
             }
