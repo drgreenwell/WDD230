@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const membersContainer = document.getElementById("members");
     const gridButton = document.getElementById("grid-button");
     const listButton = document.getElementById("list-button");
+    let isGridView = true; // Flag to track the current view mode
 
     // Fetch member data from members.json
     fetch("data/members.json")
@@ -31,32 +32,32 @@ document.addEventListener("DOMContentLoaded", function() {
                 `;
             }
 
-            // Function to render members as grid
-            function renderGrid() {
-                membersContainer.classList.add("members-grid");
+            // Function to render members
+            function renderMembers() {
                 membersContainer.innerHTML = "";
                 data.forEach(member => {
-                    const memberHTML = generateMemberHTMLGrid(member);
+                    const memberHTML = isGridView ? generateMemberHTMLGrid(member) : generateMemberHTMLList(member);
                     membersContainer.insertAdjacentHTML("beforeend", memberHTML);
                 });
             }
 
-            // Function to render members as list
-            function renderList() {
-                membersContainer.classList.remove("members-grid");
-                membersContainer.innerHTML = "";
-                data.forEach(member => {
-                    const memberHTML = generateMemberHTMLList(member);
-                    membersContainer.insertAdjacentHTML("beforeend", memberHTML);
-                });
-            }
-
-            // Initial rendering as grid
-            renderGrid();
+            // Initial rendering
+            renderMembers();
 
             // Toggle between grid and list view
-            gridButton.addEventListener("click", renderGrid);
-            listButton.addEventListener("click", renderList);
+            gridButton.addEventListener("click", function() {
+                if (!isGridView) {
+                    isGridView = true;
+                    renderMembers();
+                }
+            });
+
+            listButton.addEventListener("click", function() {
+                if (isGridView) {
+                    isGridView = false;
+                    renderMembers();
+                }
+            });
         })
         .catch(error => console.error("Error fetching member data:", error));
 });
