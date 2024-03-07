@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const membersContainer = document.getElementById("members-container");
+    const membersContainer = document.getElementById("members");
     const gridButton = document.getElementById("grid-button");
     const listButton = document.getElementById("list-button");
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     const memberHTML = generateMemberHTML(member);
                     membersContainer.insertAdjacentHTML("beforeend", memberHTML);
                 });
-                membersContainer.classList.remove("list-view");
+                membersContainer.classList.remove("members-list");
             }
 
             // Function to render members as list
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     const memberHTML = generateMemberHTML(member);
                     membersContainer.insertAdjacentHTML("beforeend", `<div class="member-list">${memberHTML}</div>`);
                 });
-                membersContainer.classList.add("list-view");
+                membersContainer.classList.add("members-list");
             }
 
             // Initial rendering as grid
