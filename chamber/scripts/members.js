@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const gridButton = document.getElementById('grid');
     const listButton = document.getElementById('list');
     const displaySection = document.querySelector('.display');
-    const dataUrl = 'data/members.json'; // Assuming members.json is the file containing your JSON data
-
+    const dataUrl = 'members.json';
+    
     // Fetch data from JSON file
     async function fetchMembers() {
         try {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             memberCard.classList.add('member-card');
 
             const memberImage = document.createElement('img');
-            memberImage.src = member.image;
+            memberImage.src = 'images/' + member.image;
             memberImage.alt = member.name;
 
             const memberDetails = document.createElement('div');
@@ -59,12 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle between grid and list view
     gridButton.addEventListener('click', function() {
         displaySection.classList.remove('list-view');
-        displaySection.classList.add('grid-view'); // Add grid-view class
+        displaySection.classList.add('grid-view');
         generateMemberCards(membersData);
     });
 
     listButton.addEventListener('click', function() {
-        displaySection.classList.remove('grid-view'); // Remove grid-view class
+        displaySection.classList.remove('grid-view');
         displaySection.classList.add('list-view');
         generateMemberList(membersData);
     });
@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchMembers().then(data => {
         membersData = data;
         generateMemberCards(data);
-        displaySection.classList.add('grid-view'); // Add grid-view class initially
     }).catch(error => {
         console.error('Error:', error);
     });
