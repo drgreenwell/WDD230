@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     listButton.addEventListener('click', function() {
         displaySection.classList.add('list-view');
-        generateMemberList(membersData);
+        generateMemberCards(membersData);
     });
 
     // Fetch members data and initially generate cards
