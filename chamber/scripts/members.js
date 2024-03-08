@@ -60,10 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle between grid and list view
     gridButton.addEventListener('click', function() {
         displaySection.classList.remove('list-view');
+        displaySection.classList.add('grid-view'); // Add grid-view class
         generateMemberCards(membersData);
     });
 
     listButton.addEventListener('click', function() {
+        displaySection.classList.remove('grid-view'); // Remove grid-view class
         displaySection.classList.add('list-view');
         generateMemberCards(membersData);
     });

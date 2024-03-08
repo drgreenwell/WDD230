@@ -297,12 +297,23 @@ nav ul li a {
     color: #007bff;
 }
 
+/* Grid View Styles */
+.display.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
 /* List View Styles */
 .list-view .member-card {
     border: none;
     box-shadow: none;
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
+}
+
+.list-view img {
+    display: none;
 }
 
 .list-view .member-card:last-child {
