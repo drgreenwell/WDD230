@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const gridButton = document.getElementById('grid');
     const listButton = document.getElementById('list');
     const displaySection = document.querySelector('.display');
-    const dataUrl = 'members.json'; // Assuming members.json is the file containing your JSON data
+    const dataUrl = 'data/members.json'; // Assuming members.json is the file containing your JSON data
     
     // Fetch data from JSON file
     async function fetchMembers() {
