@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const gridButton = document.getElementById('grid');
     const listButton = document.getElementById('list');
     const displaySection = document.querySelector('.display');
-    const dataUrl = 'members.json';
+    const dataUrl = 'data/members.json';
     
     // Fetch data from JSON file
     async function fetchMembers() {
