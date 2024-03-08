@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Generate member cards
     function generateMemberCards(members) {
+        if (!members) return; // Check if members is defined
         displaySection.innerHTML = ''; // Clear previous content
         members.forEach(member => {
             const memberCard = document.createElement('div');
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let membersData;
     fetchMembers().then(data => {
         membersData = data;
-        generateMemberCards(data);
+        generateMemberCards(membersData);
     }).catch(error => {
         console.error('Error:', error);
     });
