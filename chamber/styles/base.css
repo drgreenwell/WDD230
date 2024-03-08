@@ -400,8 +400,6 @@ footer {
         text-align: center; /* Center text content */
     }
   
-    /* Mobile Form Styles */
-  
     .membership-benefits {
     text-align: justify;
     }
@@ -410,7 +408,7 @@ footer {
     list-style-type: disc;
     padding-left: 20px;
     }
-  
+
     /* CSS for hamburger menu */
     .menu-toggle {
         display: block; /* Show only for mobile */
