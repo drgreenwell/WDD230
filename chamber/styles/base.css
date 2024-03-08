@@ -328,18 +328,20 @@ nav ul li a {
 
 /* Footer Styles */
 footer {
-    display: flex;
-    justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     background-color: var(--secondary-color);
-    padding: 20px 0;
     color: var(--text-color);
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    padding: 20px 0;
 }
 
+/* Contact Information Styles */
 .contact-info p {
     margin-right: 20px;
 }
 
+/* Development Information Styles */
 .development-info p {
     margin-left: 20px;
 }
