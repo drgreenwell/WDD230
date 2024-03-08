@@ -77,4 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }).catch(error => {
         console.error('Error:', error);
     });
+
+    // Set the default view to grid
+    displaySection.classList.add('grid-view');
 });
