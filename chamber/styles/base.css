@@ -261,6 +261,8 @@ nav ul li a {
 .member-card {
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
     border: 1px solid var(--primary-color); 
     border-radius: 5px;
     margin-bottom: 20px;
@@ -270,9 +272,8 @@ nav ul li a {
 }
 
 .member-card img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
     margin-bottom: 10px;
 }
