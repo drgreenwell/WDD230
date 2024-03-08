@@ -261,11 +261,11 @@ nav ul li a {
 .member-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
+    border: 1px solid var(--primary-color); /* Updated to use primary color variable */
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #fff;
+    background-color: var(--background-color); /* Updated to use background color variable */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -283,18 +283,18 @@ nav ul li a {
 
 .member-card h2 {
     margin: 0;
-    color: #213c63;
+    color: var(--primary-color); /* Updated to use primary color variable */
     font-size: 18px;
     font-weight: bold;
 }
 
 .member-card p {
     margin: 5px 0;
-    color: #333;
+    color: var(--text-color); /* Updated to use text color variable */
 }
 
 .member-card a {
-    color: #007bff;
+    color: var(--cta-color); /* Updated to use CTA color variable */
 }
 
 /* Grid View Styles */
@@ -309,7 +309,7 @@ nav ul li a {
     border: none;
     box-shadow: none;
     padding: 10px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--primary-color); /* Updated to use primary color variable */
 }
 
 .list-view img {
