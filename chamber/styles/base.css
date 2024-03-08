@@ -294,7 +294,7 @@ nav ul li a {
 }
 
 .member-card a {
-    color: var(--cta-color); /* Updated to use CTA color variable */
+    color: var(--primary-color); /* Updated to use CTA color variable */
 }
 
 /* Grid View Styles */
@@ -306,18 +306,22 @@ nav ul li a {
 
 /* List View Styles */
 .list-view .member-card {
-    border: none;
-    box-shadow: none;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--primary-color); /* Updated to use primary color variable */
+    background-color: var(--event-background);
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
 }
 
 .list-view img {
     display: none;
 }
 
+.list-view .member-card:nth-child(even) {
+    background-color: var(--background-color);
+}
+
 .list-view .member-card:last-child {
-    border-bottom: none;
+    margin-bottom: 20px;
 }
 
 /* Footer Styles */
