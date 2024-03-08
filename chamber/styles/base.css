@@ -367,6 +367,18 @@ footer {
         padding: 10px 20px; /* Adjust padding as needed */
     }
 
+    main {
+        padding: 10px; /* Adjust padding as needed */
+    }
+    
+    footer {
+        padding: 20px 10px; /* Adjust padding as needed */
+    }
+    
+    .development-info p {
+        margin-left: 10px; /* Reduce margin for smaller screens */
+    }
+
     .logo {
         display: flex; /* Use flexbox for logo and h1 */
         align-items: center; /* Align items vertically */
