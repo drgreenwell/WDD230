@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const listButton = document.getElementById('list');
     const displaySection = document.querySelector('.display');
     const dataUrl = 'data/members.json'; // Assuming members.json is the file containing your JSON data
-    
+
     // Fetch data from JSON file
     async function fetchMembers() {
         try {
@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Generate member cards
     function generateMemberCards(members) {
-        if (!members) return; // Check if members is defined
         displaySection.innerHTML = ''; // Clear previous content
         members.forEach(member => {
             const memberCard = document.createElement('div');
@@ -67,14 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
     listButton.addEventListener('click', function() {
         displaySection.classList.remove('grid-view'); // Remove grid-view class
         displaySection.classList.add('list-view');
-        generateMemberCards(membersData);
+        generateMemberList(membersData);
     });
 
     // Fetch members data and initially generate cards
     let membersData;
     fetchMembers().then(data => {
         membersData = data;
-        generateMemberCards(membersData);
+        generateMemberCards(data);
+        displaySection.classList.add('grid-view'); // Add grid-view class initially
     }).catch(error => {
         console.error('Error:', error);
     });
