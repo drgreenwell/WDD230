@@ -87,6 +87,38 @@ header {
     text-decoration: none;
 }
 
+.cta .btn:hover {
+    background-color: var(--event-color); /* Darken color on hover */
+    text-decoration: none;
+}
+
+/* Banner Styles */
+.banner {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: none;
+    padding: 20px;
+    border: 2px solid var(--primary-color); /* Add border to the banner */
+    border-radius: 5px;
+}
+
+#close-banner {
+    background-color: var(--primary-color);
+    color: var(--cta-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none; /* Remove border */
+    cursor: pointer;
+}
+
+#close-banner:hover {
+    background-color: var(--event-color); /* Darken color on hover */
+    text-decoration: none;
+}
+
+/* Logo Styles */
 .logo {
     display: flex; /* Use flexbox for logo and h1 */
     align-items: center; /* Align items vertically */
@@ -115,32 +147,6 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: var(--primary-color);
-}
-
-/* CSS for the banner */
-.banner {
-    background-color: #f2f2f2;
-    color: #333;
-    padding: 20px;
-    text-align: center;
-    display: none;
-}
-
-#close-banner {
-    background-color: #ccc;
-    border: none;
-    color: #333;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.chamber-banner button:hover {
-    text-decoration: underline; /* Underline button text on hover */
 }
 
 /* Sidebar Styles */
