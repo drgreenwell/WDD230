@@ -1,52 +1,87 @@
-// Function to fetch weather data from OpenWeatherMap API
-async function fetchWeatherData() {
-    const apiKey = 'ccd5563da126656b282cadea81ef3910';
-    const city = 'Maxwell'; // Change to your desired city
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
-    
+// select HTML elements in the document
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('#caption-desc');
+
+// Define API URL
+const url = 'https://api.openweathermap.org/data/2.5/weather';
+
+// Define API key and coordinates
+const apiKey = 'ccd5563da126656b282cadea81ef3910';
+const latitude = '29.882802866112275';
+const longitude = '-97.79299267726698';
+const units = 'imperial';
+
+// Define API URL with parameters
+const apiUrl = `${url}?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
+
+// Function to fetch data from API
+async function apiFetch() {
     try {
         const response = await fetch(apiUrl);
-        const data = await response.json();
-        return data;
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data); // testing only
+            displayResults(data);
+        } else {
+            throw Error(await response.text());
+        }
     } catch (error) {
-        console.error('Error fetching weather data:', error);
+        console.log(error);
     }
 }
 
-// Function to display current weather
-async function displayCurrentWeather() {
-    const weatherData = await fetchWeatherData();
-    const temperatureElement = document.getElementById('temperature');
-    const descriptionElement = document.getElementById('description');
+// Function to display results in HTML
+function displayResults(data) {
+    currentTemp.innerHTML = `${data.main.temp.toFixed(0)}&deg;F`;
+    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    let desc = data.weather[0].description;
+    desc = desc.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    weatherIcon.setAttribute('src', iconsrc);
+    captionDesc.textContent = `${desc}`;
     
-    if (weatherData) {
-        temperatureElement.textContent = weatherData.main.temp + ' °F';
-        descriptionElement.textContent = weatherData.weather[0].description;
-    }
-}
-
-// Function to fetch and display three day forecast
-async function displayThreeDayForecast() {
-    const apiKey = 'ccd5563da126656b282cadea81ef3910';
-    const city = 'Maxwell'; // Change to your desired city
-    const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`;
+    // Fetch 3-day forecast
+    fetchForecast();
     
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        const forecastData = data.list.slice(0, 3); // Get first three forecast entries
-        
-        forecastData.forEach((forecast, index) => {
-            const forecastElement = document.getElementById(`forecast${index + 1}`);
-            forecastElement.textContent = `${forecast.main.temp} °F`;
+    // Display banner if it's Monday, Tuesday, or Wednesday
+    const today = new Date().getDay();
+    if (today >= 1 && today <= 3) {
+        const banner = document.getElementById('chamber-banner');
+        banner.style.display = 'block';
+        const closeButton = document.getElementById('close-banner');
+        closeButton.addEventListener('click', () => {
+            banner.style.display = 'none';
         });
-    } catch (error) {
-        console.error('Error fetching forecast data:', error);
     }
 }
 
-// Call functions to display weather and forecast when page loads
-window.addEventListener('load', () => {
-    displayCurrentWeather();
-    displayThreeDayForecast();
-});
+// Function to fetch 3-day forecast
+async function fetchForecast() {
+    const forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast';
+    const forecastApiUrl = `${forecastUrl}?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
+    try {
+        const response = await fetch(forecastApiUrl);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data); // for testing
+            displayForecast(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// Function to display 3-day forecast
+function displayForecast(data) {
+    const forecastData = data.list;
+    // Display forecast for the next three days
+    for (let i = 0; i < 3; i++) {
+        const forecastTemp = forecastData[i].main.temp.toFixed(0);
+        document.getElementById(`day${i+1}-temp`).textContent = `${forecastTemp}`;
+    }
+}
+
+// Invoke API fetch function
+apiFetch();
