@@ -78,10 +78,10 @@ function displayForecast(data) {
     const forecastData = data.list;
     // Display forecast for the next three days
     for (let i = 0; i < 3; i++) {
-        const forecastDate = new Date(forecastData[i].dt * 1000); // Convert timestamp to milliseconds
+        const forecastDate = new Date(forecastData[i * 8].dt * 1000); // Access data for every 24 hours (8 data points per day)
         const dayOfWeek = forecastDate.toLocaleDateString('en-US', { weekday: 'long' }); // Get day of the week
         const dateOfMonth = forecastDate.toLocaleDateString('en-US', { day: 'numeric' }); // Get date of the month
-        const forecastTemp = forecastData[i].main.temp.toFixed(0);
+        const forecastTemp = forecastData[i * 8].main.temp.toFixed(0); // Access temperature for the middle of the day
         document.getElementById(`day${i+1}-temp`).textContent = `${dayOfWeek} ${dateOfMonth}: ${forecastTemp} °F`;
     }
 }
