@@ -115,8 +115,5 @@ function updateWindChill() {
 // Invoke API fetch function
 apiFetch();
 
-// Call the function to update wind chill initially
-updateWindChill();
-
 // JavaScript for last modified date
 document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
