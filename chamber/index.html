@@ -13,7 +13,6 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg">
     <meta property="og:url" content="https://www.example.com">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
@@ -82,11 +81,11 @@
 
             <section class="weather">
                 <h2>Weather</h2>
-                <p>Current Temperature: <span id="current-temp">Loading...</span></p>
+                <p>Current Temperature: <span id="temperature">Loading...</span></p>
                 <p>Wind Speed: <span id="windSpeed">5.2</span> mph</p>
-                <p>Wind Chill: <span id="windChill">Calculating...</span></p>
+                <p>Wind Chill: <span id="windChill">Calculating...</span></p>                
                 <p>Weather Description: <span id="caption-desc">Loading...</span></p>
-                <img id="weather-icon" alt="Weather Icon">
+                <img id="weather-icon" src="" alt="Weather Icon">
                 <div id="forecast">
                     <h3>3 Day Forecast</h3>
                     <div id="day1">
@@ -99,7 +98,7 @@
                         <p><span id="day3-temp">Loading...</span></p>
                     </div>
                 </div>
-            </section>           
+            </section>                      
 
             <section class="spotlights">
                 <h2>Spotlight Businesses</h2>

@@ -1,5 +1,4 @@
 // windchill.js
-
 // Function to calculate wind chill
 function calculateWindChill(temperature, windSpeed) {
     if (temperature <= 50 && windSpeed > 3.0) {
@@ -10,18 +9,7 @@ function calculateWindChill(temperature, windSpeed) {
     }
 }
 
-// Function to update wind chill on the webpage
-function updateWindChill() {
-    // Retrieve temperature and wind speed elements from the HTML
-    var temperature = parseFloat(document.getElementById('current-temp').innerText);
-    var windSpeed = parseFloat(document.getElementById('windSpeed').innerText);
-    
-    // Calculate wind chill
-    var windChill = calculateWindChill(temperature, windSpeed);
-    
-    // Update wind chill element on the webpage
-    document.getElementById('windChill').innerText = windChill;
-}
-
-// Call the function to update wind chill initially
-updateWindChill();
+var temperature = parseFloat(document.getElementById('temperature').innerText);
+var windSpeed = parseFloat(document.getElementById('windSpeed').innerText);
+var windChill = calculateWindChill(temperature, windSpeed);
+document.getElementById('windChill').innerText = windChill;
