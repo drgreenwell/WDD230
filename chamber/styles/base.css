@@ -117,6 +117,38 @@ nav ul li a {
     color: var(--primary-color);
 }
 
+/* CSS for the banner */
+.chamber-banner {
+    display: none; /* Hide the banner by default */
+    background-color: #213c63; /* Banner background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding around text */
+    position: fixed; /* Fixed position to keep it at the top of the page */
+    top: 0; /* Align banner to the top of the page */
+    left: 0; /* Align banner to the left of the page */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.chamber-banner p {
+    margin: 0; /* Remove default margin for paragraph */
+    font-size: 16px; /* Font size for the text */
+    font-weight: bold; /* Bold font weight */
+}
+
+.chamber-banner button {
+    background-color: transparent; /* Transparent background for button */
+    color: #fff; /* Text color for button */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 14px; /* Font size for the button text */
+    margin-top: 5px; /* Add margin on top of the button */
+}
+
+.chamber-banner button:hover {
+    text-decoration: underline; /* Underline button text on hover */
+}
+
 /* Sidebar Styles */
 .sidebar {
     grid-column: 1 / 2; /* Set the sidebar to start at column 1 and end at column 2 */

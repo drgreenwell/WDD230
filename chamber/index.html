@@ -65,6 +65,13 @@
                 <a href="join.html" class="btn">Join Now</a>
             </section>
 
+            <!-- HTML for banner -->
+            <div id="chamber-banner" class="chamber-banner">
+                <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
+                <button onclick="closeChamberBanner()">Close</button>
+            </div>
+
+
             <section class="events">
                 <h2>Current Events</h2>
                 <div class="event">
@@ -76,9 +83,12 @@
 
             <section class="weather">
                 <h2>Weather</h2>
-                <p>Temperature: <span id="temperature">65</span> °F</p>
-                <p>Wind Speed: <span id="windSpeed">5.2</span> mph</p>
-                <p>Wind Chill: <span id="windChill">Calculating...</span></p>
+                <p>Temperature: <span id="temperature">Loading...</span> °F</p>
+                <p>Weather Description: <span id="weatherDescription">Loading...</span></p>
+                <p>Three Day Forecast:</p>
+                <ul id="forecast">
+                    <!-- Forecast data will be inserted here -->
+                </ul>
             </section>           
 
             <section class="spotlights">
@@ -112,10 +122,7 @@
     <script src="scripts/hamButton.js"></script>
     <script src="scripts/darkMode.js"></script>
     <script src="scripts/windchill.js"></script>
-
-    <!-- JavaScript for last modified date -->
-    <script>
-        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
-    </script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/banner.js"></script>
 </body>
 </html>
