@@ -27,7 +27,7 @@ async function fetchWeatherData(apiUrl, temperatureElementId, weatherIconElement
         const response = await fetch(apiUrl);
         if (response.ok) {
             const data = await response.json();
-            displayWeatherData(data, temperatureElementId, weatherIconElementId, weatherDescElementId, windSpeedElementId, windChillElementId, forecastElementIds);
+            displayWeatherData(data, apiUrl, temperatureElementId, weatherIconElementId, weatherDescElementId, windSpeedElementId, windChillElementId, forecastElementIds);
         } else {
             throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
         }
@@ -37,7 +37,7 @@ async function fetchWeatherData(apiUrl, temperatureElementId, weatherIconElement
 }
 
 // Function to display weather data in HTML
-function displayWeatherData(data, temperatureElementId, weatherIconElementId, weatherDescElementId, windSpeedElementId, windChillElementId, forecastElementIds) {
+function displayWeatherData(data, apiUrl, temperatureElementId, weatherIconElementId, weatherDescElementId, windSpeedElementId, windChillElementId, forecastElementIds) {
     document.getElementById(temperatureElementId).innerHTML = `${data.main.temp.toFixed(0)}&deg;F`;
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     let desc = data.weather[0].description;
