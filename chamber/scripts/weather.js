@@ -1,33 +1,10 @@
-// Function to calculate wind chill
-function calculateWindChill(temperature, windSpeed) {
-    if (temperature <= 50 && windSpeed > 3.0) {
-        var windChill = Math.round(35.74 + (0.6215 * temperature) - (35.75 * Math.pow(windSpeed, 0.16)) + (0.4275 * temperature * Math.pow(windSpeed, 0.16)));
-        return windChill;
-    } else {
-        return "N/A";
-    }
-}
-
-// Function to update wind chill on the webpage
-function updateWindChill(temperatureElementId, windSpeedElementId, windChillElementId) {
-    // Retrieve temperature and wind speed elements from the HTML
-    var temperature = parseFloat(document.getElementById(temperatureElementId).innerText);
-    var windSpeed = parseFloat(document.getElementById(windSpeedElementId).innerText);
-    
-    // Calculate wind chill
-    var windChill = calculateWindChill(temperature, windSpeed);
-    
-    // Update wind chill element on the webpage
-    document.getElementById(windChillElementId).innerText = windChill;
-}
-
 // Function to fetch weather data from API
-async function fetchWeatherData(apiUrl, temperatureElementId, weatherIconElementId, weatherDescElementId, windSpeedElementId, windChillElementId, forecastElementIds) {
+async function fetchWeatherData(apiUrl, temperatureElementId, weatherIconElementId, weatherDescElementId, forecastElementIds) {
     try {
         const response = await fetch(apiUrl);
         if (response.ok) {
             const data = await response.json();
-            displayWeatherData(data, apiUrl, temperatureElementId, weatherIconElementId, weatherDescElementId, windSpeedElementId, windChillElementId, forecastElementIds);
+            displayWeatherData(data, temperatureElementId, weatherIconElementId, weatherDescElementId, forecastElementIds);
         } else {
             throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
         }
@@ -37,7 +14,7 @@ async function fetchWeatherData(apiUrl, temperatureElementId, weatherIconElement
 }
 
 // Function to display weather data in HTML
-function displayWeatherData(data, apiUrl, temperatureElementId, weatherIconElementId, weatherDescElementId, windSpeedElementId, windChillElementId, forecastElementIds) {
+function displayWeatherData(data, temperatureElementId, weatherIconElementId, weatherDescElementId, forecastElementIds) {
     document.getElementById(temperatureElementId).innerHTML = `${data.main.temp.toFixed(0)}&deg;F`;
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     let desc = data.weather[0].description;
@@ -47,9 +24,6 @@ function displayWeatherData(data, apiUrl, temperatureElementId, weatherIconEleme
     
     // Fetch 3-day forecast
     fetchForecast(apiUrl, forecastElementIds);
-    
-    // Update wind chill
-    updateWindChill(temperatureElementId, windSpeedElementId, windChillElementId); // Call updateWindChill function after updating temperature and wind speed
 }
 
 // Function to fetch 3-day forecast
@@ -78,7 +52,12 @@ function displayForecast(data, forecastElementIds) {
         const dayOfWeek = forecastDate.toLocaleDateString('en-US', { weekday: 'long' }); // Get day of the week
         const dateOfMonth = forecastDate.toLocaleDateString('en-US', { day: 'numeric' }); // Get date of the month
         const forecastTemp = forecastData[i * 8].main.temp.toFixed(0); // Access temperature for the middle of the day
-        document.getElementById(forecastElementIds[i]).textContent = `${dayOfWeek} ${dateOfMonth}: ${forecastTemp} °F`;
+        const forecastIcon = forecastData[i * 8].weather[0].icon; // Get weather icon code
+        const forecastIconUrl = `https://openweathermap.org/img/w/${forecastIcon}.png`; // Construct URL for weather icon
+
+        // Set the text content and weather icon for the forecast element
+        const forecastElement = document.getElementById(forecastElementIds[i]);
+        forecastElement.innerHTML = `${dayOfWeek} ${dateOfMonth}: ${forecastTemp} °F <img src="${forecastIconUrl}" alt="Weather Icon">`;
     }
 }
 
@@ -92,7 +71,7 @@ const units = 'imperial';
 const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
 
 // Call functions to fetch and display weather data
-fetchWeatherData(weatherApiUrl, 'current-temp', 'weather-icon', 'caption-desc', 'windSpeed', 'windChill', ['day1-temp', 'day2-temp', 'day3-temp']);
+fetchWeatherData(weatherApiUrl, 'current-temp', 'weather-icon', 'caption-desc', ['day1-temp', 'day2-temp', 'day3-temp']);
 
 // JavaScript for last modified date
 document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
