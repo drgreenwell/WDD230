@@ -1,3 +1,5 @@
+// weather.js
+
 // select HTML elements in the document
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
@@ -21,13 +23,12 @@ async function apiFetch() {
         const response = await fetch(apiUrl);
         if (response.ok) {
             const data = await response.json();
-            console.log(data); // testing only
             displayResults(data);
         } else {
-            throw Error(await response.text());
+            throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
         }
     } catch (error) {
-        console.log(error);
+        console.error('Error fetching weather data:', error);
     }
 }
 
@@ -45,17 +46,6 @@ function displayResults(data) {
     
     // Update wind chill
     updateWindChill(); // Call updateWindChill function after updating temperature and wind speed
-    
-    // Display banner if it's Monday, Tuesday, or Wednesday
-    const today = new Date().getDay();
-    if (today >= 1 && today <= 3) {
-        const banner = document.getElementById('chamber-banner');
-        banner.style.display = 'block';
-        const closeButton = document.getElementById('close-banner');
-        closeButton.addEventListener('click', () => {
-            banner.style.display = 'none';
-        });
-    }
 }
 
 // Function to fetch 3-day forecast
@@ -66,13 +56,12 @@ async function fetchForecast() {
         const response = await fetch(forecastApiUrl);
         if (response.ok) {
             const data = await response.json();
-            console.log(data); // for testing
             displayForecast(data);
         } else {
-            throw Error(await response.text());
+            throw new Error(`Failed to fetch forecast data: ${response.status} ${response.statusText}`);
         }
     } catch (error) {
-        console.log(error);
+        console.error('Error fetching forecast data:', error);
     }
 }
 
