@@ -35,7 +35,7 @@ function displayWeatherData(data, temperatureElementId, weatherIconElementId, we
     document.getElementById(weatherDescElementId).textContent = `${desc}`;
     
     // Fetch 3-day forecast
-    fetchForecast(apiUrl, forecastElementIds, forecastIconElementIds);
+    fetchForecast(weatherApiUrl, forecastElementIds, forecastIconElementIds);
 }
 
 // Function to fetch 3-day forecast
