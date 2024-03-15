@@ -51,11 +51,15 @@
   
         <main>
             <section class="hero">
-                <img srcset="images/hero-image.webp"
-                     sizes="(max-width: 480px) 480px,
-                            (max-width: 768px) 768px,
-                            1200px"
-                     src="images/hero-image.webp" alt="Hero Image">
+                <img srcset="images/hero-image.webp 480w,
+                        images/hero-image.webp 768w,
+                        images/hero-image.webp 1200w"
+                sizes="(max-width: 480px) 480px,
+                        (max-width: 768px) 768px,
+                        1200px"
+                src="images/hero-image.webp"
+                alt="Hero Image">
+   
                 <h2>Welcome to Maxwell Chamber of Commerce</h2>
             </section>
 
@@ -85,7 +89,7 @@
                 <p>Wind Speed: <span id="windSpeed">5.2</span> mph</p>
                 <p>Wind Chill: <span id="windChill">Calculating...</span></p>
                 <p>Weather Description: <span id="caption-desc">Loading...</span></p>
-                <img id="weather-icon" src="" alt="Weather Icon">
+                <img id="weather-icon" src="weather.webp" alt="Weather Icon">
                 <div id="forecast">
                     <h3>3 Day Forecast</h3>
                     <div id="day1">
