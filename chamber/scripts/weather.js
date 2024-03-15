@@ -78,11 +78,11 @@ function displayForecast(data) {
     const forecastData = data.list;
     // Display forecast for the next three days
     for (let i = 0; i < 3; i++) {
+        const forecastDate = new Date(forecastData[i].dt * 1000); // Convert timestamp to milliseconds
+        const dayOfWeek = forecastDate.toLocaleDateString('en-US', { weekday: 'long' }); // Get day of the week
+        const dateOfMonth = forecastDate.toLocaleDateString('en-US', { day: 'numeric' }); // Get date of the month
         const forecastTemp = forecastData[i].main.temp.toFixed(0);
-        const forecastDate = new Date(forecastData[i].dt * 1000); // Convert UNIX timestamp to milliseconds
-        const dayOfWeek = forecastDate.toLocaleDateString('en-US', { weekday: 'long' });
-        const dateOfMonth = forecastDate.toLocaleDateString('en-US', { day: 'numeric' });
-        document.getElementById(`day${i+1}-temp`).textContent = `${dayOfWeek}, ${dateOfMonth}`;
+        document.getElementById(`day${i+1}-temp`).textContent = `${dayOfWeek} ${dateOfMonth}: ${forecastTemp} °F`;
     }
 }
 
