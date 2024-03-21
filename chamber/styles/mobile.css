@@ -73,12 +73,18 @@
     }
   
     .membership-benefits {
-    text-align: justify;
+        text-align: justify;
     }
   
     .membership-benefits ul ul {
-    list-style-type: disc;
-    padding-left: 20px;
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .grid-view {
+        grid-template-columns: 1fr; /* Set a single column layout for mobile */
+        justify-content: center; /* Horizontally center the grid items */
+        align-items: center; /* Vertically center the grid items */
     }
 
     .photo-gallery :hover {
