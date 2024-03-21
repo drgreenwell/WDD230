@@ -344,11 +344,6 @@ nav ul li a {
     color: var(--primary-color); 
 }
 
-.display {
-    width: 2000px;
-    height: 2000px;
-}
-
 /* Grid View Styles */
 .grid-view {
     display: grid;
