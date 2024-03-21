@@ -30,35 +30,45 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Generate spotlight business elements
-    function generateSpotlightBusinesses(members) {
-        spotlightSection.innerHTML = ''; // Clear previous content
-        members.forEach(member => {
-            const spotlight = document.createElement('div');
-            spotlight.classList.add('spotlight');
+function generateSpotlightBusinesses(members) {
+    spotlightSection.innerHTML = ''; // Clear previous content
+    members.forEach(member => {
+        const spotlight = document.createElement('div');
+        spotlight.classList.add('member-card'); // Update class to match CSS
 
-            const name = document.createElement('h3');
-            name.textContent = member.name;
+        const spotlightImage = document.createElement('img');
+        spotlightImage.src = 'images/' + member.image;
+        spotlightImage.alt = member.name;
 
-            const address = document.createElement('p');
-            address.textContent = member.address;
+        const spotlightDetails = document.createElement('div');
+        spotlightDetails.classList.add('member-details'); // Update class to match CSS
 
-            const phone = document.createElement('p');
-            phone.textContent = 'Phone: ' + member.phone;
+        const spotlightName = document.createElement('h2');
+        spotlightName.textContent = member.name;
 
-            const website = document.createElement('p');
-            const websiteLink = document.createElement('a');
-            websiteLink.href = member.website;
-            websiteLink.textContent = 'Website';
-            website.appendChild(websiteLink);
+        const spotlightAddress = document.createElement('p');
+        spotlightAddress.textContent = member.address;
 
-            spotlight.appendChild(name);
-            spotlight.appendChild(address);
-            spotlight.appendChild(phone);
-            spotlight.appendChild(website);
+        const spotlightPhone = document.createElement('p');
+        spotlightPhone.textContent = 'Phone: ' + member.phone;
 
-            spotlightSection.appendChild(spotlight);
-        });
-    }
+        const spotlightWebsite = document.createElement('p');
+        const websiteLink = document.createElement('a');
+        websiteLink.href = member.website;
+        websiteLink.textContent = 'Website';
+        spotlightWebsite.appendChild(websiteLink);
+
+        spotlightDetails.appendChild(spotlightName);
+        spotlightDetails.appendChild(spotlightAddress);
+        spotlightDetails.appendChild(spotlightPhone);
+        spotlightDetails.appendChild(spotlightWebsite);
+
+        spotlight.appendChild(spotlightImage);
+        spotlight.appendChild(spotlightDetails);
+
+        spotlightSection.appendChild(spotlight);
+    });
+}
 
     // Fetch members data and populate spotlight section
     fetchMembers()
