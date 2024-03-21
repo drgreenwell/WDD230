@@ -162,8 +162,12 @@ nav ul li a {
     margin-left: 5px; /* Add margin to separate it from the sidebar */
 }
 
-.photo-gallery :hover {
-    box-shadow: 0 0 50px var(--event-color);
+.photo-gallery img {
+    border-radius: 5px;
+}
+
+.photo-gallery :hover img {
+    box-shadow: 0 0 15px var(--event-color);
 }
 
 /* Main Container Style */
