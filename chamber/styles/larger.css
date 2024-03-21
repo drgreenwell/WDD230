@@ -74,7 +74,6 @@
         margin-left: 20px; /* Adjust margin to leave space for the menu */
     }
     
-    /* Larger Form Styles */
     .form-container {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two-column layout */

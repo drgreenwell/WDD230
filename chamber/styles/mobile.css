@@ -32,7 +32,7 @@
         margin: 0; /* Remove any default margins */
     }
 
-    .main-container .content-container {
+    .main-container {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -40,9 +40,12 @@
         justify-content: center; /* Center items vertically */
     }
 
-    .spotlights {
+    .content-container {
+        width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
     }
     
     .menu-section {
