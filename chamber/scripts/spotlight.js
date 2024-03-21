@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const displaySection = document.querySelector('.spotlights');
+    const spotlightsSection = document.querySelector('.spotlights');
     const dataUrl = 'data/members.json';
     
     // Fetch data from JSON file
@@ -15,15 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Generate member cards
     function generateMemberCards(members) {
-        displaySection.innerHTML = ''; // Clear previous content
+        spotlightsSection.innerHTML = ''; // Clear previous content
 
         // Filter members with silver or gold status
         const premiumMembers = members.filter(member => member.status === 'silver' || member.status === 'gold');
 
-        // Randomly select 2 to 3 premium members
-        const selectedMembers = selectRandomMembers(premiumMembers);
-
-        selectedMembers.forEach(member => {
+        premiumMembers.forEach(member => {
             const memberCard = document.createElement('div');
             memberCard.classList.add('member-card');
 
@@ -57,36 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
             memberCard.appendChild(memberImage);
             memberCard.appendChild(memberDetails);
 
-            displaySection.appendChild(memberCard);
+            spotlightsSection.appendChild(memberCard);
         });
     }
 
-    // Function to randomly select 2 to 3 members
-    function selectRandomMembers(members) {
-        const selectedMembers = [];
-        const min = Math.min(2, members.length);
-        const max = Math.min(3, members.length);
-
-        const numMembers = Math.floor(Math.random() * (max - min + 1)) + min;
-
-        for (let i = 0; i < numMembers; i++) {
-            const index = Math.floor(Math.random() * members.length);
-            selectedMembers.push(members[index]);
-            members.splice(index, 1);
-        }
-
-        return selectedMembers;
-    }
-
     // Fetch members data and initially generate cards
-    let membersData;
     fetchMembers().then(data => {
-        membersData = data;
         generateMemberCards(data);
     }).catch(error => {
         console.error('Error:', error);
     });
-
-    // Set the default view to grid
-    displaySection.classList.add('grid-view');
 });
