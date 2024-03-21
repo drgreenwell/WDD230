@@ -420,6 +420,16 @@ footer {
         margin: 0; /* Remove any default margins */
     }
 
+    .sidebar {
+        grid-column: initial;
+    }
+
+    .photo-gallery {
+        grid-column: initial;
+        margin-left: 0;
+        padding: 10px;
+    }
+
     .main-container {
         width: 100%;
         display: flex;
