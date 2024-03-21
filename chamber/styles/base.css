@@ -311,9 +311,27 @@ nav ul li a {
    margin-left: 10px;
 }
 
-.display{
+.display {
     height: 1200px;
+    overflow-x: visible;
     overflow-y: auto;
+}
+
+/* Width */
+.display::-webkit-scrollbar {
+    width: 20px;
+}
+  
+/* Track */
+.display::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--background-color);
+    border-radius: 10px;
+}
+  
+/* Handle */
+.display::-webkit-scrollbar-thumb {
+    background: var(--event-color);
+    border-radius: 10px;
 }
 
 /* Member Card Styles */
