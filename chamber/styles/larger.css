@@ -1,12 +1,12 @@
 @media only screen and (min-width: 769px) {
     /* For larger screens */
     header {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center items horizontally */
-    background-color: var(--secondary-color);
-    padding: 10px 20px;
-    height: 100px; /* Optionally set a fixed height for the header */
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center items horizontally */
+        background-color: var(--secondary-color);
+        padding: 10px 20px;
+        height: 100px; /* Optionally set a fixed height for the header */
     }
 
     .logo {
@@ -17,6 +17,7 @@
     .logo img {
         width: 100px; /* Set the width to your desired size */
         height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Add some space between logo and h1 */
     }
 
     h1 {

@@ -2,12 +2,17 @@
 @media only screen and (max-width: 768px) {
     /* For mobile devices */
     header {
-        display: flex; /* Use flexbox */
-        align-items: center;
-        justify-content: center; /* Add space between logo and h1 */
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center; /* Center items horizontally */
+        text-align: center;
         background-color: var(--secondary-color);
         padding: 10px 20px;
         width: 100%;
+    }
+
+    .logo {
+        order: -1; /* Move the logo section to the top */
+        margin-bottom: 10px; /* Add some space between logo and h1 */
     }
 
     main {
