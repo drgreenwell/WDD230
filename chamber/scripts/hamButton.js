@@ -1,11 +1,1 @@
-// hamButton.js
-
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('show');
-        menuToggle.classList.toggle('active');
-    });
-});
+document.addEventListener("DOMContentLoaded",function(){let e=document.querySelector(".menu-toggle"),t=document.querySelector(".menu");e.addEventListener("click",()=>{t.classList.toggle("show"),e.classList.toggle("active")})});
