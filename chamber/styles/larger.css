@@ -9,17 +9,6 @@
         height: 100px; /* Optionally set a fixed height for the header */
     }
 
-    .logo {
-        display: flex; /* Use flexbox for logo and h1 */
-        align-items: center; /* Align items vertically */
-    }
-
-    .logo img {
-        width: 100px; /* Set the width to your desired size */
-        height: auto; /* Maintain aspect ratio */
-        margin-right: 10px; /* Add some space between logo and h1 */
-    }
-
     h1 {
         margin: 25px; /* Remove any default margins */
     }
