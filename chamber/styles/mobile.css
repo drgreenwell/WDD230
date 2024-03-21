@@ -6,7 +6,8 @@
         align-items: center;
         justify-content: center; /* Add space between logo and h1 */
         background-color: var(--secondary-color);
-        padding: 10px 20px; 
+        padding: 10px 20px;
+        width: 100%;
     }
 
     main {
@@ -15,6 +16,7 @@
     
     footer {
         padding: 20px 10px; 
+        width: 100%;
     }
     
     .development-info p {
@@ -30,7 +32,7 @@
         margin: 0; /* Remove any default margins */
     }
 
-    .main-container {
+    .main-container .content-container {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -38,12 +40,9 @@
         justify-content: center; /* Center items vertically */
     }
 
-    .content-container {
-        width: 100%;
+    .spotlights {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        justify-content: center; /* Center items vertically */
     }
     
     .menu-section {
