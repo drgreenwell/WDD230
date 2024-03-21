@@ -53,15 +53,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     gridButton.addEventListener("click", function () {
-        displayContainer.classList.remove("list-view");
-        displayContainer.classList.add("grid-view");
-        fetchAndRenderMembers();
+        if (!displayContainer.classList.contains("grid-view")) {
+            displayContainer.classList.remove("list-view");
+            displayContainer.classList.add("grid-view");
+            fetchAndRenderMembers();
+        }
     });
 
     listButton.addEventListener("click", function () {
-        displayContainer.classList.remove("grid-view");
-        displayContainer.classList.add("list-view");
-        fetchAndRenderMembers();
+        if (!displayContainer.classList.contains("list-view")) {
+            displayContainer.classList.remove("grid-view");
+            displayContainer.classList.add("list-view");
+            fetchAndRenderMembers();
+        }
     });
 
     async function fetchAndRenderMembers() {
