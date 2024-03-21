@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const spotlightsSection = document.querySelector('.spotlights');
+    const spotlightSection = document.querySelector('.spotlights');
     const dataUrl = 'data/members.json';
     
     // Fetch data from JSON file
@@ -13,55 +13,78 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Generate member cards
-    function generateMemberCards(members) {
-        spotlightsSection.innerHTML = ''; // Clear previous content
+    // Filter members with silver or gold status
+    function filterMembersByStatus(members) {
+        return members.filter(member => member.membership_level === "Silver" || member.membership_level === "Gold");
+    }
 
-        // Filter members with silver or gold status
-        const premiumMembers = members.filter(member => member.status === 'silver' || member.status === 'gold');
+    // Randomly select spotlight members
+    function selectSpotlightMembers(members, count) {
+        const selectedMembers = [];
+        for (let i = 0; i < count; i++) {
+            const randomIndex = Math.floor(Math.random() * members.length);
+            selectedMembers.push(members[randomIndex]);
+            members.splice(randomIndex, 1); // Remove selected member to avoid duplication
+        }
+        return selectedMembers;
+    }
 
-        premiumMembers.forEach(member => {
-            const memberCard = document.createElement('div');
-            memberCard.classList.add('member-card');
+    // Generate spotlight business elements
+    function generateSpotlightBusinesses(members) {
+        spotlightSection.innerHTML = ''; // Clear previous content
 
-            const memberImage = document.createElement('img');
-            memberImage.src = 'images/' + member.image;
-            memberImage.alt = member.name;
+        const gridContainer = document.createElement('div');
+        gridContainer.classList.add('grid-view'); // Add the grid-view class
 
-            const memberDetails = document.createElement('div');
-            memberDetails.classList.add('member-details');
+        members.forEach(member => {
+            const spotlight = document.createElement('div');
+            spotlight.classList.add('member-card'); // Update class to match CSS
 
-            const memberName = document.createElement('h2');
-            memberName.textContent = member.name;
+            const spotlightImage = document.createElement('img');
+            spotlightImage.src = 'images/' + member.image;
+            spotlightImage.alt = member.name;
 
-            const memberAddress = document.createElement('p');
-            memberAddress.textContent = member.address;
+            const spotlightDetails = document.createElement('div');
+            spotlightDetails.classList.add('member-details'); // Update class to match CSS
 
-            const memberPhone = document.createElement('p');
-            memberPhone.textContent = 'Phone: ' + member.phone;
+            const spotlightName = document.createElement('h2');
+            spotlightName.textContent = member.name;
 
-            const memberWebsite = document.createElement('p');
+            const spotlightAddress = document.createElement('p');
+            spotlightAddress.textContent = member.address;
+
+            const spotlightPhone = document.createElement('p');
+            spotlightPhone.textContent = 'Phone: ' + member.phone;
+
+            const spotlightWebsite = document.createElement('p');
             const websiteLink = document.createElement('a');
             websiteLink.href = member.website;
             websiteLink.textContent = 'Website';
-            memberWebsite.appendChild(websiteLink);
+            spotlightWebsite.appendChild(websiteLink);
 
-            memberDetails.appendChild(memberName);
-            memberDetails.appendChild(memberAddress);
-            memberDetails.appendChild(memberPhone);
-            memberDetails.appendChild(memberWebsite);
+            spotlightDetails.appendChild(spotlightName);
+            spotlightDetails.appendChild(spotlightAddress);
+            spotlightDetails.appendChild(spotlightPhone);
+            spotlightDetails.appendChild(spotlightWebsite);
 
-            memberCard.appendChild(memberImage);
-            memberCard.appendChild(memberDetails);
+            spotlight.appendChild(spotlightImage);
+            spotlight.appendChild(spotlightDetails);
 
-            spotlightsSection.appendChild(memberCard);
+            gridContainer.appendChild(spotlight); // Append spotlight to the grid container
         });
+
+        spotlightSection.appendChild(gridContainer); // Append grid container to the spotlight section
     }
 
-    // Fetch members data and initially generate cards
-    fetchMembers().then(data => {
-        generateMemberCards(data);
-    }).catch(error => {
-        console.error('Error:', error);
-    });
+
+    // Fetch members data and populate spotlight section
+    fetchMembers()
+        .then(data => {
+            const silverGoldMembers = filterMembersByStatus(data);
+            const spotlightMembers = selectSpotlightMembers(silverGoldMembers, 3); // Select 3 spotlight members
+            generateSpotlightBusinesses(spotlightMembers);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 });
