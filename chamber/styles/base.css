@@ -152,14 +152,12 @@ nav ul li a {
 /* Discover Styles */
 /* Sidebar Style */
 .sidebar {
-    grid-column: 1 / 2; /* Set the sidebar to start at column 1 and end at column 2 */
     background-color: var(--event-background);
     padding: 20px;
 }
 
 /* Photo Gallery Style */
 .photo-gallery {
-    grid-column: 2 / 3; /* Set the photo gallery to start at column 2 and end at column 3 */
     padding: 20px;
     margin-left: 20px; /* Add margin to separate it from the sidebar */
 }
@@ -421,8 +419,7 @@ footer {
     }
 
     .sidebar {
-        grid-column: 2;
-        padding: 20px;
+        padding: 100px;
     }
 
     .main-container {
