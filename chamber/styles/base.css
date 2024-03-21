@@ -344,6 +344,11 @@ nav ul li a {
     color: var(--primary-color); 
 }
 
+.display{
+    width: 800px;
+    height: 800px;
+}
+
 /* Grid View Styles */
 .grid-view {
     display: grid;
@@ -372,7 +377,7 @@ nav ul li a {
 }
 
 .list-view .member-card:last-child {
-    margin-bottom: 209px;
+    margin-bottom: 20px;
 }
 
 /* Footer Styles */
