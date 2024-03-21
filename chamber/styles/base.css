@@ -162,6 +162,10 @@ nav ul li a {
     margin-left: 5px; /* Add margin to separate it from the sidebar */
 }
 
+.photo-gallery :hover {
+    box-shadow: 0 0 50px var(--event-color);
+}
+
 /* Main Container Style */
 .main-container {
     display: grid;
@@ -384,132 +388,6 @@ footer {
 
 .development-info span {
     font-weight: bold;
-}
-
-/* Media queries for adjusting layout */
-@media only screen and (max-width: 768px) {
-    /* For mobile devices */
-    header {
-        display: flex; /* Use flexbox */
-        align-items: center;
-        justify-content: center; /* Add space between logo and h1 */
-        background-color: var(--secondary-color);
-        padding: 10px 20px; 
-    }
-
-    main {
-        padding: 10px; 
-    }
-    
-    footer {
-        padding: 20px 10px; 
-    }
-    
-    .development-info p {
-        margin-left: 10px; /* Reduce margin for smaller screens */
-    }
-
-    .logo {
-        display: flex; /* Use flexbox for logo and h1 */
-        align-items: center; /* Align items vertically */
-    }
-
-    h1 {
-        margin: 0; /* Remove any default margins */
-    }
-
-    .main-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        justify-content: center; /* Center items vertically */
-    }
-
-    .content-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        justify-content: center; /* Center items vertically */
-    }
-    
-    .menu-section {
-        width: 100%;
-        background-color: var(--secondary-color);
-        display: flex;
-        justify-content: center; /* Center menu items horizontally */
-    }
-
-    .menu {
-        padding-bottom: 5px;
-        margin: 5px;
-        list-style-type: none;
-    }
-
-    .menu li {
-        margin-bottom: 10px; /* Adjust spacing as needed */
-    }
-
-    main {
-        margin-top: 20px; /* Adjust as needed */
-        text-align: center; /* Center text content */
-    }
-
-   .weather {
-        text-align: center; /* Center text content */
-    }
-  
-    .membership-benefits {
-    text-align: justify;
-    }
-  
-    .membership-benefits ul ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    }
-
-    /* CSS for hamburger menu */
-    .menu-toggle {
-        display: block; /* Show only for mobile */
-        cursor: pointer;
-        padding: 10px;
-        position: absolute;
-        top: 40px; /* Adjust as needed to position it below the dark mode toggle button */
-        right: 10px; /* Adjust as needed */
-        z-index: 1000; /* Ensure it's above other content, adjust as needed */
-    }
-
-    .hamburger:before {
-        font-size: 24px;
-        content: "☰";
-        color: var(--primary-color);
-    }
-  
-    .hamburger:after {
-        font-size: 24px;
-        content: "X";
-        display: none;
-        color: var(--primary-color);
-    }
-  
-    .menu-toggle.active .hamburger:before {
-        display: none;
-    }
-
-    .menu-toggle.active .hamburger:after {
-        display: inline;
-    }
-
-    /* Hide regular menu for mobile */
-    .menu {
-        display: none;
-    }
-
-    /* Show menu when toggled */
-    .menu.show {
-        display: block;
-    }
 }
 
 /* Dark mode toggle styles */
