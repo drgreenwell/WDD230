@@ -63,7 +63,7 @@ header {
 .hero img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
 }
 
 /* Call to Action Styles */
