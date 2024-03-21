@@ -421,13 +421,11 @@ footer {
     }
 
     .sidebar {
-        grid-column: initial;
-    }
-
-    .photo-gallery {
-        grid-column: initial;
-        margin-left: 0;
-        padding: 10px;
+        grid-column: 1 / 2;
+        background-color: var(--event-background);
+        padding: 20px 10px; /* Adjust padding as needed */
+        overflow-x: auto; /* Allow horizontal overflow */
+        max-width: calc(100% - 20px); /* Limit maximum width */
     }
 
     .main-container {
