@@ -421,8 +421,7 @@ footer {
     }
 
     .sidebar {
-        display: flex;
-        flex-direction: column;
+        grid-column: 2;
         padding: 20px;
     }
 
