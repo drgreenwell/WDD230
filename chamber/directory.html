@@ -18,7 +18,16 @@
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/normalize.css">
-
+    <!-- JavaScripts -->
+    <script src="scripts/hamButton.js" defer></script>
+    <script src="scripts/darkMode.js" defer></script>
+    <script src="scripts/members.js" defer></script>
+    <!-- JavaScript for last modified date -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -71,15 +80,5 @@
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
-
-    <!-- JavaScripts -->
-    <script src="scripts/hamButton.js"></script>
-    <script src="scripts/darkMode.js"></script>
-    <script src="scripts/members.js"></script>
-
-    <!-- JavaScript for last modified date -->
-    <script>
-        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
-    </script>
 </body>
 </html>
