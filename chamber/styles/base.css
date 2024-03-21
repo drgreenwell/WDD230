@@ -301,6 +301,21 @@ nav ul li a {
 }
 
 /* Directory Styles */
+.directory-menu {
+    display: flex;
+    justify-content: center; /* Center items vertically */
+    margin-top: 10px;
+}
+
+.directory-menu button {
+   margin-left: 10px;
+}
+
+.display{
+    width: 100%;
+    height: 1200px;
+}
+
 /* Member Card Styles */
 .member-card {
     width: 300px;
