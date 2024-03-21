@@ -30,45 +30,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Generate spotlight business elements
-function generateSpotlightBusinesses(members) {
-    spotlightSection.innerHTML = ''; // Clear previous content
-    members.forEach(member => {
-        const spotlight = document.createElement('div');
-        spotlight.classList.add('member-card'); // Update class to match CSS
+    function generateSpotlightBusinesses(members) {
+        spotlightSection.innerHTML = ''; // Clear previous content
 
-        const spotlightImage = document.createElement('img');
-        spotlightImage.src = 'images/' + member.image;
-        spotlightImage.alt = member.name;
+        const gridContainer = document.createElement('div');
+        gridContainer.classList.add('grid-view'); // Add the grid-view class
 
-        const spotlightDetails = document.createElement('div');
-        spotlightDetails.classList.add('member-details'); // Update class to match CSS
+        members.forEach(member => {
+            const spotlight = document.createElement('div');
+            spotlight.classList.add('member-card'); // Update class to match CSS
 
-        const spotlightName = document.createElement('h2');
-        spotlightName.textContent = member.name;
+            const spotlightImage = document.createElement('img');
+            spotlightImage.src = 'images/' + member.image;
+            spotlightImage.alt = member.name;
 
-        const spotlightAddress = document.createElement('p');
-        spotlightAddress.textContent = member.address;
+            const spotlightDetails = document.createElement('div');
+            spotlightDetails.classList.add('member-details'); // Update class to match CSS
 
-        const spotlightPhone = document.createElement('p');
-        spotlightPhone.textContent = 'Phone: ' + member.phone;
+            const spotlightName = document.createElement('h2');
+            spotlightName.textContent = member.name;
 
-        const spotlightWebsite = document.createElement('p');
-        const websiteLink = document.createElement('a');
-        websiteLink.href = member.website;
-        websiteLink.textContent = 'Website';
-        spotlightWebsite.appendChild(websiteLink);
+            const spotlightAddress = document.createElement('p');
+            spotlightAddress.textContent = member.address;
 
-        spotlightDetails.appendChild(spotlightName);
-        spotlightDetails.appendChild(spotlightAddress);
-        spotlightDetails.appendChild(spotlightPhone);
-        spotlightDetails.appendChild(spotlightWebsite);
+            const spotlightPhone = document.createElement('p');
+            spotlightPhone.textContent = 'Phone: ' + member.phone;
 
-        spotlight.appendChild(spotlightImage);
-        spotlight.appendChild(spotlightDetails);
+            const spotlightWebsite = document.createElement('p');
+            const websiteLink = document.createElement('a');
+            websiteLink.href = member.website;
+            websiteLink.textContent = 'Website';
+            spotlightWebsite.appendChild(websiteLink);
 
-        spotlightSection.appendChild(spotlight);
-    });
-}
+            spotlightDetails.appendChild(spotlightName);
+            spotlightDetails.appendChild(spotlightAddress);
+            spotlightDetails.appendChild(spotlightPhone);
+            spotlightDetails.appendChild(spotlightWebsite);
+
+            spotlight.appendChild(spotlightImage);
+            spotlight.appendChild(spotlightDetails);
+
+            gridContainer.appendChild(spotlight); // Append spotlight to the grid container
+        });
+
+        spotlightSection.appendChild(gridContainer); // Append grid container to the spotlight section
+    }
+
 
     // Fetch members data and populate spotlight section
     fetchMembers()
