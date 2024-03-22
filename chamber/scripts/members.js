@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
             let s = document.createElement("p"),
                 c = document.createElement("a");
             c.href = e.website, c.textContent = "Website", s.appendChild(c), i.appendChild(d), i.appendChild(r), i.appendChild(l), i.appendChild(s), t.appendChild(a), t.appendChild(i), n.appendChild(t);
-            
+
             // Adding dashes between each h2 and p in list mode
             if (n.classList.contains("list-view")) {
-                n.innerHTML += ` - ${d.textContent} - ${r.textContent} - ${l.textContent} - `;
+                n.innerHTML += `${d.textContent} - ${r.textContent} - ${l.textContent} - `;
             }
         })
     }
