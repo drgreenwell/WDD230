@@ -21,15 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
             memberDetails.classList.add("member-details");
 
             if (displayArea.classList.contains("list-view")) {
+                let title = document.createElement("h2");
+                title.textContent = member.name;
+                memberDetails.appendChild(title);
+
                 let details = document.createElement("p");
-                details.textContent = `${member.name} - ${member.address} - Phone: ${member.phone} - `;
+                details.textContent = `${member.address} - Phone: ${member.phone} - `;
                 
                 let website = document.createElement("a");
                 website.href = member.website;
                 website.textContent = "Website";
 
+                details.appendChild(website);
                 memberDetails.appendChild(details);
-                memberDetails.appendChild(website);
             } else {
                 let name = document.createElement("h2");
                 name.textContent = member.name;
