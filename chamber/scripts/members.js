@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let gridButton = document.getElementById("grid");
     let listButton = document.getElementById("list");
-    let displayContainer = document.querySelector(".display");
-    let gridElements = document.querySelectorAll(".grid-only");
+    let displayArea = document.querySelector(".display");
 
     async function fetchMembers() {
         try {
@@ -13,65 +12,71 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function displayMembers(members) {
-        displayContainer.innerHTML = "";
+        displayArea.innerHTML = "";
         members.forEach(member => {
             let memberCard = document.createElement("div");
             memberCard.classList.add("member-card");
-    
+
             let memberDetails = document.createElement("div");
             memberDetails.classList.add("member-details");
-    
-            let nameHeading = document.createElement("h2");
-            nameHeading.textContent = member.name;
-    
-            let addressParagraph = document.createElement("p");
-            addressParagraph.textContent = member.address;
-    
-            let phoneParagraph = document.createElement("p");
-            phoneParagraph.textContent = "Phone: " + member.phone;
-    
-            let websiteParagraph = document.createElement("p");
+
+            let nameAndAddress = document.createElement("div");
+            let name = document.createElement("h2");
+            name.textContent = member.name;
+            let address = document.createElement("p");
+            address.textContent = member.address;
+
+            nameAndAddress.appendChild(name);
+            nameAndAddress.appendChild(document.createTextNode(" - "));
+            nameAndAddress.appendChild(address);
+
+            let phone = document.createElement("p");
+            phone.textContent = "Phone: " + member.phone;
+
+            let website = document.createElement("p");
             let websiteLink = document.createElement("a");
             websiteLink.href = member.website;
             websiteLink.textContent = "Website";
-            websiteParagraph.appendChild(websiteLink);
-    
-            memberDetails.appendChild(nameHeading);
-            memberDetails.appendChild(addressParagraph);
-            memberDetails.appendChild(phoneParagraph);
-            memberDetails.appendChild(websiteParagraph);
-    
+            website.appendChild(websiteLink);
+
+            memberDetails.appendChild(nameAndAddress);
+            memberDetails.appendChild(phone);
+            memberDetails.appendChild(website);
+
+            let image = document.createElement("img");
+            image.src = "images/" + member.image;
+            image.alt = member.name;
+
+            memberCard.appendChild(image);
             memberCard.appendChild(memberDetails);
-    
-            displayContainer.appendChild(memberCard);
+
+            displayArea.appendChild(memberCard);
         });
-    }   
+    }
 
     gridButton.addEventListener("click", function () {
-        displayContainer.classList.remove("list-view");
-        displayContainer.classList.add("grid-view");
-        gridElements.forEach(element => {
-            element.style.display = "block";
-        });
+        displayArea.classList.remove("list-view");
+        displayArea.classList.add("grid-view");
         fetchMembers().then(members => {
             displayMembers(members);
         });
     });
 
     listButton.addEventListener("click", function () {
-        displayContainer.classList.remove("grid-view");
-        displayContainer.classList.add("list-view");
-        gridElements.forEach(element => {
-            element.style.display = "none";
-        });
+        displayArea.classList.remove("grid-view");
+        displayArea.classList.add("list-view");
         fetchMembers().then(members => {
             displayMembers(members);
         });
     });
 
-    // Initially set to grid view
+    let initialMembers;
     fetchMembers().then(members => {
-        displayMembers(members);
-        displayContainer.classList.add("grid-view");
+        initialMembers = members;
+        displayMembers(initialMembers);
+    }).catch(error => {
+        console.error("Error:", error);
     });
+
+    displayArea.classList.add("grid-view");
 });
