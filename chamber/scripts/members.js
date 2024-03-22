@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let gridButton = document.getElementById("grid");
     let listButton = document.getElementById("list");
     let displayContainer = document.querySelector(".display");
+    let gridElements = document.querySelectorAll(".grid-only");
 
     async function fetchMembers() {
         try {
@@ -16,10 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         members.forEach(member => {
             let memberCard = document.createElement("div");
             memberCard.classList.add("member-card");
-
-            let memberImage = document.createElement("img");
-            memberImage.src = "images/" + member.image;
-            memberImage.alt = member.name;
 
             let memberDetails = document.createElement("div");
             memberDetails.classList.add("member-details");
@@ -39,12 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
             websiteLink.textContent = "Website";
             websiteParagraph.appendChild(websiteLink);
 
-            memberDetails.appendChild(nameHeading);
-            memberDetails.appendChild(addressParagraph);
-            memberDetails.appendChild(phoneParagraph);
-            memberDetails.appendChild(websiteParagraph);
+            let memberDetailsText = `${nameHeading.textContent} - ${addressParagraph.textContent} - ${phoneParagraph.textContent} - ${websiteLink.textContent}`;
+            memberDetails.textContent = memberDetailsText;
 
-            memberCard.appendChild(memberImage);
             memberCard.appendChild(memberDetails);
 
             displayContainer.appendChild(memberCard);
@@ -54,6 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
     gridButton.addEventListener("click", function () {
         displayContainer.classList.remove("list-view");
         displayContainer.classList.add("grid-view");
+        gridElements.forEach(element => {
+            element.style.display = "block";
+        });
         fetchMembers().then(members => {
             displayMembers(members);
         });
@@ -62,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
     listButton.addEventListener("click", function () {
         displayContainer.classList.remove("grid-view");
         displayContainer.classList.add("list-view");
+        gridElements.forEach(element => {
+            element.style.display = "none";
+        });
         fetchMembers().then(members => {
             displayMembers(members);
         });
