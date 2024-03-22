@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function renderMembers(members) {
+    function renderMembersInList(members) {
         displayArea.innerHTML = "";
         members.forEach(member => {
             let memberCard = document.createElement("div");
@@ -21,48 +21,42 @@ document.addEventListener("DOMContentLoaded", function () {
             name.textContent = member.name;
 
             let address = document.createElement("p");
-            address.textContent = `${member.address} - ${member.city}, ${member.state} ${member.zip}`;
+            address.textContent = member.address;
 
-            let contact = document.createElement("p");
-            contact.textContent = `Phone: ${member.phone} - Website: `;
-            
+            let phone = document.createElement("p");
+            phone.textContent = "Phone: " + member.phone;
+
+            let website = document.createElement("p");
             let websiteLink = document.createElement("a");
             websiteLink.href = member.website;
-            websiteLink.textContent = "Visit Website";
-            websiteLink.target = "_blank";
-            contact.appendChild(websiteLink);
+            websiteLink.textContent = "Website";
+            website.appendChild(websiteLink);
 
             memberCard.appendChild(name);
             memberCard.appendChild(address);
-            memberCard.appendChild(contact);
+            memberCard.appendChild(phone);
+            memberCard.appendChild(website);
 
             displayArea.appendChild(memberCard);
         });
     }
 
-    gridButton.addEventListener("click", function () {
-        displayArea.classList.remove("list-view");
-        displayArea.classList.add("grid-view");
-        fetchMembers().then(members => {
-            renderMembers(members);
-        });
-    });
-
     listButton.addEventListener("click", function () {
         displayArea.classList.remove("grid-view");
         displayArea.classList.add("list-view");
         fetchMembers().then(members => {
-            renderMembers(members);
+            renderMembersInList(members);
         });
     });
 
+    // Initial loading in grid view
     let membersData;
     fetchMembers().then(members => {
         membersData = members;
-        renderMembers(membersData);
+        renderMembersInList(membersData);
     }).catch(error => {
         console.error("Error:", error);
     });
 
-    displayArea.classList.add("grid-view");
+    displayArea.classList.add("list-view");
 });
