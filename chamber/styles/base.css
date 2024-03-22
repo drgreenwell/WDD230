@@ -61,6 +61,7 @@ header {
 
 nav a:hover {
     box-shadow: var(--background-color) 0px 0px 0px 3px;
+    font-weight: bold;
 }
 
 /* Hero Styles */
