@@ -17,25 +17,24 @@ document.addEventListener("DOMContentLoaded", function () {
             let memberCard = document.createElement("div");
             memberCard.classList.add("member-card");
 
-            let image = document.createElement("img");
-            image.src = "images/" + member.image;
-            image.alt = member.name;
-
-            let memberDetails = document.createElement("div");
-            memberDetails.classList.add("member-details");
-
             let name = document.createElement("h2");
             name.textContent = member.name;
 
-            let contactInfo = document.createElement("p");
-            contactInfo.textContent = `${member.name} - ${member.address}, ${member.city}, ${member.state} ${member.zip}
-Phone: ${member.phone} - Website: ${member.website}`;
+            let address = document.createElement("p");
+            address.textContent = `${member.address} - ${member.city}, ${member.state} ${member.zip}`;
 
-            memberDetails.appendChild(name);
-            memberDetails.appendChild(contactInfo);
+            let contact = document.createElement("p");
+            contact.textContent = `Phone: ${member.phone} - Website: `;
+            
+            let websiteLink = document.createElement("a");
+            websiteLink.href = member.website;
+            websiteLink.textContent = "Visit Website";
+            websiteLink.target = "_blank";
+            contact.appendChild(websiteLink);
 
-            memberCard.appendChild(image);
-            memberCard.appendChild(memberDetails);
+            memberCard.appendChild(name);
+            memberCard.appendChild(address);
+            memberCard.appendChild(contact);
 
             displayArea.appendChild(memberCard);
         });
