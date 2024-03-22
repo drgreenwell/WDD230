@@ -17,33 +17,35 @@ document.addEventListener("DOMContentLoaded", function () {
         members.forEach(member => {
             let memberCard = document.createElement("div");
             memberCard.classList.add("member-card");
-
+    
             let memberDetails = document.createElement("div");
             memberDetails.classList.add("member-details");
-
+    
             let nameHeading = document.createElement("h2");
             nameHeading.textContent = member.name;
-
+    
             let addressParagraph = document.createElement("p");
             addressParagraph.textContent = member.address;
-
+    
             let phoneParagraph = document.createElement("p");
             phoneParagraph.textContent = "Phone: " + member.phone;
-
+    
             let websiteParagraph = document.createElement("p");
             let websiteLink = document.createElement("a");
             websiteLink.href = member.website;
             websiteLink.textContent = "Website";
             websiteParagraph.appendChild(websiteLink);
-
-            let memberDetailsText = `${nameHeading.textContent} - ${addressParagraph.textContent} - ${phoneParagraph.textContent} - ${websiteLink.textContent}`;
-            memberDetails.textContent = memberDetailsText;
-
+    
+            memberDetails.appendChild(nameHeading);
+            memberDetails.appendChild(addressParagraph);
+            memberDetails.appendChild(phoneParagraph);
+            memberDetails.appendChild(websiteParagraph);
+    
             memberCard.appendChild(memberDetails);
-
+    
             displayContainer.appendChild(memberCard);
         });
-    }
+    }   
 
     gridButton.addEventListener("click", function () {
         displayContainer.classList.remove("list-view");
