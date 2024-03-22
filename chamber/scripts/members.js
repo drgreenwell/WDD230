@@ -20,28 +20,37 @@ document.addEventListener("DOMContentLoaded", function () {
             let memberDetails = document.createElement("div");
             memberDetails.classList.add("member-details");
 
-            let nameAndAddress = document.createElement("div");
-            let name = document.createElement("h2");
-            name.textContent = member.name;
-            let address = document.createElement("p");
-            address.textContent = member.address;
+            if (displayArea.classList.contains("list-view")) {
+                let details = document.createElement("p");
+                details.textContent = `${member.name} - ${member.address} - Phone: ${member.phone} - `;
+                
+                let website = document.createElement("a");
+                website.href = member.website;
+                website.textContent = "Website";
 
-            nameAndAddress.appendChild(name);
-            nameAndAddress.appendChild(document.createTextNode(" - "));
-            nameAndAddress.appendChild(address);
+                memberDetails.appendChild(details);
+                memberDetails.appendChild(website);
+            } else {
+                let name = document.createElement("h2");
+                name.textContent = member.name;
 
-            let phone = document.createElement("p");
-            phone.textContent = "Phone: " + member.phone;
+                let address = document.createElement("p");
+                address.textContent = member.address;
 
-            let website = document.createElement("p");
-            let websiteLink = document.createElement("a");
-            websiteLink.href = member.website;
-            websiteLink.textContent = "Website";
-            website.appendChild(websiteLink);
+                let phone = document.createElement("p");
+                phone.textContent = "Phone: " + member.phone;
 
-            memberDetails.appendChild(nameAndAddress);
-            memberDetails.appendChild(phone);
-            memberDetails.appendChild(website);
+                let website = document.createElement("p");
+                let websiteLink = document.createElement("a");
+                websiteLink.href = member.website;
+                websiteLink.textContent = "Website";
+                website.appendChild(websiteLink);
+
+                memberDetails.appendChild(name);
+                memberDetails.appendChild(address);
+                memberDetails.appendChild(phone);
+                memberDetails.appendChild(website);
+            }
 
             let image = document.createElement("img");
             image.src = "images/" + member.image;
