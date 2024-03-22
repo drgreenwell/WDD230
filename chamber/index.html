@@ -18,6 +18,16 @@
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <!-- JavaScripts -->
+    <script src="scripts/hamButton.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/banner.js"></script>
+    <script src="scripts/spotlight.js"></script>
+    <!-- JavaScript For Last Modified Date -->
+    <script>
+        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+    </script>
 
 </head>
 <body>
@@ -125,17 +135,5 @@
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
-
-    <!-- JavaScripts -->
-    <script src="scripts/hamButton.js"></script>
-    <script src="scripts/darkMode.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/banner.js"></script>
-    <script src="scripts/spotlight.js"></script>
-
-    <!-- JavaScript For Last Modified Date -->
-    <script>
-        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
-    </script>
 </body>
 </html>
