@@ -28,17 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
             name.textContent = member.name;
 
             let contactInfo = document.createElement("p");
-            contactInfo.textContent = `${member.address} - Phone: ${member.phone}`;
-
-            let website = document.createElement("p");
-            let websiteLink = document.createElement("a");
-            websiteLink.href = member.website;
-            websiteLink.textContent = "Website";
-            website.appendChild(websiteLink);
+            contactInfo.textContent = `${member.name} - ${member.address}, ${member.city}, ${member.state} ${member.zip}
+Phone: ${member.phone} - Website: ${member.website}`;
 
             memberDetails.appendChild(name);
             memberDetails.appendChild(contactInfo);
-            memberDetails.appendChild(website);
 
             memberCard.appendChild(image);
             memberCard.appendChild(memberDetails);
