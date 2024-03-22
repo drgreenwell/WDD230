@@ -18,15 +18,6 @@
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <!-- JavaScripts -->
-    <script src="scripts/hamButton.js"></script>
-    <script src="scripts/darkMode.js"></script>
-
-    <!-- JavaScript for last modified date -->
-    <script>
-        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
-        document.getElementById('formDateTime').value = Date.now();
-    </script>
 
 </head>
 <body>
@@ -146,5 +137,15 @@
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
+
+    <!-- JavaScripts -->
+    <script src="scripts/hamButton.js"></script>
+    <script src="scripts/darkMode.js"></script>
+
+    <!-- JavaScript for last modified date -->
+    <script>
+        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+        document.getElementById('formDateTime').value = Date.now();
+    </script>
 </body>
 </html>
