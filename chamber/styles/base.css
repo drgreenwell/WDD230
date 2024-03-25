@@ -171,10 +171,6 @@ nav ul li a {
     border-radius: 5px;
 }
 
-.photo-gallery :hover img {
-    box-shadow: 0 0 15px var(--event-color);
-}
-
 /* Main Container Style */
 .main-container {
     display: grid;

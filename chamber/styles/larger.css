@@ -38,6 +38,10 @@
         grid-column: 2; /* Set the photo gallery to start at column 2 */
     }
 
+    .photo-gallery :hover img {
+        box-shadow: 0 0 15px var(--event-color);
+    }   
+
     .menu-section {
         display: block; /* Ensure the menu-section takes full width and doesn't affect grid layout */
         width: 100%;
