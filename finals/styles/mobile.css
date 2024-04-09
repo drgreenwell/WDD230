@@ -13,4 +13,9 @@
         width: 50%;
         border-collapse: collapse;
     }
+
+    .map {
+        width: 90%;
+        height: 300px;
+    }
 }
