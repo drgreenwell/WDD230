@@ -241,9 +241,11 @@ footer a {
 
 /* Table styles */
 #pricingTable {
+    max-height: 500px;
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    overflow-x: auto;
 }
 
 #pricingTable th, #pricingTable td {
