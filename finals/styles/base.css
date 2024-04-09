@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body, h1, h2, h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /* Color Scheme */
@@ -210,6 +210,8 @@ footer a {
 }
 
 .rental-image {
+    width: 200px;
+    height: 200px;
     display: block;
     margin: 0 auto; /* Center the image horizontally */
 }
@@ -294,6 +296,7 @@ footer a {
 /* Form Styles */
 .container {
     max-width: 800px;
+    max-height: 1600px;
     margin: 0 auto;
 }
 
