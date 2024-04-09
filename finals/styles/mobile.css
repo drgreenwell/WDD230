@@ -19,6 +19,12 @@
         height: 300px;
     }
 
+    .container {
+        height: 2800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
     /* CSS for hamburger menu */
     /* Hide navigation by default */
     .navigation {
