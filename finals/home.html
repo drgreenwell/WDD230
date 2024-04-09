@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>~Scoots~</title>
+    <title>~Scoots~ Rental Company</title>
+    <meta name="description" content="~Scoots~ Rental Company Website">
+    <meta name="author" content="Daniel Greenwell">
+    <meta property="og:title" content="~Scoots~ Rental Company">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://commons.wikimedia.org/wiki/File:Flag_of_Cozumel,_Quintana_Roo,_Mexico.svg">
+    <meta property="og:url" content="https://drgreenwell.github.io/wdd230/finals/home.html">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/mobile.css">
@@ -32,6 +39,14 @@
             <h1>Welcome to ~Scoots~</h1>
             <p>Escape the tourism and explore Cozumel with our rentals!</p>
         </header>
+        <!-- Hamburger menu icon -->
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
         <nav class="navigation">
             <ul>
                 <li><a href="#" title="Go To Home Page" class="active">Home</a></li>
@@ -79,6 +94,7 @@
     <!-- JavaScripts -->
     <script src="scripts/getdate.js"></script>
     <script src="scripts/weather.js"></script>
-    <script src="scripts/home.js"></script>
+    <script src="scripts/banner.js" defer></script>
+    <script src="scripts/hamburger.js"></script>
 </body>
 </html>

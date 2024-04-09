@@ -1,3 +1,4 @@
+// Banner js
 document.addEventListener("DOMContentLoaded", function() {
     // Get the close button and banner
     var closeBtn = document.querySelector('.close-btn');
@@ -9,4 +10,3 @@ document.addEventListener("DOMContentLoaded", function() {
         closeableMessage.style.display = 'none';
     });
 });
-

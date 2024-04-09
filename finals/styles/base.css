@@ -158,9 +158,36 @@ footer a {
     height: 50px;
 }
 
-/* CSS for rentalCards.js */
+/* Rental Section Styles */
+#rentalSection {
+    max-height: 500px;
+    overflow-y: auto;
+}
 
-/* Styles for rental groups */
+/* For WebKit based browsers like Chrome and Safari */
+#rentalSection::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+/* Track (background) */
+#rentalSection::-webkit-scrollbar-track {
+    background: var(--light-text); /* Color of the track */
+    border-radius: 0 6px 6px 0;
+}
+
+/* Handle (thumb) */
+#rentalSection::-webkit-scrollbar-thumb {
+    background: var(--secondary-color); /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners */
+}
+
+/* Handle on hover */
+#rentalSection::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-hover); /* Darker color when hovered */
+}
+
+
+/* Rental Groups Styles */
 .rental-group {
     display: flex;
     flex-wrap: wrap;
@@ -187,9 +214,7 @@ footer a {
     margin: 0 auto; /* Center the image horizontally */
 }
 
-/* CSS for rentalInfo.js */
-  
-/* Styles for pricing table */
+/* Pricing Table Styles */
 
 .pricing-table {
     width: 100%;
@@ -229,7 +254,7 @@ footer a {
 
 #pricingTable th {
     background-color: var(--tertiary-color);
-    color: var(--light-text)
+    color: var(--light-text);
 }
 
 #pricingTable th.rheader {
@@ -237,11 +262,12 @@ footer a {
     background-color: var(--primary-color);
     border: 1px solid var(--background-color);
     border-radius: 10px 50px;
-    color:var(--tertiary-color);
+    color: var(--tertiary-color);
     padding: 20px 0px 20px;
 }
 
 #pricingTable th.rheader2 {
+    border-top: 20px solid var(--background-color);
     padding-top: 20px;
 }
 
@@ -304,4 +330,9 @@ button {
 
 button:hover {
     background-color: var(--secondary-hover);
+}
+
+/*Hamburger Menu Styles*/
+.menu-toggle {
+    display: none;
 }
