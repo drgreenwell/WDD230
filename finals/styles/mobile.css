@@ -8,4 +8,9 @@
     .rental-card {
         width: 90%; /* Take full width of the container */
     }
+
+    .pricing-table {
+        width: 50%;
+        border-collapse: collapse;
+    }
 }

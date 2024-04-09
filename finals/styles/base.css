@@ -11,8 +11,8 @@ body, h1, h2, h3 {
   --primary-color: #ffcc00;
   --secondary-color: #650099;
   --secondary-hover: #390669;
-  --secondary-active: #8d54c1;
-  --tertiary-color:#577ac0;
+  --secondary-active: #7E14DA;
+  --tertiary-color:#1B3B80;
   --background-color: #ffe064;
   --text-color: #333;
   --light-text: #fff;
@@ -121,7 +121,7 @@ section {
     margin: 20px;
     margin-bottom: 30px;
     border: 3px solid var(--primary-color);
-    background-color: #fff;
+    background-color: var(--light-text);
     border-radius: 10px;
     padding: 20px;
 }
@@ -229,12 +229,13 @@ footer a {
 
 #pricingTable th {
     background-color: var(--tertiary-color);
+    color: var(--light-text)
 }
 
 #pricingTable th.rheader {
     font-size: 36px;
     background-color: var(--primary-color);
-    border: 1px solid var(--light-text);
+    border: 1px solid var(--background-color);
     border-radius: 10px 50px;
     color:var(--tertiary-color);
     padding: 20px 0px 20px;
@@ -256,6 +257,10 @@ footer a {
 #pricingTable td:nth-child(3), #pricingTable td:nth-child(4),
 #pricingTable td:nth-child(5), #pricingTable td:nth-child(6) {
     width: 15%;
+}
+
+#pricingTable tr:nth-child(n) {
+    background-color: var(--light-text);
 }
 
 /* Form Styles */
