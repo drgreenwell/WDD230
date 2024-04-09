@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~Scoots~ Reservations</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reservations</h1>
+        </header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html" title="Go To Home Page">Home</a></li>
+                <li><a href="rentals.html" title="Go To Rentals">Rentals</a></li>
+                <li><a href="#" title="Go To Reservations" class="active">Reservations</a></li>
+                <li><a href="contact.html" title="Go To Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Rental Services and Agreements</h2>
+            <p>By using our rental services, you agree to the following:</p>
+            <ul>
+                <li>A $50 security deposit is required to confirm reservations.</li>
+                <li>A valid driver's license is required in hand at the time of rental.</li>
+                <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>
+                <li>Fuel charge is not included.</li>
+                <li>Unlimited mileage.</li>
+                <li>Liability insurance is included.</li>
+                <li>Damage insurance is available for purchase.</li>
+                <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
+                <li>Rentals may be returned to either physical location.</li>
+            </ul>
+            <p>We reserve the right to refuse service at any time for any reason.</p>
+        </section>
+        <section>
+            <h2>Reservation Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="period">Rental Period:</label>
+                    <select id="period" name="period" required>
+                        <option value="">Select Period</option>
+                        <option value="half-day">Half Day</option>
+                        <option value="full-day">Full Day</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rental-type">Rental Type:</label>
+                    <select id="rental-type" name="rental-type" required>
+                        <option value="">Select Type</option>
+                        <option value="Honda Metro Scooter">Honda Metro Scooter</option>
+                        <option value="Honda Dio Scooter">Honda Dio Scooter</option>
+                        <option value="Honda PCX150 Scooter">Honda PCX150 Scooter</option>
+                        <option value="Honda Pioneer ATV">Honda Pioneer ATV</option>
+                        <option value="Jeep Wrangler - 4 Door with A/C">Jeep Wrangler - 4 Door with A/C</option>
+                        <option value="Jeep Wrangler - 2 Door">Jeep Wrangler - 2 Door</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="number">Number of Rentals:</label>
+                    <input type="number" id="number" name="number" required placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(800) 555-1234">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="state-country">Home State/Country:</label>
+                    <input type="text" id="state-country" name="state-country" required placeholder="'Texas' or 'United Kingdom'">
+                </div>
+                <div class="form-group">
+                    <label for="cruise-line">Cruise Line (if applicable):</label>
+                    <input type="text" id="cruise-line" name="cruise-line" placeholder="Carnival Cruise Line">
+                </div>
+                <div class="form-group">
+                    <label for="accommodations">Special Accommodations/Comments:</label>
+                    <textarea id="accommodations" name="accommodations"></textarea>
+                </div>
+                <button type="submit">Book Reservation</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                <img src="images/facebook-icon.webp" alt="Facebook Icon" class="social-icon">
+            </a>
+            <a href="https://twitter.com/" target="_blank" title="Twitter">
+                <img src="images/twitter-icon.webp" alt="Twitter Icon" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <img src="images/instagram-icon.webp" alt="Instagram Icon" class="social-icon">
+            </a>
+            <p>&copy; <span id="currentYear"></span> ~Scoots~ Cozumel, Mexico</p>
+        </div>
+    </footer>
+    <!-- JavaScripts -->
+    <script src="scripts/getdate.js"></script>
+</body>
+</html>

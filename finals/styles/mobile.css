@@ -1,0 +1,11 @@
+/* Add media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .rental-group {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards horizontally */
+    }
+
+    .rental-card {
+        width: 90%; /* Take full width of the container */
+    }
+}

@@ -1,0 +1,302 @@
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Color Scheme */
+:root {
+  --primary-color: #ffcc00;
+  --secondary-color: #650099;
+  --secondary-hover: #390669;
+  --secondary-active: #8d54c1;
+  --tertiary-color:#577ac0;
+  --background-color: #ffe064;
+  --text-color: #333;
+  --light-text: #fff;
+}
+
+/* Body styles */
+body {
+    background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+    color:var(--tertiary-color);
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Closeable message styles */
+.closeable-message {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: var(--primary-color);
+    border-radius: 10px 50px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: var(--text-color);
+    padding-bottom: 10px;
+}
+
+header .hero {
+    /* Resetting styles inherited from section */
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    margin: 10px;
+}
+
+header .hero img {
+    border-radius: 10px 50px;
+}
+
+/* Navigation styles */
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    display: inline-block; /* Display list items horizontally */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--light-text);
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 2.5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--secondary-hover);
+}
+
+.active {
+    background-color: var(--secondary-active);
+}
+
+/* Section styles */
+section {
+    flex: 1 1 calc(50% - 20px);
+    margin: 20px;
+    margin-bottom: 30px;
+    border: 3px solid var(--primary-color);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    border: none;
+    border-radius: 2.5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 30px;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* CSS for rentalCards.js */
+
+/* Styles for rental groups */
+.rental-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rental-card {
+    background-color: var(--secondary-active);
+    color: var(--light-text);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+.rental-card p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.rental-image {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* CSS for rentalInfo.js */
+  
+/* Styles for pricing table */
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.pricing-table th, .pricing-table td {
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+}
+  
+.pricing-table th {
+    text-align: center;
+    background-color: var(--background-color);
+}
+  
+.pricing-table td {
+    text-align: center;
+}
+  
+.pricing-table td[colspan="4"], .pricing-table td[colspan="2"] {
+    text-align: left;
+}
+
+/* Table styles */
+#pricingTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#pricingTable th, #pricingTable td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+}
+
+#pricingTable th {
+    background-color: var(--tertiary-color);
+}
+
+#pricingTable th.rheader {
+    font-size: 36px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--light-text);
+    border-radius: 10px 50px;
+    color:var(--tertiary-color);
+    padding: 20px 0px 20px;
+}
+
+#pricingTable th.rheader2 {
+    padding-top: 20px;
+}
+
+#pricingTable th:first-child {
+    width: 20%;
+}
+
+#pricingTable th:nth-child(2), #pricingTable td:nth-child(2) {
+    width: 10%;
+}
+
+#pricingTable th:nth-child(3), #pricingTable th:nth-child(4),
+#pricingTable td:nth-child(3), #pricingTable td:nth-child(4),
+#pricingTable td:nth-child(5), #pricingTable td:nth-child(6) {
+    width: 15%;
+}
+
+/* Form Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 2.5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary-hover);
+}

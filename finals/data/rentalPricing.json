@@ -1,0 +1,48 @@
+{
+    "pricing": {
+        "reservation": {
+            "half_day": {
+                "Honda Metro Scooter": 20,
+                "Honda Dio Scooter": 30,
+                "Honda PCX150 Scooter": 40,
+                "Honda Pioneer ATV": 50,
+                "Jeep Wrangler - 4 Door with A/C": 70,
+                "Jeep Wrangler - 2 Door": 60
+            },
+            "full_day": {
+                "Honda Metro Scooter": 30,
+                "Honda Dio Scooter": 40,
+                "Honda PCX150 Scooter": 50,
+                "Honda Pioneer ATV": 70,
+                "Jeep Wrangler - 4 Door with A/C": 100,
+                "Jeep Wrangler - 2 Door": 85
+            }
+        },
+        "walk_in": {
+            "half_day": {
+                "Honda Metro Scooter": 25,
+                "Honda Dio Scooter": 35,
+                "Honda PCX150 Scooter": 45,
+                "Honda Pioneer ATV": 60,
+                "Jeep Wrangler - 4 Door with A/C": 85,
+                "Jeep Wrangler - 2 Door": 70
+            },
+            "full_day": {
+                "Honda Metro Scooter": 35,
+                "Honda Dio Scooter": 45,
+                "Honda PCX150 Scooter": 55,
+                "Honda Pioneer ATV": 80,
+                "Jeep Wrangler - 4 Door with A/C": 125,
+                "Jeep Wrangler - 2 Door": 90
+            }
+        },
+        "max_persons": {
+            "Honda Metro Scooter": 1,
+            "Honda Dio Scooter": 2,
+            "Honda PCX150 Scooter": 2,
+            "Honda Pioneer ATV": 4,
+            "Jeep Wrangler - 4 Door with A/C": 5,
+            "Jeep Wrangler - 2 Door": 4
+        }
+    }
+}

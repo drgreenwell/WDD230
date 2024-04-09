@@ -1,0 +1,47 @@
+{
+    "rentals": [
+      {
+        "picture": "images/honda-metropolitan.webp",
+        "name": "Honda Metropolitan (49cc)",
+        "brand": "Honda",
+        "type": "Scooter",
+        "max_persons": 1
+      },
+      {
+        "picture": "images/honda-dio.webp",
+        "name": "Honda Dio (110cc)",
+        "brand": "Honda",
+        "type": "Scooter",
+        "max_persons": 2
+      },
+      {
+        "picture": "images/honda-pcx.webp",
+        "name": "Honda PCX150 (149cc)",
+        "brand": "Honda",
+        "type": "Scooter",
+        "max_persons": 2
+      },
+      {
+        "picture": "images/pioneer-1000.webp",
+        "name": "Honda Pioneer 1000",
+        "brand": "Honda",
+        "type": "ATV",
+        "max_persons": 4
+      },
+      {
+        "picture": "images/jeep-wrangler-4-door.webp",
+        "name": "Jeep Wrangler - 4 Door - A/C - Manuel",
+        "brand": "Jeep",
+        "type": "Jeep",
+        "max_persons": 5
+      },
+      {
+        "picture": "images/jeep-wrangler-2-door.webp",
+        "name": "Jeep Wrangler - 2 Door - Open Air - Manuel",
+        "brand": "Jeep",
+        "type": "Jeep",
+        "max_persons": 4
+      }
+    ]
+}
+  

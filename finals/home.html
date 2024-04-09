@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~Scoots~</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <!-- Closeable message with high temperature -->
+        <div class="closeable-message">
+            Today's high temperature: [TEMP-MAX]
+            <span class="close-btn">X</span>
+        </div>
+        <!-- Main content -->
+        <header>
+            <section class="hero">
+                <img srcset="images/hero-image.webp 480w,
+                        images/hero-image.webp 768w,
+                        images/hero-image.webp 1200w"
+                sizes="(max-width: 480px) 480px,
+                        (max-width: 768px) 768px,
+                        1200px"
+                src="images/hero-image.webp"
+                alt="Hero Image">
+            </section>
+            <h1>Welcome to ~Scoots~</h1>
+            <p>Escape the tourism and explore Cozumel with our rentals!</p>
+        </header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#" title="Go To Home Page" class="active">Home</a></li>
+                <li><a href="rentals.html" title="Go To Rentals">Rentals</a></li>
+                <li><a href="reservations.html" title="Go To Reservations">Reservations</a></li>
+                <li><a href="contact.html" title="Go To Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>About Us</h2>
+            <p>~Scoots~ is a fictitious 🛵 motor scooter rental company located on the island of Cozumel off the coast of Mexico in the western Caribbean Sea. Our owner-operator company caters to locals, walk-in tourists, motor scooter enthusiasts, and cruise-based touring groups and partnerships!</p>
+            <p>With two physical rental locations near the Playa del Carmen-Cozumel Ferry dock and the Terminal Puerta Maya, it is quick and painless to get off the boat and start exploring with our wide selection of motor scooters, jeeps, and side-by-sides ATVs. Renting them is easy and our friendly employees are always at hand to help out.</p>
+            <p>So what are you waiting for? Get out there and explore today!</p>
+            <a href="reservations.html" class="button">Make A Reservation</a>
+        </section>
+        <section id="weather-info">
+            <!-- Weather information -->
+            <div id="current-weather">
+                <h2>Current Weather</h2>
+                <p>Temperature: <span id="current-temp">Loading...</span></p>
+                <p>Humidity: <span id="current-humidity">Loading...</span></p>
+                <div id="current-weather-icon"><img id="weather-icon" src="images/weather.webp" alt="Weather Icon"></div>
+            </div>
+            <div id="next-day-forecast">
+                <h2>Next Day's Forecast</h2>
+                <p>Temperature at 3:00pm: <span id="next-day-forecast-temp">Loading...</span></p>
+                <div id="next-day-forecast-icon"><img id="weather-icon" src="images/weather.webp" alt="Weather Icon"></div>
+            </div>
+        </section>
+        <footer>
+            <div class="social-links">
+                <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                    <img src="images/facebook-icon.webp" alt="Facebook Icon" class="social-icon">
+                </a>
+                <a href="https://twitter.com/" target="_blank" title="Twitter">
+                    <img src="images/twitter-icon.webp" alt="Twitter Icon" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                    <img src="images/instagram-icon.webp" alt="Instagram Icon" class="social-icon">
+                </a>
+                <p>&copy; <span id="currentYear"></span> ~Scoots~ Cozumel, Mexico</p>
+            </div>
+        </footer>
+    </div>
+    <!-- JavaScripts -->
+    <script src="scripts/getdate.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html>

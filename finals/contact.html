@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~Scoots~ Contact</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Information</h1>
+        </header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html" title="Go To Home Page">Home</a></li>
+                <li><a href="rentals.html" title="Go To Rentals">Rentals</a></li>
+                <li><a href="reservations.html" title="Go To Reservations">Reservations</a></li>
+                <li><a href="#" title="Go To Contact Us" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section>
+            <!-- Essential contact information -->
+            <div class="contact-info">
+                <h2>We have locations in two exciting areas!</h2>
+                <ul>
+                    <li>Our el Centro de Cozumel Location Near Playa del Carmen-Cozumel Ferry Dock</li>
+                    <!--Playa del Carmen-Cozumel Ferry Embed Map-->
+                    <iframe class="map" title="Playa del Carmen-Cozumel Ferry" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190542.48181944385!2d-86.95186657987406!3d20.50531727440497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e4eb2b0d7f0db%3A0xa0b6ebfa53f012d4!2sPlaya%20del%20Carmen-Cozumel%20Ferry%20dock%2C%20Av.%20Rafael%20E.%20Melgar%2C%20Centro%2C%2077650%20San%20Miguel%20de%20Cozumel%2C%20Q.R.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1649840587655!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <li>Our South Coast Location Near Terminal Puerta Maya</li>
+                    <!--Terminal Puerta Maya Ferry Embed Map-->
+                    <iframe class="map" title="Terminal Puerta Maya" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.1267761967093!2d-86.97411894436309!3d20.47620869842092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e5064bb32830f%3A0x54a4c4ffedf67c7d!2sTerminal%20Puerta%20Maya!5e0!3m2!1sen!2sus!4v1649840663147!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </ul>
+            </div>
+
+            <!-- Contact form -->
+            <div class="form-group">
+                <h2>Contact Us</h2>
+                <p>Should you need to contact us, you may reach us by:</p>
+                <p>Phone: +52 (123)456-7890</p>
+                <p>Email: info@scootscozumel.com</p>
+                <p>Online:</p>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="example@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="accommodations">Comments:</label>
+                        <textarea id="accommodations" name="accommodations"></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                <img src="images/facebook-icon.webp" alt="Facebook Icon" class="social-icon">
+            </a>
+            <a href="https://twitter.com/" target="_blank" title="Twitter">
+                <img src="images/twitter-icon.webp" alt="Twitter Icon" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <img src="images/instagram-icon.webp" alt="Instagram Icon" class="social-icon">
+            </a>
+            <p>&copy; <span id="currentYear"></span> ~Scoots~ Cozumel, Mexico</p>
+        </div>
+    </footer>
+    <!-- JavaScripts -->
+    <script src="scripts/getdate.js"></script>
+</body>
+</html>

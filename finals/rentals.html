@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~Scoots~ Rentals</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rentals</h1>
+        </header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html" title="Go To Home Page">Home</a></li>
+                <li><a href="#" title="Go To Rentals" class="active">Rentals</a></li>
+                <li><a href="reservations.html" title="Go To Reservations">Reservations</a></li>
+                <li><a href="contact.html" title="Go To Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section id="rentalSection">
+            <!-- Rental cards will be inserted here -->
+        </section>
+        <section>
+            <table id="pricingTable">
+                <thead>
+                    <tr>
+                        <th class="rheader" colspan="6">Rental Pricing</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2"></th>
+                        <th class="rheader2" colspan="2">Reservation</th>
+                        <th class="rheader2" colspan="2">Walk-In</th>
+                    </tr>
+                    <tr>
+                        <th>Rental Type</th>
+                        <th>Max. Passengers</th>
+                        <th>Half Day (3 hrs)</th>
+                        <th>Full Day</th>
+                        <th>Half Day (3 hrs)</th>
+                        <th>Full Day</th>
+                    </tr>
+                </thead>
+                <!-- Table body will be dynamically populated by JavaScript -->
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                <img src="images/facebook-icon.webp" alt="Facebook Icon" class="social-icon">
+            </a>
+            <a href="https://twitter.com/" target="_blank" title="Twitter">
+                <img src="images/twitter-icon.webp" alt="Twitter Icon" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <img src="images/instagram-icon.webp" alt="Instagram Icon" class="social-icon">
+            </a>
+            <p>&copy; <span id="currentYear"></span> ~Scoots~ Cozumel, Mexico</p>
+        </div>
+    </footer>
+    <!-- JavaScripts -->
+    <script src="scripts/getdate.js"></script>
+    <script src="scripts/rentalCards.js" defer></script>
+    <script src="scripts/rentalPricing.js" defer></script>
+</body>
+</html>
